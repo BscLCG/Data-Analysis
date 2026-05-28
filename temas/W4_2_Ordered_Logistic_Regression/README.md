@@ -44,5 +44,9 @@ If the assumption is violated, the researcher must decide whether to:
 
 ## References and Materials
 
+### View (PDFs)
+- [W4. OrderedLogistic model.pdf](./W4.%20OrderedLogistic%20model.pdf)
+
+### Download (Originals & Scripts)
 - [W4. OrderedLogistic model.pptx](./W4.%20OrderedLogistic%20model.pptx)
 - [W4. Logit.R](./W4.%20Logit.R)

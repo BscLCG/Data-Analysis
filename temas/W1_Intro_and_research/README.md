@@ -38,6 +38,12 @@ Reproducibility is a mandatory requirement in modern analysis. It means an indep
 
 ## References and Materials
 
+### View (PDFs)
+- [W1. Intro and research approaches.pdf](./W1.%20Intro%20and%20%20research%20approaches.pdf)
+- [W1. DOA.pdf](./W1.%20DOA.pdf)
+- [W1. R studio y markdown.pdf](./W1.%20R%20studio%20y%20markdown.pdf)
+
+### Download (Originals & Scripts)
 - [W1. Intro and research approaches.pptx](./W1.%20Intro%20and%20%20research%20approaches.pptx)
 - [W1. DOA.docx](./W1.%20DOA.docx)
 - [W1. R studio y markdown.docx](./W1.%20R%20studio%20y%20markdown.docx)

@@ -24,4 +24,8 @@ The peer review session following each presentation constitutes a fundamental co
 
 ## References and Materials
 
+### View (PDFs)
+- [W14. project presentations.pdf](./W14.%20project%20presentations.pdf)
+
+### Download (Originals & Scripts)
 - [W14. project presentations.pptx](./W14.%20project%20presentations.pptx)

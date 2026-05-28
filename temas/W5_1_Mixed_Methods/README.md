@@ -32,4 +32,8 @@ By explicitly integrating the data streams, researchers neutralize the limitatio
 
 ## References and Materials
 
+### View (PDFs)
+- [W5. Mixed Methods Procedures.pdf](./W5.%20Mixed%20Methods%20Procedures.pdf)
+
+### Download (Originals & Scripts)
 - [W5. Mixed Methods Procedures.pptx](./W5.%20Mixed%20Methods%20Procedures.pptx)

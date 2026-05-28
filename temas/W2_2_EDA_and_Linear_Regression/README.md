@@ -18,7 +18,9 @@ EDA employs two main approaches:
 
 ### Simple Linear Regression
 Simple Linear Regression estimates the relationship between a single independent variable ($x$) and a continuous dependent variable ($y$). The model fits a straight line through the data points governed by the equation:
+
 $$ y = \beta_0 + \beta_1 x + u $$
+
 Where:
 - $\beta_0$ is the intercept (the expected value of $y$ when $x=0$).
 - $\beta_1$ is the slope (the change in $y$ for a one-unit increase in $x$).
@@ -28,9 +30,11 @@ Where:
 The standard procedure for estimating $\beta_0$ and $\beta_1$ is Ordinary Least Squares (OLS). OLS calculates the specific line that minimizes the sum of squared differences (residuals) between the observed values in the sample and the values predicted by the model.
 
 The OLS estimator for the slope parameter is derived as the sample covariance between $x$ and $y$ divided by the sample variance of $x$:
+
 $$ \hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} $$
 
 Once the slope is estimated, the intercept is computed as:
+
 $$ \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x} $$
 
 ### OLS Assumptions
@@ -50,5 +54,10 @@ If these conditions are met, OLS produces the Best Linear Unbiased Estimator (BL
 
 ## References and Materials
 
+### View (PDFs)
+- [W2. EDA and linear regression.pdf](./W2.%20EDA%20and%20linear%20regression.pdf)
+- [W2. Inference and statistical significance.pdf](./W2.%20Inference%20and%20statistical%20significance.pdf)
+
+### Download (Originals & Scripts)
 - [W2. EDA and linear regression.pptx](./W2.%20EDA%20and%20linear%20regression.pptx)
 - [W2. Inference and statistical significance.pptx](./W2.%20Inference%20and%20statistical%20significance.pptx)

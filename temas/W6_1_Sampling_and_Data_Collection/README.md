@@ -47,6 +47,11 @@ An instrument must be both valid and reliable.
 
 ## References and Materials
 
+### View (PDFs)
+- [W6. Forms in Qualtrics.pdf](./W6.%20Forms%20in%20Qualtrics.pdf)
+- [W6. Sample, data collection and instruments.pdf](./W6.%20Sample,%20data%20collection%20and%20instruments.pdf)
+
+### Download (Originals & Scripts)
 - [W6. Forms in Qualtrics.docx](./W6.%20Forms%20in%20Qualtrics.docx)
 - [W6. Sample, data collection and instruments.pptx](./W6.%20Sample,%20data%20collection%20and%20instruments.pptx)
 - [W6.The Qualtrics handbook of question design.pdf](./W6.The%20Qualtrics%20handbook%20of%20question%20design.pdf)

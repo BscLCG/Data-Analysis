@@ -29,5 +29,9 @@ While the statistical model is robust, all experimental designs must be evaluate
 
 ## References and Materials
 
+### View (PDFs)
+- [W9.poster 01.pdf](./W9.poster%2001.pdf)
+
+### Download (Originals & Scripts)
 - [W9. class example logit.R](./W9.%20class%20example%20logit.R)
 - [W9.poster 01.pptx](./W9.poster%2001.pptx)

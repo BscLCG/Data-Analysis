@@ -39,5 +39,10 @@ A literature map is a visual tool that organizes the reviewed articles to show h
 
 ## References and Materials
 
+### View (PDFs)
+- [W3. Literature review.pdf](./W3.%20Literature%20review.pdf)
+- [W3. Zotero.pdf](./W3.%20Zotero.pdf)
+
+### Download (Originals & Scripts)
 - [W3. Literature review.pptx](./W3.%20Literature%20review.pptx)
 - [W3. Zotero.docx](./W3.%20Zotero.docx)
