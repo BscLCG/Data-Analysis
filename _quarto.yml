@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Data Analysis"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Home"
+        file: README.md
+      - section: "Topics"
+        contents:
+          - text: "Week 1: Intro and research approaches"
+            file: Topics/W1_Intro_and_research/README.md
+          - text: "Week 2.1: Problem and Research Questions"
+            file: Topics/W2_1_Problem_and_Research_Questions/README.md
+          - text: "Week 2.2: EDA and Linear Regression"
+            file: Topics/W2_2_EDA_and_Linear_Regression/README.md
+          - text: "Week 3.1: Literature Review"
+            file: Topics/W3_1_Literature_Review/README.md
+          - text: "Week 3.2: Logistic Regression"
+            file: Topics/W3_2_Logistic_Regression/README.md
+          - text: "Week 4.1: Use of Theory"
+            file: Topics/W4_1_Use_of_Theory/README.md
+          - text: "Week 4.2: Ordered Logistic Regression"
+            file: Topics/W4_2_Ordered_Logistic_Regression/README.md
+          - text: "Week 5.1: Mixed Methods"
+            file: Topics/W5_1_Mixed_Methods/README.md
+          - text: "Week 6.1: Sampling and Data Collection"
+            file: Topics/W6_1_Sampling_and_Data_Collection/README.md
+          - text: "Week 8.1: Writing and Ethics"
+            file: Topics/W8_1_Writing_and_Ethics/README.md
+          - text: "Week 9.1: Logit Example"
+            file: Topics/W9_1_Logit_Example/README.md
+          - text: "Week 13.1: Causal Mediation Analysis"
+            file: Topics/W13_1_Mediation/README.md
+          - text: "Week 14.1: Final Presentations"
+            file: Topics/W14_1_Presentations/README.md
+
+format:
+  html:
+    theme: cosmo
+    toc: true
