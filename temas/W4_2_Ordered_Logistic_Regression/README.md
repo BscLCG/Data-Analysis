@@ -11,15 +11,18 @@ When the dependent variable is categorical with more than two ordered categories
 
 ### The Latent Variable Framework
 The ordered logistic model assumes that the observed ordinal outcome $Y$ is a discrete realization of an underlying, unobserved continuous variable $Y^*$. The variable $Y^*$ is determined by a linear combination of predictors plus a random error term:
+
 $$ Y^* = \beta_1 X_1 + \dots + \beta_k X_k + \epsilon $$
 
 In the ordered logit model, the error term $\epsilon$ is assumed to follow a standard logistic distribution. The decision regarding which category $Y$ falls into depends on where the latent variable $Y^*$ lands relative to a series of estimated thresholds (or cut-points), denoted as $\mu_1, \mu_2, \dots, \mu_{m-1}$.
 
 ### The Proportional Odds Model
 The standard formulation for ordinal regression is the Proportional Odds model, which specifies the cumulative probability that an observation falls into category $j$ or below:
+
 $$ P(Y \leq j) = \frac{e^{\mu_j - (\beta_1 X_1 + \dots + \beta_k X_k)}}{1 + e^{\mu_j - (\beta_1 X_1 + \dots + \beta_k X_k)}} $$
 
 By applying the natural logarithm to both sides of the ratio between $P(Y \leq j)$ and $P(Y > j)$, we obtain the linear specification of the log-odds:
+
 $$ \text{Log-odds}(Y \leq j) = \ln\left(\frac{P(Y \leq j)}{P(Y > j)}\right) = \mu_j - (\beta_1 X_1 + \dots + \beta_k X_k) $$
 
 The model estimates a specific intercept (cut-point $\mu_j$) for each transition between categories, but **estimates a single coefficient $\beta_k$ for each predictor across all thresholds**. 
