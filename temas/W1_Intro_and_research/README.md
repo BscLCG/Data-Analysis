@@ -1,64 +1,40 @@
 # Week 1: Introduction and Research Approaches
 
-## Overview
+This section introduces the foundational competencies for data analysis and research methodology. It covers the structural integration of Large Language Models (LLMs) in academic settings, the philosophical assumptions guiding research design, and the distinction between research approaches. It also establishes the technical tooling (R, RStudio, and R Markdown) required for reproducible workflows.
 
-This week introduces the fundamental competencies required for data analysis and research methodology. The materials cover the integration and limitations of Large Language Models (LLMs) in academic work, the philosophical assumptions that shape research (Positivist, Constructivist, Transformative, and Pragmatic worldviews), and the distinction between research designs and research methods. Additionally, it provides an introductory guide to setting up and using R, RStudio, and R Markdown for reproducible data science.
+## Required and Complementary Readings
+* [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../referencias/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 30–52)
 
-## Key Concepts
+## Detailed Reading: Worldviews and Reproducibility
 
-- **Large Language Models (LLMs):** Probabilistic models that predict the next word in a sequence. Useful tools, but prone to factual inaccuracies and subject to strict academic integrity guidelines.
-- **Philosophical Assumptions:**
-  - *Positivist:* Deterministic, reductionist, focused on empirical observation and theory verification.
-  - *Constructivist:* Interpretative, focused on understanding multiple participant meanings and social construction.
-  - *Transformative:* Political, change-oriented, and focused on power and justice.
-  - *Pragmatic:* Problem-centered, pluralistic, and practice-oriented.
-- **Research Approaches:** 
-  - *Quantitative:* Uses numbers, closed-ended questions, and tests theories deductively.
-  - *Qualitative:* Uses words, open-ended questions, and builds theories inductively.
-  - *Mixed Methods:* Combines both to neutralize weaknesses and seek convergence.
-- **Research Design vs. Methods:** Design is the overall plan for collecting evidence, while methods are the specific techniques (e.g., surveys, ethnography, experiments).
+### The Role of Large Language Models in Research
+Large Language Models (LLMs) operate as probabilistic prediction engines. They lack understanding, factual verification, and agency. When generating text, an LLM selects statistically probable words based on training data patterns, which often produces plausible but false information (hallucination).
 
-## Relevant Points
+Academic research demands strict oversight when integrating LLMs. While researchers use them to summarize literature or draft code, deploying AI outputs without manual verification causes factual errors and plagiarism. Institutional guidelines require researchers to disclose AI assistance and assume full responsibility for the accuracy of their work. Researchers must verify every claim, citation, and data point against primary sources.
 
-- **LLM Usage:** Using AI without review can lead to plagiarism, lack of learning, and academic sanctions.
-- **Worldviews Shape Research:** The philosophical ideas held by researchers actively influence their practice and must be explicitly stated.
-- **Tooling:** R and RStudio provide an integrated development environment for statistical calculations, while R Markdown enables reproducible reporting by combining code and narrative.
+### Philosophical Assumptions in Research
+Research designs follow the philosophical assumptions (worldviews) of the researcher. These assumptions dictate what constitutes valid knowledge. The social and behavioral sciences rely on four primary worldviews:
 
-## Detailed Reading
+1. **Positivist Worldview**: Deterministic and reductionist. It assumes causes determine effects. Researchers isolate discrete variables to test hypotheses through empirical observation and measurement. This worldview forms the foundation of quantitative research, designed to test [theories deductively](../W4_1_Use_of_Theory/README.md).
+2. **Constructivist Worldview**: Interpretative. It assumes individuals develop subjective meanings from their experiences. Researchers examine the complexity of these views rather than reducing them to narrow categories. This is the foundation of qualitative research.
+3. **Transformative Worldview**: Political and change-oriented. It integrates research with an agenda to confront social oppression and empower marginalized groups. It includes frameworks like feminist, racialized, and critical theory.
+4. **Pragmatic Worldview**: Problem-centered and pluralistic. It focuses on practical outcomes and solutions rather than strict philosophical conditions. Researchers use all available approaches to understand the problem. This underpins [Mixed Methods](../W5_1_Mixed_Methods/README.md) research.
 
-### The role of Large Language Models in research
+### Research Approaches and Designs
+A research approach defines the structural procedure from broad assumptions to specific data collection methods.
 
-Large Language Models (LLMs) operate as probabilistic engines that predict the next word in a sequence based on statistical patterns found in their training data. They do not possess understanding, agency, or the ability to verify facts. When an LLM generates text, it selects words that are statistically probable, which means it can produce plausible but entirely false information. This phenomenon is known as hallucination.
+* **Quantitative research**: Tests objective theories by examining relationships among measurable variables. It relies on numbered data analyzed through statistical procedures.
+* **Qualitative research**: Explores the meaning individuals ascribe to social problems. It uses inductive data analysis, building from particulars to general themes based on qualitative data (words, observations).
+* **Mixed methods research**: Collects and integrates both quantitative and qualitative data. It operates under the assumption that combining approaches yields a more complete understanding of the research problem.
 
-In academic research, the use of LLMs requires strict oversight. Students and researchers use these tools to summarize articles, draft code, or structure documents. However, using AI outputs without review leads to factual errors, plagiarism, and a reduction in the researcher's learning process. The university establishes clear academic integrity guidelines: all AI assistance must be disclosed, and researchers remain solely responsible for the accuracy of their work. A researcher must manually verify every claim, citation, and data point generated by an LLM against primary sources. 
+### Tooling for Reproducible Research
+Data analysis requires software to manipulate datasets, execute statistical tests, and document the workflow. This course utilizes R and RStudio. R is a programming language built for statistical computing, while RStudio serves as its integrated development environment (IDE).
 
-### Philosophical assumptions in research
+Reproducibility is a mandatory requirement in modern analysis. It means an independent researcher can take the original data and code, run it, and produce the exact same results. To guarantee reproducibility, researchers use R Markdown. R Markdown integrates executable R code with narrative text. Upon rendering, it executes the code and embeds the outputs (tables, plots) directly into a final document. This workflow eliminates manual copying and pasting, directly preventing transcription errors in academic reporting.
 
-Research designs are shaped by the philosophical assumptions, or worldviews, held by the researcher. These assumptions dictate what constitutes valid knowledge and how it should be obtained. There are four primary worldviews in social and behavioral sciences:
-
-1. **Positivist worldview**. This approach is deterministic and reductionist. It posits that causes determine effects or outcomes. Positivist researchers reduce ideas into small, discrete variables to test hypotheses. Knowledge is based on careful observation and measurement of the objective reality. This worldview is the foundation of most quantitative research designs, where the goal is to test [theories deductively](../W4_Use_of_theory/README.md). For example, a researcher testing the effect of a new policy on unemployment rates relies on positivist assumptions.
-
-2. **Constructivist worldview**. Constructivism assumes that individuals seek understanding of the world in which they live and work. Individuals develop subjective meanings of their experiences. These meanings are varied and multiple, leading the researcher to look for the complexity of views rather than narrowing meanings into a few categories or ideas. The goal of the research is to rely as much as possible on the participants' views of the situation. Constructivism is the typical foundation for qualitative research.
-
-3. **Transformative worldview**. This worldview holds that research inquiry needs to be intertwined with politics and a political change agenda to confront social oppression. It focuses on the needs of groups and individuals in society that may be marginalized or disenfranchised. Theoretical perspectives include feminist perspectives, racialized discourses, critical theory, and queer theory. The research contains an action agenda for reform that may change the lives of the participants, the institutions in which individuals work or live, and the researcher's life. 
-
-4. **Pragmatic worldview**. Pragmatism focuses on the outcomes of the research, the actions, situations, and consequences of inquiry, rather than antecedent conditions. There is a concern with applications and solutions to problems. Instead of focusing on methods, researchers emphasize the research problem and use all approaches available to understand the problem. This worldview is the philosophical underpinning of [mixed-methods research](../W5_Mixed_Methods/README.md).
-
-### Research approaches and designs
-
-A research approach is the plan and procedure for research that spans the steps from broad assumptions to detailed methods of data collection, analysis, and interpretation. 
-
-**Quantitative research** is an approach for testing objective theories by examining the relationship among variables. These variables can be measured, typically on instruments, so that numbered data can be analyzed using statistical procedures. The final written report has a set structure consisting of introduction, literature and theory, methods, results, and discussion. See the specific techniques for gathering numeric data in [Data Collection](../W6_Data_collection/README.md).
-
-**Qualitative research** is an approach for exploring and understanding the meaning individuals or groups ascribe to a social or human problem. The process of research involves emerging questions and procedures, data typically collected in the participant's setting, data analysis inductively building from particulars to general themes, and the researcher making interpretations of the meaning of the data. 
-
-**Mixed methods research** is an approach to inquiry involving collecting both quantitative and qualitative data, integrating the two forms of data, and using distinct designs that may involve philosophical assumptions and theoretical frameworks. The core assumption of this form of inquiry is that the combination of qualitative and quantitative approaches provides a more complete understanding of a research problem than either approach alone.
-
-### Tooling for reproducible research
-
-Data analysis requires software capable of handling large datasets, performing statistical tests, and documenting the process. In this course, researchers use R and RStudio. R is a programming language specifically designed for statistical computing and graphics. RStudio is an integrated development environment (IDE) that provides a graphical interface for R, making it easier to write scripts, view plots, and manage workspace variables.
-
-Reproducibility is a core requirement of modern data analysis. Reproducibility means that another researcher can take the original data and the original code, run it, and obtain the exact same results. To achieve this, researchers use R Markdown. R Markdown files combine executable R code with descriptive text written in Markdown. When the file is rendered, it executes the code and embeds the results (tables, plots, statistical outputs) directly into a final document, such as a PDF or HTML file. This process eliminates the manual copying and pasting of results, which is a common source of error in academic publishing. 
+## Cross-References
+* Return to the [Course Root](../../README.md)
+* Next topic: [Problem Formulation and Research Questions](../W2_1_Problem_and_Research_Questions/README.md)
 
 ## References and Materials
 
