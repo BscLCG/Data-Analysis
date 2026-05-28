@@ -1,8 +1,6 @@
 # Data Analysis
 Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.
 
-<img width="1898" height="1074" alt="image" src="https://github.com/user-attachments/assets/058a442b-41f0-4e33-a616-64a3f60243d8" />
-
 ## Topics
 
 - [W1: Intro and research](Topics/W1_Intro_and_research/README.md)
