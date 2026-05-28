@@ -1,0 +1,748 @@
+
+--- FILE: W1. DOA.docx ---
+Project context & problematization
+In this section you should establish the "Why" of the research before diving into the "How."
+Questions and hypothesis
+In this section you should establish the "What" of the research before diving into the "How."
+Philosophical assumptions
+In this section you should describe how your world view interacts and shapes your research.
+Research design & strategy
+In this section you should describe how you plan to develop your research, and the frameworks that will host the methodological approaches you’ll develop to carry out your study.
+Research methodology
+In this section you should describe “How” you intend to research your proposed topic, identifying relevant methods that will enable you to achieve your research objective(s).
+Ethics & Timeline and planning
+References
+
+--- FILE: W1. Intro and  research approaches.pptx ---
+Slide 1:
+1
+27/03/2026
+Data analysis
+Luis Carlos Guevara
+
+Faculty of Finance, Government and International Relations
+2026-I
+Slide 2:
+2
+27/03/2026
+Objectives
+1.
+Instrument design
+2.
+Fieldwork and data processing
+Data analysis
+Develop the skills of data collection, management, processing, and analysis (both quantitative and qualitative), with the aim of producing research projects that are coherent, comprehensible, and well‑structured.
+Developing evidence following a structured process
+Slide 3:
+3
+27/03/2026
+Objectives
+Competencies
+Understand a social phenomenon in depth, relevant to a research project
+Implement a robust research project to address specific problems
+Incorporate ethical considerations in the collection and treatment of both primary and secondary data
+Connect the research project to its relevant social, political, economic, or environmental context
+Communicate the development, findings, and implications of the research project clearly and effectively
+Develop the skills of data collection, management, processing, and analysis (both quantitative and qualitative), with the aim of producing research projects that are coherent, comprehensible, and well‑structured.
+Data analysis
+Slide 4:
+4
+27/03/2026
+Objectives
+What is the thematic structure we will be developing?
+Data analysis
+Slide 5:
+5
+27/03/2026
+Course Tools
+Data analysis
+Slide 6:
+27/03/2026
+The course objectives are to foster competencies in the collection, management, processing, and analysis of both quantitative and qualitative data, with the aim of producing research projects that are coherent, accessible, and well‑structured.
+6
+Slide 7:
+7
+27/03/2026
+We will pursue the course objectives through two complementary approaches
+Course Tools
+1.
+Practical engagement with data and statistical softwareYou will work directly with datasets using specialized analytical tools to strengthen your technical proficiency and applied research skills
+2.
+Conceptual deepening in statistics and research methodology
+Theoretical sessions will reinforce core statistical concepts and methodological frameworks, enabling you to critically interpret data and design robust research strategies.
+Data analysis
+Slide 8:
+8
+27/03/2026
+We will pursue the course objectives through two complementary approaches
+Course Tools
+1.
+Practical engagement with data and statistical software
+Problem sets
+Quizzes
+20%
+Submissions 
+(4 deliverables)
+10%
+70%
+2.
+Conceptual deepening in statistics and research methodology
+Data analysis
+Slide 9:
+9
+27/03/2026
+1.
+Hands-on work with data and statistical software
+
+You will engage directly with datasets using tools such as R and RStudio to develop practical skills in data analysis and interpretation
+Course Tools
+We will use multiple statistical and research software
+2.
+Management of sources and academic literature
+
+Zotero will be used to organize bibliographic references and streamline the handling of research materials
+3.
+Design and implementation of data collection instruments
+
+You will create and apply structured forms using platforms like Qualtrics to gather primary data for research purposes.
+Data analysis
+2.
+Management of sources and academic literature
+
+Zotero will be used to organize bibliographic references and streamline the handling of research materials
+Slide 10:
+10
+27/03/2026
+Design and develop
+26-01
+Project definition
+25-02
+DOA - First submission
+18-03
+Data collection instrument/form
+Start of data collection
+08-04
+End of data collection
+Second submission
+29-04
+Third submission
+Start of data description and analysis
+20-05
+Review academic literature on the chosen social phenomenon to identify key concepts, theories, and findings.
+Define an appropriate research design aligned with your objectives and methodological approach.
+Develop tailored instruments, such as questionnaires and interview guides, for data collection.
+Implement
+Collect quantitative and qualitative data in accordance with the chosen research design and aligned with the research questions.
+Conduct appropriate data analyses tailored to the types of data collected, ensuring that the findings effectively address the research questions posed
+Analyse and communicate
+Identify the contextual implications of the research project, considering its impact from design through to results.
+Clearly communicate the project’s findings, meeting professional standards of oral, written, and visual communication.
+Project Timeline and Development Steps
+Data analysis
+Last submission
+Slide 11:
+27/03/2026
+Before we begin, lets talk LLMs 🤖
+11
+Slide 12:
+27/03/2026
+LLMs
+12
+27/03/2026
+Human
+Can you explain to me the intuition behind a logistic model, with an emphasis on the interpretation of its results?
+AI Assistant
+
+A logistic model is a statistical technique used to predict the probability of a binary event (for example, success vs. failure, yes vs. no, 1 vs. 0) based on one or more independent variables.
+It takes text inputs and produces results in terms of a prediction of the words that might follow in the text.
+Keep calm and ________
+carry on
+Data analysis
+Slide 13:
+27/03/2026
+13
+Large Language Models predict the next word based on probabilities conditioned by preceding text. 
+
+For example, with the input “Keep calm and carry …”, a model trained on historical wartime texts would strongly favour “on”, reflecting the original British slogan. 
+
+However, with more recent inputs, the probability might shift towards alternatives like “shopping” or “coding”, showing that predictions depend on the specific cultural and textual context.
+Taken from: Keep Calm and Carry On - Wikipedia
+Slide 14:
+27/03/2026
+LLMs
+14
+27/03/2026
+Human
+Can you explain to me the intuition behind a logistic model, with an emphasis on the interpretation of its results?
+Asistente de IA
+A
+Human
+Can you explain to me the intuition behind a logistic model, with an emphasis on the interpretation of its results?AI Assistant 
+A
+AI AssistantA logistic model
+Human
+Can you explain to me the intuition behind a logistic model, with an emphasis on the interpretation of its results?AI Assistant 
+A logistic
+AI AssistantA logistic model
+Humano
+Can you explain to me the intuition behind a logistic model, with an emphasis on the interpretation of its results?AI Assistant 
+A logistic model …
+AI AssistantA logistic model is
+Human
+Can you explain to me the intuition behind a logistic model, with an emphasis on the interpretation of its results?AI Assistant 
+A logistic model …
+AI AssistantA logistic model is a statistical technique used to predict the probability of a binary event (for example, success vs. failure, yes vs. no, 1 vs. 0) based on one or more independent variables
+Large Language Models (LLM)
+An LLM is a sophisticated mathematical function that predicts which word ‘follows’ after any given piece of text.”
+Data analysis
+Slide 15:
+27/03/2026
+LLMs
+15
+27/03/2026
+Large Language Models (LLM)
+A Large Language Model (LLM) is a sophisticated mathematical function that predicts which word is likely to follow any given piece of text.
+The LLM does not predict the exact word; instead, it assigns a probability to all the words that could follow in the text sequence.
+Camarón que se duerme, se lo lleva la_______
+In interaction with the user, the most probable words are presented based on the context of the “conversation”, but less probable words may also be included to give the text a more “natural” feel.
+Data analysis
+Slide 16:
+27/03/2026
+LLMs
+16
+27/03/2026
+Large Language Models (LLM)
+LLMs assign probabilities to possible next words in a sequence, rather than predicting a single word with certainty.
+This probabilistic approach allows for natural, context-sensitive text generation.
+Logistic models are statistical tools used to estimate the probability of a binary event (e.g., success vs. failure).
+They transform a linear combination of predictors into a probability using the logistic function.
+Unlike linear models, which produce hard class boundaries, logistic models' smooth transitions, making them more robust to noise and uncertainty.
+The ROC curve evaluates model performance by showing the trade-off between sensitivity and specificity across decision thresholds
+Data analysis
+Slide 17:
+27/03/2026
+LLMs
+17
+27/03/2026
+Calvo Hernández, Danny. “Discovering Language Model Behaviors with Model-Written Evaluations.” Findings of the Association for Computational Linguistics: ACL 2023, Association for Computational Linguistics.
+Pretraining
+The process we’ve just described is only the beginning. Successfully completing a passage of text is not the goal of an AI assistant
+RLHF – Reinforcement Learning with Human Feedback
+To move beyond basic text completion, models undergo Reinforcement Learning with Human Feedback (RLHF).
+Human annotators identify and flag unhelpful or problematic predictions. These corrections are incorporated into the model’s parameters.
+Fine-tuning with RLHF encourages the model to generate responses that maximize reward signals, sometimes excessively.A well-known example involves an OpenAI model trained to favor positive sentiment: it concluded that weddings were the most positive topic and began generating wedding-related content regardless of the prompt.
+
+This illustrates how the model may “play the training game”, optimizing for reward rather than coherence or relevance.
+Data analysis
+Slide 18:
+27/03/2026
+18
+27/03/2026
+Replication Crisis and the WEIRD Critique
+Over the past decade, the fields of psychology and economics have faced a replication crisis:
+While 62% of experimental studies can be replicated, the effect size is typically half that of the original findings.
+File drawer studies
+Dependence on statistical significance
+Pre-registration of analyses
+Publishing all results
+WEIRD populations, Western, Educated, Industrialised, Rich, and Democratic,  have a unique conception of individualism.
+This has significantly shaped Western culture and the systematic evidence surrounding behavioural change.
+Data analysis
+Slide 19:
+27/03/2026
+19
+27/03/2026
+Be. FM
+Taken from: Using language models to decipher the motivation behind human behaviors
+Y Xie, Q Mei, W Yuan, MO Jackson - arXiv preprint arXiv:2503.15752, 2025
+Cited by 2 Related articles All 3 versions
+Be.FM (Behaviour Foundation Model) is a pioneering open-source foundation model developed to understand and simulate human decision-making. It was introduced by researchers from the University of Michigan, Stanford, MobLab, and the Santa Fe Institute.
+Benchmarks  Be.FM
+Data analysis
+Slide 20:
+20
+27/03/2026
+And other LLMs
+ChatGPT is a chat-based artificial intelligence system developed by OpenAI that uses Large Language Models (LLMs).
+
+These models are trained on vast amounts of textual data and can generate human-like text, answer questions, and perform other language-related tasks with high accuracy.
+
+Although LLMs can articulate coherent responses, they often struggle with factual precision. Moreover, they may lack the ability to provide innovative or creative solutions, or to incorporate situational context effectively
+LLMs
+Data analysis
+Slide 21:
+21
+27/03/2026
+LLMs
+Slide 22:
+27/03/2026
+22
+Large Language Models explained briefly
+Taken from:  3Blue1Brown
+According to the video, what is the primary function of a large language model (LLM)? (0:36-0:43)
+How does a chatbot use an LLM to generate its responses, and why might you get a different answer each time you ask the same question? (0:53-1:27)
+Briefly describe the "pre-training" process for an LLM, including what kind of data is used and what "parameters" are. (1:29-2:12)
+Besides pre-training, what is another crucial type of training mentioned for chatbots, and how does human feedback play a role in it?
+Slide 23:
+27/03/2026
+⚠️Inappropriate use of this technology in academic work can lead to serious consequences. Among them:
+
+No grade awarded for your work. Using AI‑generated responses without proper review or citation may be considered plagiarism.
+
+Lack of learning. Relying exclusively on AI to complete tasks can prevent you from developing critical thinking and analytical skills.
+
+Academic sanctions. In some cases, the improper use of digital tools may result in disciplinary measures under university policies.
+23
+Slide 24:
+24
+27/03/2026
+Philosophical Foundations of Science
+Describe the three main research methodologies and their differences to select an approach appropriate for your study.
+Explain the relationship between philosophical worldviews, underlying assumptions, research designs and methods.
+Slide 25:
+25
+27/03/2026
+How do you approach research?
+Slide 26:
+26
+27/03/2026
+Research approaches are processes that encompass several stages: from the definition of assumptions to the collection and interpretation of data.
+Research approaches
+This process involves making multiple decisions across its various components.
+The most general decision within such processes concerns selecting the approach to be used to study a topic of interest
+Data analysis
+Slide 27:
+27
+27/03/2026
+Research approaches
+Research approaches or methodologies
+Research Designs
+Encompass the major traditions that have emerged historically in the development of research. They guide how knowledge is generated and understood.
+Philosophical Assumptions
+These are the researcher’s subjective viewpoints and sets of beliefs that inform the overall approach taken in a study. They shape how the researcher understands reality and what counts as valid knowledge.
+These are the specific ways in which research is conducted within a broader methodology. Each design has its own procedures, strategies, and logic for carrying out a study.
+Research Methods
+Within a particular design, the researcher collects data, analyses them, and interprets their meaning. These are the concrete techniques and procedures applied in a study.
+Data analysis
+Slide 28:
+28
+27/03/2026
+Research approaches
+Quantitative Methods
+Qualitative Methods
+Mixed Methods
+These incorporate elements from both qualitative and quantitative approaches.
+What is the difference between quantitative and qualitative methods?
+Slide 29:
+29
+27/03/2026
+Research approaches
+What is the difference between quantitative and qualitative methods?
+Qualitative Methods
+Quantitative Methods
+Use of words
+Use of numbers
+Closed‑ended questions and answers
+Open‑ended questions and answers
+A more rigorous way to study/define the differences between qualitative and quantitative methods can be found in:
+Data analysis
+1.
+Philosophical assumptions
+2.
+Research designs
+3.
+Methods for data collection, analysis, and interpretation
+Slide 30:
+30
+27/03/2026
+Research approaches
+1.
+Philosophical assumptions
+2.
+Research designs
+3.
+Methods for data collection, analysis, and interpretation
+Quantitative Methods
+Qualitative Methods
+An approach aimed at exploring and understanding the meanings that individuals or groups attribute to a social or human problem
+It follows an inductive style that moves from data towards themes, focusing on individual meaning and emphasizing the importance of reporting the complexity of a situation.
+It involves emergent questions and procedures; data are typically collected in the participants’ setting, and the analysis is built inductively from the details to broader themes, with the researcher interpreting the meaning of the data.
+What is the difference between quantitative and qualitative methods?
+1.
+Philosophical assumptions
+2.
+Research designs
+3.
+Methods for data collection, analysis, and interpretation
+An approach used to test objective theories by examining the relationship between variables or comparing groups.
+It tests theories deductively, incorporates safeguards against bias, controls for alternative or counterfactual explanations, and seeks to generalize and replicate findings.
+Variables can be measured, typically through instruments, so that numerical data may be analyzed using statistical procedures.
+Data analysis
+Slide 31:
+31
+27/03/2026
+Philosophical assumptions
+Research designs
+Methods for data collection, analysis, and interpretation
+Positivist
+Constructivist
+Transformative
+Pragmatic
+Questions
+Data Collection
+Data Analysis
+Interpretation
+Validation
+Quantitative
+Qualitative
+Mixed Methods
+Approaches to research
+A Framework for Research
+Data analysis
+Slide 32:
+The philosophical ideas held by researchers influence their research practice and therefore need to be explicitly identified.
+
+When preparing a research proposal, these assumptions should be clearly presented.
+
+Philosophical assumptions or viewpoints are the beliefs and values that highlight the elements the researcher considers most important when conducting a study.
+
+These beliefs and values develop from the researcher’s experiences and academic training.
+Philosophical assumptions
+27/03/2026
+32
+27/03/2026
+Data analysis
+Slide 33:
+33
+27/03/2026
+Our beliefs and viewpoints shape the approach we adopt when carrying out research.
+⚠️
+Slide 34:
+27/03/2026
+34
+27/03/2026
+How to present philosophical ideas, worldviews, and assumptions explicitly?
+1.
+Present the philosophical worldview adopted by the researcher.
+2.
+Provide a definition of this worldview and explain its origins.
+🌍 The term worldview offers a global perspective for research within a context of international and global interconnections.
+
+Worldviews are defined as a general philosophical orientation regarding the world and the nature of research that a researcher develops , a basic set of beliefs that guide action.
+3.
+Explain how this worldview shapes the research approach.
+Worldviews are grounded in disciplinary orientations, research communities, supervisors and mentors, previous research experiences, and cultural experiences. These factors lead researchers to adopt a qualitative, quantitative, or mixed methods approach in their work.
+Philosophical assumptions
+Data analysis
+Slide 35:
+35
+27/03/2026
+4 World views
+Understanding
+Meanings derived from multiple participants
+Social and historical construction
+Generation of theories
+Determinism
+Reductionism
+Empirical observation and measurement
+Verification of theories
+Political
+Oriented towards power and justice
+Collaborative
+Change‑oriented
+Consequences of actions
+Problem‑centered
+Pluralistic
+Practice‑oriented
+Transformative
+Pragmatic
+Constructivist
+Positivist
+Worldviews are defined as a general philosophical orientation regarding the world and the nature of research that a researcher develops.
+
+They are a basic set of beliefs that guide action.
+Slide 36:
+4 World views
+27/03/2026
+36
+27/03/2026
+Constructivism (Interpretivism)
+Frequently used in qualitative approaches.
+It seeks to study perspectives, meanings, interpretations, and subjective experiences rather than reducing them to categories or predefined ideas.
+1.
+Understanding
+Individuals construct the meaning of a situation within a specific temporal and spatial context.
+2.
+Multiple participants
+Meanings are constructed socially and historically, shaped by social and cultural norms. Therefore, the processes through which individuals interact and integrate become highly significant.
+3.
+Theory generation
+The researcher’s intention is to make sense of, or interpret, the meanings that others hold about the world.
+
+Rather than beginning with a theory (as in post‑positivism), researchers generate or develop theories inductively, deriving patterns of meaning from participants’ accounts.
+Data analysis
+Slide 37:
+27/03/2026
+37
+27/03/2026
+Positivism (the Scientific Method)
+Positivism represents the traditional form of research, and its assumptions remain relevant for both quantitative and qualitative approaches.
+1.
+Determinism
+It maintains a deterministic philosophy in which causes determine effects. There is a need to identify and assess the causes that influence outcomes.
+2.
+Reductionism
+This perspective aims to reduce ideas to a small, discrete set to be tested, such as the variables that constitute hypotheses and research questions.
+3.
+Observation and measurement
+It focuses on the careful observation and measurement of objective reality, using numerical measures of observations. The study of individual behavior becomes essential to this approach.
+4.
+Theory verification
+Within the scientific method, research begins with a theory that is evaluated through data collection and evidence. Revisions are then made, followed by additional testing.
+4 World views
+Data analysis
+Slide 38:
+27/03/2026
+38
+27/03/2026
+Transformative
+Emerges as a response to the structural laws and theories of positivism, which often fail to reflect the reality of marginalised social groups affected by issues of power, social justice, discrimination, and oppression.
+1.
+Political
+This worldview holds that research must be intertwined with politics and a political agenda aimed at confronting social oppression wherever it occurs.
+2.
+Oriented towards power and justice
+Researchers must address important social issues such as empowerment, inequality, oppression, domination, suppression, and alienation.
+3.
+Change oriented
+Research includes an action agenda for reform that can transform the lives of participants, the institutions in which they work or live, and the researcher’s own life.
+4.
+Collaborative
+It assumes that the researcher will work collaboratively so as not to further marginalise participants. Participants may help design questions, collect data, analyse information, or share in the benefits of the research.
+4 World views
+Data analysis
+Slide 39:
+27/03/2026
+39
+27/03/2026
+Pragmatism
+Pragmatism emerges from actions, situations, and consequences rather than from antecedent conditions (or theories).
+1.
+Focus on problems and methodological pluralism
+There is an emphasis on applications, on what works,  and on finding solutions to practical problems
+
+Instead of prioritizing specific methods, researchers place the research problem and questions at the centre and use any available approaches to understand that problem.
+
+In other words, this worldview directs attention to the research problem itself within social science research, and then encourages the use of pluralistic approaches to collect data that best illuminate it
+4 World views
+Slide 40:
+40
+27/03/2026
+Philosophical assumptions
+Research designs
+Methods for data collection, analysis, and interpretation
+Positivist
+Constructivist
+Transformative
+Pragmatic
+Questions
+Data Collection
+Data Analysis
+Interpretation
+Validation
+Quantitative
+Qualitative
+Mixed Methods
+Approaches to research
+A Framework for Research
+Slide 41:
+41
+27/03/2026
+Research designs
+Convergent design
+Sequential explanatory design
+Sequential exploratory design
+Embedded (nested) design
+Experiments
+Surveys
+Single‑subject designs
+Longitudinal designs
+Descriptive methods
+Narratives
+Phenomenology
+Ethnography
+Case studies
+Grounded theory
+Qualitative
+Quantitative
+Mixed
+Within the available methods (quantitative, qualitative, and mixed methods), YOU, as a researcher, must select the specific designs used to develop the project.
+
+Research designs are types of inquiry within methodological approaches that provide a specific direction for the procedures to be carried out in a study.
+Slide 42:
+27/03/2026
+Research designs
+42
+27/03/2026
+Qualitative
+Descriptive Method
+Focus: Close analysis of data with limited frameworks or interpretations.
+Purpose: To categorise information into themes.
+
+Narrative Research
+Focus: The study of individuals’ lives through their stories.
+Purpose: To create a narrative chronology and to integrate both participant and researcher perspectives.
+
+Phenomenological Research
+Focus: The description of individuals’ lived experiences of a phenomenon.
+Purpose: To capture the shared perspectives among several people who have experienced the phenomenon.
+Grounded Theory
+Focus: The derivation of an abstract theory grounded in participants’ views.
+Purpose: To refine and interrelate categories of information in order to construct a theory.
+
+Ethnography
+Focus: The study of shared behavioural patterns, language, and actions within a cultural group in its natural environment.
+Purpose: Long‑term observations and interviews to understand the group's culture.
+
+Case Studies
+Focus: An in‑depth analysis of a specific case such as a programme, event, activity, or individual.
+Purpose: To collect rich, detailed information using multiple data‑gathering procedures.
+Data analysis
+Slide 43:
+27/03/2026
+43
+27/03/2026
+Quantitative
+Non‑experimental quantitative research includes causal‑comparative research, in which researchers compare groups based on an independent variable that has already been observed.
+
+It uses correlational statistics to describe and measure the relationships between variables. These designs may involve complex relationships between variables, employing techniques such as structural equation modelling, hierarchical linear modelling, and logistic regression.
+Recent quantitative strategies have incorporated complex experiments with multiple variables and treatments, such as factorial designs and repeated‑measures designs.
+
+These designs frequently rely on longitudinal data collection to identify how ideas and trends develop over time and often include sophisticated structural equation models that identify causal pathways.
+Research designs
+Data analysis
+Slide 44:
+27/03/2026
+44
+27/03/2026
+Mixed
+Mixed methods research involves the collection of both quantitative and qualitative data and the combination or integration of these data to generate insights or inferences. 
+
+The joint use of quantitative and qualitative data helps neutralise the weaknesses of each type of data.
+
+The combination of data sources therefore becomes a means of seeking convergence between qualitative and quantitative approaches.
+Systematic integration of quantitative and qualitative data has led to the development of different ways of combining data across various kinds of research designs.
+Research designs
+Data analysis
+Slide 45:
+27/03/2026
+45
+27/03/2026
+Mixed designs
+Research designs
+Convergent
+Focus: To integrate  quantitative and qualitative data collected in parallel.
+Purpose: To provide a comprehensive analysis of the research problem by identifying points of convergence and divergence between the two types of evidence.
+
+Sequential exploratory
+Focus: Qualitative research followed by quantitative research.
+Purpose: To use qualitative findings to inform and construct the subsequent quantitative phase.
+
+Sequential explanatory
+Focus: Quantitative research followed by qualitative research.
+Purpose: To explain quantitative findings in greater depth through qualitative data.
+Complex (Embedded)
+Focus: The incorporation of core designs within a broader research framework or process.
+Purpose: To explain quantitative results using qualitative data, to document cases, or to generate cases for further analysis.
+Data analysis
+Slide 46:
+46
+27/03/2026
+Research methods
+Quantitative Methods
+Qualitative Methods
+Mixed Methods
+Data collection often involves visiting the research site to observe participants or conducting interviews, generally without highly structured questions.
+Methods are emergent rather than fixed.
+Questions are open‑ended.
+Data come from interviews, observations, documents, and audiovisual materials.
+Analysis focuses on text and images, identifying patterns and themes.
+Data are collected using instruments, tests, and behavioural checklists.
+Methods are pre‑determined.
+Questions are typically closed‑ended and based on structured instruments.
+Analysis and interpretation rely on statistical procedures.
+Slide 47:
+47
+27/03/2026
+Research methods
+Slide 48:
+48
+27/03/2026
+Research approaches
+1.
+Quantitative Approach: Post‑positivist Perspective
+Design: Experimental design with pre‑test and post‑test measures of attitudes
+The researcher tests a theory by specifying clear hypotheses and collecting data to support or refute them.
+
+An experimental design is used to assess participants’ attitudes before and after an experimental treatment.
+
+Data are gathered using an instrument that measures attitudes, and the results are analysed using statistical procedures and hypothesis testing.
+2.
+Qualitative Approach: Constructivist Perspective
+Design: Ethnographic design with behavioural observation
+The researcher seeks to understand the meaning of a phenomenon from the perspectives of participants.
+
+This involves identifying a group that shares a common culture and studying how shared behavioural patterns develop over time.
+
+A key component of this design is the direct observation of participants as they take part in relevant activities.
+3.
+Mixed Methods Approach: Pragmatic Perspective
+Design: Sequential explanatory design
+Mixed methods research assumes that collecting multiple types of data provides a more complete understanding of a research problem than relying solely on quantitative or qualitative evidence.
+
+The study begins with a broad survey, allowing the researcher to generalise findings to a population.
+In a second phase, open‑ended qualitative interviews are conducted to obtain detailed perspectives that help explain the results of the initial quantitative phase.
+Slide 49:
+49
+27/03/2026
+Research approaches
+📑 week 2 reading:The Dictatorship of the Problem Choosing Research Methods
+
+What kinds of perspectives are present within your group that might influence your choice of research methodology?
+
+Vogt suggests six guiding questions to help select an appropriate research design. Based on your current topic drafts and project ideas, why would the other approaches not be suitable for your research?
+
+The author argues that research design is the first stage in a natural sequence of methodological decision‑making. Given this, which approach would be most effective for communicating with your intended audience, and why?
+
+--- FILE: W1. R studio y markdown.docx ---
+R, RStudio, and R Markdown
+How to install
+is a system for statistical calculations, table and data management, and graphic generation, among other functions. It is comprised of a dedicated language and execution environment.
+The language allows for control structures such as branching and loops.
+It supports modular programming through functions, which can be built by users or other contributors.
+It has a wide set of statistical procedures, such as linear and generalized models, time series analysis, parametric and non-parametric tests, clustering, and smoothing.
+It offers a set of functions dedicated to the creation of graphs and data representations.
+It allows for the installation of “add-on packages” for specific purposes, further expanding its functionality.
+After installing R, it is possible to install . It is an integrated development environment (IDE) for R, which includes a console, a syntax editor (for the codes we will write), and support for direct code execution.
+RStudio also contains tools that facilitate workflow, such as exploring objects (data, vectors, matrices, lists, and functions).
+It includes command history and variable lists.
+It can be understood as an interface for working with R, providing friendlier and more organized experience for writing code, debugging data, and visualizing results
+The user interface (UI) structure of RStudio is described by four sections
+Taken from https://bionesiacourse.github.io/2021Course/setup.html
+R Markdown
+R Markdown provides an authoring framework for data science, allowing code to be saved and executed while generating high-quality reports from a single file.
+It enables the reproducibility of results: both the code and the textual interpretation are in the same document.
+Results are generated automatically from the source code.
+It can be used as a library within R.
+After installing the library, you can start a new document via the File menu. Markdown documents use a specific file type: .rmd.
+Select File > New File > R Markdown (Steps 1 and 2).
+Provide a title and a date (Steps 3 and 4).
+Choose a format: HTML, PDF, or Word. In this course, we will mostly use PDF (which requires the tinytex package)
+A template consists of three types of elements:
+Metadata (Orange): Facilitates the construction and compilation of the document.
+Code Chunks (Purple): Where commands, functions, and operations are written using the R language.
+Text (Violet): Not conditioned by R language elements; mostly incorporates elements similar to HTML text construction.
+To compile the document, use the Knit option (Step 5). You will then be prompted for a file name and directory to export the final PDF
+Additional Resources
+Introduction to R Markdown: https://rmarkdown.rstudio.com/lesson-1.html or https://bookdown.org/yihui/rmarkdown/.
+Introduction to RStudio: https://education.rstudio.com/learn/beginner/.

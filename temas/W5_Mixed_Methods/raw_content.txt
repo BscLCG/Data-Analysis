@@ -1,0 +1,577 @@
+
+--- FILE: W5. Mixed Methods Procedures.pptx ---
+Slide 1:
+04/03/2026
+Mixed Methods Procedures
+Describe the six characteristics of mixed methods research.
+Create a justification for using mixed methods research in a proposal or study.
+Contrast quantitative and qualitative data.
+Identify, for a core design, its intent, procedures for data collection, integration, meta‑inferences, and validity.
+Choose a type of mixed methods design for a study and present the reasons for the choice.
+Slide 2:
+04/03/2026
+Mixed Methods Procedures
+2
+04/03/2026
+What should be considered when “mixing” quantitative and qualitative data?
+Qualitative data are open data, while quantitative data are closed data.
+The goal is to combine the strengths to develop a stronger understanding of the research problem or questions, while overcoming the limitations of each approach.
+Integration of methods and data must provide a stronger understanding of the problem or research question than either method alone.
+Slide 3:
+04/03/2026
+3
+04/03/2026
+Mixed Methods Procedures
+Slide 4:
+04/03/2026
+4
+04/03/2026
+1
+Characteristics of Mixed Methods Research
+2
+Justification for the Use of Mixed Methods
+3
+Definitions
+4
+Process of Developing a Mixed Methods Study
+Mixed Methods Procedures
+Slide 5:
+Frames the study with
+ worldviews or theories
+Draws conclusions,
+ knowledge, and interpretations
+Analyses the 
+connection
+Uses procedures to
+ connect the two
+ types of data
+Connects the 
+two types of data
+04/03/2026
+Characteristics of Mixed Methods Research
+5
+04/03/2026
+Collection of two types of data
+Slide 6:
+04/03/2026
+6
+04/03/2026
+1
+Characteristics of Mixed Methods Research
+2
+Justification for the Use of Mixed Methods
+3
+Definitions
+4
+Process of Developing a Mixed Methods Study
+Mixed Methods Procedures
+Slide 7:
+04/03/2026
+Characteristics of Mixed Methods Research
+7
+04/03/2026
+Access to data
+Researchers may have access to both quantitative and qualitative data, which allows for additional “mining” of information beyond the results obtained from quantitative or qualitative datasets
+
+A useful addition if you are trained in quantitative research is to collect qualitative data to provide evidence that supports numerical findings.
+
+Problems complexity
+For example, research and reporting during the pandemic, where daily statistics on new cases were observed alongside stories of people resisting vaccination.
+
+Added value of combining data
+A mixed‑methods perspective provides richer understanding compared with reporting only quantitative or only qualitative results.
+Slide 8:
+04/03/2026
+8
+04/03/2026
+1
+Characteristics of Mixed Methods Research
+2
+Justification for the Use of Mixed Methods
+3
+Definitions
+4
+Process of Developing a Mixed Methods Study
+Mixed Methods Procedures
+Slide 9:
+04/03/2026
+Definitions
+9
+04/03/2026
+Information collected where the researcher provides No predefined response options, such as rating scales (“strongly agree” to “strongly disagree”). 
+
+Applied to qualitative observations and documents, the researcher does not use a predetermined set of response options but rather observes or examines documents to identify meaning.
+Data types
+Distinguishing between the two types of data is more specific than simply referring to numbers versus text, or numeric data versus narratives. 
+
+Some data sources may contain both closed and open elements, such as health data that include closed scores from medical tests as well as open information from patient histories.
+Open data
+Information collected where researchers ask a question but do not provide a response option.
+.
+Closed data
+Slide 10:
+04/03/2026
+Definitions
+10
+04/03/2026
+Designs
+Procedure used to carry out a study, extending from broad philosophical assumptions to the interpretation of data.
+Basic designs
+Complex designs
+Convergent
+Explanatory sequential
+Exploratory sequential
+Experimental processes
+Participatory action research frameworks
+Case study procedures
+Evaluation processes
+Mixed Methods
+Slide 11:
+04/03/2026
+Definitions
+11
+04/03/2026
+Integration
+This involves combining or “mixing” quantitative and qualitative data within a study or across a series of studies.
+
+It consists of the reasons or “intent” for combining the two databases/sources and the procedures used to carry out this mixing.
+
+Integration varies depending on the type of mixed methods design. In terms of procedures:
+
+The researcher merges or combines the two databases 
+The researcher connects them, allowing one to build upon the other.
+
+For complex designs, integration involves incorporating one or more basic designs into a broader process or framework, such as an experiment, evaluation, or participatory action‑research project.
+Joint Display (visualisation)
+In procedures that involve combining data, the researcher needs some way of examining the effect of bringing the two databases together.
+
+A joint display is a table or chart that presents the side‑by‑side combination of the two databases.
+
+Joint displays vary across different designs, because the procedures for combining data differ depending on the design.
+Meta‑inference
+As the joint display table or chart is examined, conclusions are drawn about the understanding that emerges from comparing the two databases.
+In mixed methods, these insights are called meta‑inferences, meaning that a researcher reaches quantitative and qualitative conclusions and then draws additional inferences beyond what each method provides on its own.
+Slide 12:
+04/03/2026
+12
+04/03/2026
+1
+Characteristics of Mixed Methods Research
+2
+Justification for the Use of Mixed Methods
+3
+Definitions
+4
+Process of Developing a Mixed Methods Study
+Mixed Methods Procedures
+Slide 13:
+04/03/2026
+The process
+13
+04/03/2026
+The process of conducting a mixed methods study involves connecting quantitative and qualitative data with a specific type of mixed methods design.
+Draws a diagram of the design
+Integrates the two databases
+Presents the integration in a joint table or visualization for analysis
+Derives insights or meta‑inferences from the results of the integration
+Data collection
+After defining the methodology with key characteristics and a justification for its use, it is necessary to specify the types of qualitative and quantitative data collected.
+
+A useful strategy is to pose a general problem for the mixed methods study and gather two types of data (quantitative and qualitative) to address the issue of interest (i.e., benefits of having both open and closed information simultaneously).
+
+To merge the two databases during integration, it is necessary to have a clear idea of the types of data collected.
+⚠️You must state:
+Slide 14:
+Phase Phase 2
+Phase 3
+Phase 1
+How does 
+the testing improve our results?
+The process for central designs
+14
+Collection of quantitative data
+Collection of qualitative data
+Merging of results
+Interpretation of results
+Convergent (one‑phase design)
+Explanatory sequential (two‑phase design)
+Phase 2
+Phase 1
+How does
+ the qualitative 
+e explain the 
+quantitative?
+Collection of quantitative data
+Identification
+ of results
+Collection of qualitative data
+Interpretation
+of results
+Collection of qualitative data
+Identification of 
+an attribute 
+for testing
+Exploratory sequential (three‑phase design)
+Quantitative testing of the attribute
+Interpretation
+ of results
+Creswell and Plano Clark identified three basic mixed methods designs: the convergent design, the explanatory sequential design, and the exploratory sequential design.
+Creswell
+(2018)
+04/03/2026
+Slide 15:
+Convergent (one‑phase design)
+15
+Key assumption:
+Qualitative data and quantitative data provide different types of information, and their patterns/results are expected to converge.
+Detailed views from participants (qualitative)
+Scores on instruments (quantitative)
+When comparing the results, the additional purpose is to assess whether the findings:
+Converge (match) or diverge
+Mutually support a construct
+Validate one form of data with the other
+The goal of the convergent design is to compare the results of the qualitative database with those of the quantitative database by merging the results.
+Campbell y Fiske (1959)
+Based on the historical concept of the idea of multiple methods and multiple traits Campbell and Fiske (1959) suggested understanding a psychological trait by collecting different forms of data.
+Ideally, both forms of data should be collected using the same variables, constructs, or concepts.
+04/03/2026
+Collection of quantitative data
+Collection of qualitative data
+Merging of results
+Interpretation of results
+Measurement of the concept of self‑esteem:
+During quantitative data collection, questions are asked about the same concept that is also explored during the qualitative data collection process.
+Slide 16:
+Convergent (one‑phase design)
+16
+Sampling
+Typically, mixed methods researchers include the qualitative participant sample within the larger quantitative sample. Ultimately, the researchers compare the two databases, and the more similar they are, the better the comparison will be.
+04/03/2026
+Collection of quantitative data
+Collection of qualitative data
+Merging of results
+Interpretation of results
+Data analysis process
+Integration
+Side‑by‑side comparison
+These comparisons appear in the discussion sections of mixed methods studies.
+Themes‑to‑variables / data transformation
+Merge the two databases by changing or transforming qualitative codes or themes into quantitative variables and then combine the two quantitative databases.
+Graphical representation
+Merge the two forms of data into a table or graphic. This table or graphic is called a joint display.
+Slide 17:
+Convergent (one‑phase design)
+17
+04/03/2026
+Collection of quantitative data
+Collection of qualitative data
+Merging of results
+Interpretation of results
+Graphical representation – Joint display
+Slide 18:
+Convergent (one‑phase design)
+18
+04/03/2026
+Collection of quantitative data
+Collection of qualitative data
+Merging of results
+Interpretation of results
+Guetterman et al., (2015)
+Dickson et al. (2011) investigated how cognitive function and knowledge affected self‑care in heart failure, using a convergent design.
+In two specialised outpatient heart‑failure clinics in a large urban medical center in the United States, they administered standardized instruments to measure self‑care, knowledge, and cognitive function
+
+They simultaneously conducted interviews with patients to understand their self‑care practices.
+
+The integration focused on the concordance between the qualitative and quantitative results
+Dickson et al. developed a joint display comparing cases to compare interview data with quantitative scales of self‑care, cognitive function, and knowledge.
+In this example, the authors used the visualisation to validate the quantitative scores for knowledge and self‑care, while also identifying cases of inconsistencies.
+Slide 19:
+04/03/2026
+19
+04/03/2026
+The research in
+ central designs
+When divergence occurs, the researcher needs to conduct a follow‑up analysis.
+What to do when divergence is identified?
+Slide 20:
+Explanatory Sequential  (two‑phase design)
+20
+Key assumption:
+Quantitative results may produce unexpected, unusual, significant, or atypical findings, or demographic patterns that require additional explanation.
+
+The qualitative follow‑up phase provides this explanation.
+The qualitative data collection is directly based on the quantitative findings.
+04/03/2026
+Sampling
+Procedures must occur over time:
+The qualitative sample should be a subset of the quantitative sample. Researchers must anticipate the qualitative phase early, even before fully completing the quantitative phase.
+Data analysis process
+Slide 21:
+Explanatory Sequential  (two‑phase design)
+21
+04/03/2026
+Graphical representation – Joint display
+In an explanatory sequential design, the qualitative sample is a subset of the quantitative sample, leading to overlapping samples; the integration is achieved by connecting Phase 1 results to guide Phase 2 data collection, rather than by a post‑hoc side‑by‑side comparison.
+Slide 22:
+Convergent (one‑phase design)
+22
+04/03/2026
+Guetterman et al., (2015)
+Finley et al. (2013) carried out an explanatory sequential study with the aim of validating the Work Relationships Scale (WRS) for primary‑care clinics. They analysed the measurement properties of the WRS and correlations with patients’ ratings of quality of care
+They interviewed key informants about relationships in the clinics and analysed the interviews based on the seven characteristics of the WRS.
+
+They concluded that the interview data supported the statistical analysis, providing evidence of validity for the WRS and indicating the importance of relationships in delivering primary care.
+They developed a joint display of statistics by themes that compared clinics with low and high WRS scores
+Slide 23:
+04/03/2026
+23
+04/03/2026
+The research process
+in central designs
+As in all mixed methods studies, the researcher needs to establish the validity of the quantitative measure scores and the qualitative findings.
+Slide 24:
+Exploratory Sequential (three‑phase design)
+24
+Key assumption:
+
+We assume that qualitative data can improve (and make contextualised) quantitative measures, scales, or instruments.
+04/03/2026
+Data analysis process
+Sampling
+Should individuals in the qualitative sample also be individuals in the quantitative sample?
+
+No. The qualitative sample is typically much smaller than the quantitative sample needed to generalise to a population. However, a good procedure is to draw both samples from the same population but ensure that the individuals in each sample are not the same.
+Slide 25:
+Exploratory Sequential (three‑phase design)
+25
+04/03/2026
+Graphical representation – Joint display
+Slide 26:
+Exploratory Sequential (three‑phase design)
+26
+04/03/2026
+Guetterman et al., (2015)
+A joint display for instrument development mapped the qualitative dimensions of continuity of care to the items of the quantitative instrument.
+Haggerty et al (2012) carried out a sequential exploratory design to develop and validate an instrument that evaluates the continuity of care from the patients’ perspective. They examined themes from 33 qualitative studies on patient‑care experiences.
+Slide 27:
+04/03/2026
+27
+04/03/2026
+The research process
+in central designs
+As in all mixed methods studies, the researcher needs to establish the validity of the quantitative measure scores and the qualitative findings.
+Slide 28:
+04/03/2026
+Definitions
+28
+04/03/2026
+Designs
+Procedure used to carry out a study, extending from broad philosophical assumptions to the interpretation of data.
+Basic designs
+Complex designs
+Convergent
+Explanatory sequential
+Exploratory sequential
+Experimental processes
+Participatory action research frameworks
+Case study procedures
+Evaluation processes
+Mixed Methods
+Slide 29:
+The research process in
+complex designs
+29
+Qualitative interviews during the experiment
+(convergent)
+Qualitative interviews before the experiment
+(exploratory sequential)
+Mixed Methods Experimental Design
+04/03/2026
+Qualitative interviews after the experiment
+(explanatory sequential)
+Experiment with an interview and pre‑ and post‑test measures
+Recruitment of participants
+Development of applicable interventions
+Development of pre‑test and post‑test measures
+Examination of participants’ experiences
+Modifications to the treatment
+Examination of the results
+Modifications to the experiment
+Integration of qualitative and quantitative data
+This design allows the researcher to collect and analyse both qualitative and quantitative data within the same study.
+Support for experimental data collection
+Qualitative data support the pre‑test and post‑test measurements of the experiment
+Different forms of integration
+Qualitative data may be added before, during or after the experiment.
+Methods
+Slide 30:
+The research process in complex designs
+30
+Case selection criteria
+Interpretation
+Mixed Methods Case Study Design
+04/03/2026
+Quantitative survey
+In this design, the researcher integrates a central design within the broader process of developing case studies for analysis. 
+
+The central design is a convergent design
+The process consists of developing cases inductively for their description and comparison.
+
+Deductive approach
+The cases are established at the beginning of the study.
+Differences between the cases are documented through qualitative and quantitative data.
+
+Inductive approach
+The researcher collects and analyses both types of data.
+Cases are formed during the research process based on the evidence gathered.
+
+Description and Comparison of Cases
+Describing each case
+Then discussing the similarities and differences between cases
+
+Challenges in Case Identification and Understanding
+Identifying the cases before the study begins
+Generating cases based on the evidence collected
+Qualitative interview
+Data analysis
+Data analysis
+Interpretation
+Case description and themes (Case 1)
+Case description and themes (Case 2)
+Case description and themes (Case 3)
+Comparison between cases and interpretation
+Slide 31:
+The research process in complex designs
+31
+Implementation of a new model
+Participatory Action Research Design in Mixed Methods
+04/03/2026
+Monitoring, implementation, and improvement
+Active community participation
+Community members actively participate in the research. They collaborate closely with researchers throughout the entire research process.
+
+Focus on social change
+Social‑justice studies aim not only to gather data but also to promote significant social change and actions that improve people’s lives. This approach goes beyond data collection and focuses on meaningful, concrete actions for the community.
+
+Collaborative evaluation process
+Evaluation, collection, and analysis of mixed‑data sources
+Community diagnosis
+Planning and selection of a tailored model
+Collection of mixed data from community members
+Mixed
+methods core design
+Slide 32:
+The research process in complex designs
+32
+Mixed Methods Evaluation Design
+04/03/2026
+Evaluation of needs
+
+Qualitative phase
+Interviews
+Observations
+Documents
+Integration of quantitative and qualitative data
+This design combines quantitative and qualitative data within an evaluation framework to provide a more complete and detailed understanding of the programme, experiment, or policy being evaluated.
+
+Central designs
+Across these projects, multiple central designs are often used.
+Integration: Building from a qualitative evaluation toward theory
+Theory contextualization
+
+Quantitative phase
+Sequential exploratory design
+Development of instruments and measures
+Quantitative phase
+Implementation and evaluation
+
+Quantitative phase
+Experimental intervention based on quantitative measures
+Follow‑up
+Qualitative phase
+Interviews
+Observations
+Documents
+Sequential explanatory design
+integration
+Combining exploratory and explanatory approaches
+It is possible to use multiple central designs.
+Slide 33:
+04/03/2026
+33
+04/03/2026
+The research process
+in central designs
+The intention for using a design and the procedures for carrying out the research differ depending on whether the design is central or complex.
+
+The aim of this design is to carry out a research process in which both quantitative and qualitative data and their integration shape one or more stages of the process.
+
+How to develop a justification for the choice of design type?
+
+The intention for using a design and the procedures for carrying out the research differ depending on whether the design is central or complex.
+Convergent design: Integration involves comparing the results of the quantitative and qualitative data by merging them, so that a more complete understanding emerges than that provided by either quantitative or qualitative results alone.
+
+Explanatory sequential design: Integration involves explaining the results of the initial quantitative phase by connecting it to a qualitative phase. This connection includes which questions need further exploration and who can best help explain the quantitative results.
+
+Exploratory sequential design: Integration involves initial exploration by collecting qualitative data, analysing it, and using the qualitative results to build a culturally specific measure or instrument for quantitative testing with a large sample.
+Slide 34:
+Selection of designs based on purposes and procedures
+34
+04/03/2026
+Will you collect quantitative and qualitative data?
+A mixed‑methods design is not required
+No
+Yes
+Will you compare the data or build one upon the other?
+There is no integration process
+No
+Will you compare the data?
+Convergent design
+Yes
+Will you build from one type of data to the other?
+From quantitative to qualitative
+From qualitative to quantitative
+Yes
+Explanatory sequential
+Exploratory sequential
+Do you plan to expand a conceptual framework or process as central mixed‑methods?
+No
+Which  is the framework or process?
+Intervention
+Case study
+Evaluation
+Participatory
+Choose the central design
+Central design
+Will you collect quantitative and qualitative data?
+A mixed‑methods design is not required
+No
+Yes
+Will you merge the data or build one upon the other?
+There is no integration process
+No
+Will you merge the data?
+Convergent design
+Yes
+Will you connect the data?
+Quantitative first
+Qualitative first
+Yes
+Explanatory sequential
+Exploratory sequential
+Do you plan to embed central designs within your overall procedural framework?
+No
+Which  is the framework or process?
+Intervention
+Case study
+Evaluation
+Participatory
+Choose the central design
+Central design
+Flowchart for choosing your type of design (based on procedures)
+Flowchart for choosing your type of design (based on purposes)
+Slide 35:
+04/03/2026
+35
+04/03/2026
+Selection of designs based on purposes and procedures

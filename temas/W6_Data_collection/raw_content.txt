@@ -1,0 +1,1186 @@
+
+--- FILE: W6. Forms in Qualtrics.docx ---
+Forms in 
+Qualtrics
+Data Analysis
+2026 – I
+The Qualtrics Environment
+When you log in to Qualtrics, the first page you will see is the control panel. Here you can create and manage your projects. A project is built from a predefined survey template or from scratch (a new survey-built step by step by you). Within the control panel, projects are organized into folders on the left side of the page.
+To create a new survey, go to the "Create Project" menu, then select creating a survey from scratch, and click the "Get started" button in the panel that appears on the right side of the page.
+Assign a short name to your project and select "Start with a blank survey" from the templates menu. In addition to creating a blank project, Qualtrics offers three additional options: "Import a QSF File": lets you upload a survey in Qualtrics Survey Format (QSF). "Copy a Survey from an Existing Project": lets you duplicate one of your existing surveys and use it as a base for the new one. "Use a Survey from Your Library": lets you use existing surveys available in the Qualtrics Library.
+After this, the project will appear on your control panel. Once the project is created, you can reorganize folders and subfolders to, for example, separate instruments with a qualitative versus quantitative focus. When you open one of your projects from the control panel, you will find the instrument development area. This page has 5 main tabs:
+In the Survey tab, you can edit the survey you have opened.
+In the Workflows tab, you can configure different types of notifications that will be triggered if a participant responds in a particular way (for example, selects a specific response option).
+In the Distributions tab, you can activate your survey and also have different options for how to distribute it. This is especially useful if you are conducting your research online.
+In the Data & Analysis tab, you can view individual responses or averages from your survey. However, to truly test your hypothesis, you will need to download the data and analyze it in Stata, R, SPSS, or another statistical software.
+In the Reports tab, you can create different visual representations of your survey results.
+Within the Survey tab, you will find 6 tools to customize and optimize the questions in your instrument:
+Question Type: allows you to select the format or type of question to include in the survey. The available options are:
+Multiple Choice: can be displayed as a traditional list of options or as a dropdown, selection box, etc.
+Text Entry: used to collect open-ended responses from respondents. These responses can be long essays or short text.
+Text/Graphic: can be used to add an introduction or instructions to your survey, or to display an asset such as an image.
+Matrix: used to collect multiple pieces of information in one question. This type provides an efficient way to condense your survey or group similar items in a single question.
+Slider: sliders allow respondents to indicate their level of preference with a draggable bar instead of a traditional button or checkbox.
+Form Field: allows collecting standard form information such as name and email address.
+Rank Order/Preference: used to determine each respondent's order of preference for a list of items.
+Side by Side: allows asking multiple questions in a condensed table, providing an efficient way to shorten your survey while collecting the same amount of data.
+Response Type: defines whether respondents can select a single or multiple answer options. This allows adjusting response flexibility according to the instrument's needs.
+Choices: here you configure the different response options available to respondents. You can add, edit, or delete options. You can also use suggested options or edit multiple options at once.
+Format: determines how response options will be displayed, such as in a vertical list, horizontal, or dropdown format, depending on what is most appropriate for the form.
+Response Requirements: allows setting rules or validations for responses, such as making the question mandatory or setting specific criteria that responses must meet.
+Question Behavior: offers advanced settings such as adding display logic (show or hide the question under certain conditions), skip logic (skip questions based on responses), randomization of options, and value recoding.
+Creating Question Blocks
+In Qualtrics, a question block is a set of (different types of) questions grouped within the same section of a survey. Blocks allow you to organize and structure surveys more efficiently, facilitating their management and modification. Each block can contain questions related to a specific topic or serve a particular function within the survey.
+The advantage of organizing different parts of a survey into blocks is that specific functions available in Qualtrics can be applied to all the questions within the same block. One of the main advantages of this organization is that it allows, for example, randomly assigning 50% of participants to one form while the other 50% are assigned to another.
+Example Questionnaire with Random Block Assignment
+Following the instrument developed by Professor Dario Krpan, we will generate an instrument to investigate whether people's self-perception of time management can be influenced using default values, even when they did not receive an intervention that objectively changed their time management.
+More specifically, we will create a survey that will allow us to test whether setting participants' default answers in the time management questionnaire to "never" or "none" influences them to report less effective time management compared to setting these default responses to "very often" or "many".
+Therefore, our goal will be to build a simple survey consisting of 5 time management items taken from Oettingen et al. (2015). All participants in this experiment will respond to these 5 items. However, for half of the participants (Condition 0), the default response will be "never" or "none", while for the other half it will be "very often" or "many" (Condition 1). Each participant will be randomly assigned to one of the two experimental conditions. Applying this instrument will allow us to study the following hypothesis:
+For this purpose, the first block of the form will contain the informed consent form that participants must read to confirm their willingness to participate in the experiment.
+The second and third blocks will include the five items of the time management questionnaire. In the second block, the default options will be set to "never" or "none" (Condition 0), while in the third block the default options will be set to "very often" or "many" (Condition 1). The organization of the instrument must allow randomly assigning 50% of participants to Condition 0, while the other 50% will be assigned to Condition 1.
+Creating 3 Blocks
+In addition to the default block, create 2 more blocks, for a total of 3 question blocks. Then rename the blocks as follows: "Informed Consent", "Condition 1", and "Condition 0".
+Creating the Informed Consent
+With the 3 question blocks created, we need to create the consent form. To do this, first change (or add) a question of type "Text or Graphic". To write the question, click on the default question created in the block, and then click on "Rich Content Editor".
+Inside the text editor, include the following informed consent template:
+Now you need to configure the response option. To do this, first open the "Builder" tab (where you can find different features to edit questions) and then click on "Multiple Choice" under "Question Type". The question type we need is "Multiple Choice".
+Now there are 2 response options for the informed consent. Next, it is necessary to modify how the options are presented and to adjust behavior. For example, in the "Format" tab, you can display the response options as a List, Dropdown, or Selection Box. You can also change their alignment from vertical to horizontal or column. Additionally, if you want to require participants to answer this question, go to the "Response Requirements" tab, click "Add Requirements", and select "Force Response".
+Additionally, we need to make sure that participants who select "No, I do not want to participate" are immediately taken to the end of the survey, as they have chosen not to participate and should not be shown the survey. To do this, in the "Survey Builder" tab, scroll down to "Question Behavior" and select "Skip Logic".
+Then, when the "Skip Logic" window opens, you will need to configure "Skip to" as "End of Survey" if "No, I do not want to participate" "Is Selected". Finally, press "Confirm" to set the skip logic.
+Finally, to complete the consent form, we need to rename the question. Currently, the question is labeled "Q1". However, it is recommended to give each question a unique name so it can be easily recognized in the data analysis. To rename the question, click on "Q1", and the field where you can change the name will open (for example, you can name the question "Consent").
+Condition
+Now we will create the survey consisting of the following 5 items, with the default options set to "never" (items 1-4) or "none" (item 5):
+During the last 7 days, I managed time easily.
+During the last 7 days, I kept my appointments easily.
+How often did you feel in control during the last 7 days?
+How often did you feel relaxed during the last 7 days?
+How many projects did you complete during the last 7 days?
+To create the first item, click on "Add New Question" below the "Condition 0" block and select the following question type: "Slider".
+Then, by clicking on "Click to write the question text", you can open the text field and copy and paste Item 1: "1. During the last 7 days, I managed time easily." Since only one slider is needed to answer the question, you will have to remove the 2 redundant sliders (created by default). To do this, go to "Statements" under "Question Type" and set the number of statements to 1.
+With the first item created, it is now necessary to manipulate the default slider options. To do this, in the "Survey Builder" tab, find the "Question Behavior" menu and click "Default Choices". When the "Edit Default Choices" window opens, move the slider to the position you want to set as default and press "Save". This completes the first item for Condition 0. Now the other 4 items must be created using the same procedure used for Item 1. You can use the "Copy" function to copy and paste the first question 4 times and use it as a base for creating the remaining items, instead of starting from scratch.
+Condition 1
+The Condition 1 question block is the same as Condition 0, except that the default options are configured differently. Therefore, instead of recreating the Condition 1 items manually, we will simply copy Condition 0 and change the default options.
+Block Randomization
+We have created 2 Condition Blocks (0 and 1), but participants in our experiment will be randomly assigned to only one of them.
+For this you must go to the Survey Flow section. Here you can organize and control the structure of the survey. In this section, you can manage content blocks, such as questions or experimental conditions, through options to move, duplicate, or delete elements, and you can add new functionalities such as "Randomizer" to randomly assign participants to different conditions.
+To use this feature, first click on the "Add a New Element Here" menu and select "Randomizer". The randomizer must be moved below the "Informed Consent" block in the survey flow. To do this, press "Move" and hold down the left mouse button (it is very important that you keep the mouse button held down, otherwise you will not be able to move the randomizer). The field will turn green, and you must drag it below the "Informed Consent" block.
+Now it is necessary to convert the "Condition 0" and "Condition 1" blocks into "Randomizer" elements. To do this, first press "Move" within the "Condition 0" block (similar to how it was done with the randomizer in the previous example) and then drag it to "Add a New Element Here". Do the same with "Condition 1".
+Finally, select "Randomly present 1 of the following elements" within the "Randomizer". Also, check the "Evenly Present Elements" option. These features will ensure that only 1 condition is randomly shown to each participant and that a similar number of participants complete each of the two conditions. When finished, click the "Apply" button in the lower right corner of the page.
+Creating a Variable to Store Condition Assignment
+When a participant completes your form and you download the data, the dataset will not by default include a variable indicating which condition the participant was assigned to. However, this variable is important, as it constitutes the "independent variable" you will need for your statistical analyses. Therefore, it is necessary to create a variable using the "Embedded Data" functionality, which allows recording additional information beyond the responses to the questions.
+First, in the "Survey Flow" tab in the left menu, click on "Add a New Element Here" and select "Branch". Create 2 branches, one for each condition of the form.
+Now that the 2 "Branch" elements have been created, you will need to click on "Add a Condition" within each branch to determine the conditions under which they should be triggered. For the first branch, select the following logic:
+"Then, trigger the branch if question C0-1 (the first question in Condition 0) and Choice 1 (or simply '1', or sometimes '1 ', depending on the operating system and browser) and is displayed."
+For the second branch, the logic to select is: "Then, trigger the branch if question C1-1 (the first question in Condition 1) and Choice 1 (or simply '1', or sometimes '1 ', depending on the operating system and browser) and is displayed."
+Click "OK" in the lower right corner of each branch to save the logic. These rules mean that the first branch will be triggered whenever participants are assigned to Condition 0 (because the first question in Condition 0 is shown when that condition is active) and the second branch will be triggered whenever participants are assigned to Condition 1 (by the same logic with Condition 1).
+Now we need to create 2 "Embedded Data" elements to record that a participant is in Condition 0 when the first branch is triggered, and that a participant is in Condition 1 when the second branch is triggered. To create the 2 "Embedded Data" elements, click on "Add a New Element Here" twice, and then, for each element, select "Embedded Data".
+After this, you will need to move the first "Embedded Data" element inside the first "Branch" and the second "Embedded Data" element inside the second "Branch". To do this, press "Move" within each "Embedded Data" element and drag it to "Add a New Element Here" under the corresponding branch.
+The next step is to "Set Embedded Data". To do this, in each "Embedded Data" element, click on "Create new field or choose from dropdown", and type "Condition" in the text box. Then click "Set a value now" and enter 0 for the first "Embedded Data" element and 1 for the second "Embedded Data" element.
+Finally, when done, click the "Apply" button hidden in the lower right corner of the page. Now, these embedded data elements will create a variable called "Condition", where 0 will be assigned to all participants assigned to Condition 0 and 1 to participants assigned to Condition 1. This variable will appear in your dataset when you download it.
+Form Preview
+Before activating the survey and sending it to participants, it is important to test it ourselves to make sure it looks good and does exactly what we want it to do. To test the survey, we will use the preview function. Press "Preview" and then answer the questions yourself to confirm that everything works correctly.
+Before showing how to launch and distribute the survey, it is important to review the "IQ Score". This tool evaluates aspects such as survey length, whether it is suitable for mobile devices, the number of grammatical conjunctions in question text, among others. It then calculates how "smart" the survey is overall.
+Form Distribution
+When you open the "Distributions" tab, you will see that Qualtrics offers four main survey distribution options:
+Email
+Web
+Social
+Mobile
+Qualtrics also provides the option to purchase participants (Online Panel) who meet specific demographic criteria. However, it is recommended to use participant recruitment platforms such as Prolific Academic or Amazon Mechanical Turk for experiments, unless you need very specific participant groups that you cannot reach through these platforms.
+
+--- FILE: W6. Sample, data collection and instruments.pptx ---
+Slide 1:
+1
+25/03/2026
+Sample, data collection and instruments
+Slide 2:
+2
+25/03/2026
+Quantitative designs
+Surveys
+Purpose of the instrument
+Sampling process
+3
+Instrument development
+4
+Instrument administration
+1
+2
+Slide 3:
+3
+25/03/2026
+Quantitative designs
+Surveys
+1
+Purpose of the Instrument
+2
+Sampling Process
+3
+Instrument Development
+Slide 4:
+Quantitative designs
+The purpose
+To answer one or more research questions about variables of interest.
+Surveys
+The justification
+When justifying the choice of method, it is essential to recognise the advantages of survey designs: 
+
+Cost‑effectiveness
+Rapid data collection
+Constraints that prevent the use of other designs
+Type of Survey Method
+Indicate whether the survey will be cross‑sectional, with data collected at one point in time, or longitudinal, with data collected over time.
+Modes of Data Collection
+Fowler (2014) identifies the following types:
+Regarding internet surveys and online administration, there has been significant growth in their popularity because they provide easy access to participants around the world, such as through platforms like Amazon Mechanical Turk and Prolific.
+Regardless of the data‑collection mode, it is important to justify the chosen procedure, drawing on its strengths, weaknesses, costs, data availability, and convenience.
+4
+25/03/2026
+Slide 5:
+Quantitative designs
+Key approaches to obtain factors that would otherwise remain unobservable:
+Surveys
+These factors are important because they are determinants of political, social, and economic outcomes.
+We are designing and building a process that enables the generation of data.
+Stefanie Stantcheva
+Social economy Lab at Harvard
+❗Surveys should be understood only as one method of data collection.
+5
+25/03/2026
+Slide 6:
+25/03/2026
+Quantitative designs
+A clear definition of the research question
+A good survey must be adapted to the subject of the research.
+
+When writing survey questions, we must always think about how we are going to analyse them
+
+This means that the design of the survey will always depend on the objectives established for the research
+When designing questions, one must:
+Surveys
+In social, economic, and political research settings, the objective is not to document or collect statistics (as is the case with administrative records or household surveys).
+6
+25/03/2026
+Slide 7:
+7
+25/03/2026
+Quantitative designs
+Surveys
+1
+Purpose of the Instrument
+2
+Sampling Process
+3
+Instrument Development
+Slide 8:
+What type of sample is needed to answer the research question?
+25/03/2026
+Quantitative designs
+Sampling
+Surveys
+The sample must be intentionally diverse in terms of variables that are conceptually relevant to the research question.
+Nationally representative panels
+Commercial survey companies
+Commercial survey marketplaces
+Convenience samples
+Online labour platforms
+Targeted or expert samples
+Governmental or institutional surveys
+Types of Samples and Sampling Sources
+These rely on quota‑based online panels, such as Qualtrics, Dynata, Bilendi and Prolific Academic.
+Like commercial survey companies, but requiring more hands‑on management by the researcher. E.g., Cint.
+Populations that are easily accessible to the researcher, such as university students or conference participants.
+Such as Mechanical Turk de Amazon (MTurk), positioned between convenience samples and quota‑based panels due to the large number of available respondents..
+For example, experts, employees in a specific firm, economists, or other specialised groups.
+Typically conducted by national statistical offices.
+Large-scale national probability panels
+8
+25/03/2026
+Slide 9:
+25/03/2026
+Quantitative designs
+Taken from: Surveys can also be done for firms, instead of individuals or households, as done by Link et al. (2022) and Weber et al. (2022)
+Target Population
+Sampling Frame / Pool of Possible Respondents
+Planned Sample
+Effective Sample
+Coverage Error
+Sampling Error
+Non‑response Error
+This refers to the population of interest for the research.
+
+For example, all residents of Cali aged between 18 and 25.
+This represents all individuals who could potentially be surveyed.
+
+Individuals aged 18–25 who use digital media (≈120,000).
+All individuals expected to complete the survey.
+Individuals are drawn from the effective frame according to different methods.
+3,000 invited; expected 1,000 completes.
+All individuals who complete the survey
+912 complete and pass quality checks.
+Selection Bias
+The sampling frame includes only residents aged 18–25 who use digital media. However, approximately 25% of youth in low‑income areas of Cali have limited or no access to digital platforms.
+Suppose the true proportion of 18–25-year-olds in Cali who support the new public transport policy is 62%. If we were to draw a simple random sample of 1,000 individuals from the sampling frame, the sample estimate might be 59% or 65% purely by chance. This deviation is sampling error
+Out of 3,000 invited individuals, only 912 completed the survey. Non‑respondents were mainly full‑time workers with different digital habits. If their views differ from respondents’, estimates may suffer from non‑response error.
+The systematic difference between the target population and the effective sample, arising from non‑random mechanisms at any stage (coverage, recruitment, or response), such that your estimates would be different even with infinite sample size
+9
+25/03/2026
+Slide 10:
+25/03/2026
+Quantitative designs
+Surveys
+What risks exist regarding representativeness?
+Sampling
+The difference between the individuals who actually started the survey and those who were initially expected to do so (selection‑related response error).
+1.
+2.
+Occurs when respondents begin the survey (i.e., are part of the effective sample) but do not answer all questions.
+Attrition
+Refers to the phenomenon whereby respondents exit the survey before completing it. This implies that items after a certain point are not fully answered.
+
+If this “drop‑off” is systematic rather than random, attrition may introduce bias into the instrument.
+10
+25/03/2026
+Slide 11:
+25/03/2026
+Quantitative designs
+Surveys
+The First Page of the Survey 📎
+Recruitment
+11
+25/03/2026
+Slide 12:
+Surveys
+Provides a quantitative description of trends, attitudes, and opinions, and tests associations between variables of a population by studying a sample.
+Quantitative designs
+Descriptive questions
+1
+What percentage of the company’s employees support the hiring of foreign workers?
+Questions about relationships between variables
+2
+Is there an association between the number of foreign employees and overall job‑satisfaction perceptions among employees?
+Longitudinal structures
+3
+Does the hiring of new foreign employees at Time 1 predict higher job satisfaction at Time 2?
+Population
+S5
+S4
+S2
+S3
+S1
+12
+25/03/2026
+Slide 13:
+Quantitative designs
+Population
+A population is the set of all elements of interest in a study.
+Sample
+A sample is a subset of the population.
+Parameter
+A parameter is a fixed characteristic of the population.
+Indicators
+Indicators (or sample statistics) are quantities computed from the sample.
+The primary purpose of statistical inference
+The principal goal of statistical inference is to make estimates and conduct hypothesis tests about population parameters using the information provided by a sample.
+13
+25/03/2026
+Slide 14:
+Uncertainty Generated by Random Sampling
+Objective
+To reproduce the same mean for the entire population, that is, if we want to study the mean, we aim to estimate the average evaluated across all individuals in the population of interest.
+Expected Value and samples
+Quantitative designs
+14
+25/03/2026
+1.
+Sample Mean
+Population parameters
+2.
+Slide 15:
+Quantitative designs
+15
+25/03/2026
+parameters
+indicators
+Slide 16:
+Quantitative designs
+16
+25/03/2026
+How can we determine whether statistical results constitute solid evidence, or whether they are little more than outcomes unlikely to be replicated in another sample?
+What level of variability should we expect across samples?
+Slide 17:
+Quantitative designs
+17
+25/03/2026
+Slide 18:
+Quantitative designs
+18
+25/03/2026
+The law of large numbers tells us that, for large samples, the sample mean is very likely to be very similar to the population mean.
+In other words, if we were to draw infinitely many random samples and compute the sample mean Avg[Y] for each of them, the average of all these sample means would converge to the true population mean, E[Y].
+A related property states that the expected value of the sample mean, Avg[Y], is equal to the population expected value, E[Y].
+Slide 19:
+Quantitative designs
+What statistical tests should be used?
+A statistical test is a rule defined a priori (i.e., before accessing the data) that specifies what must be observed in the data to justify rejecting the null hypothesis (H₀).
+
+A result meeting this criterion is labelled “statistically significant.”
+What is required for a statistical test?
+Technically, the significance level may be set at any value, provided it is chosen before examining the data.
+It is not acceptable to set α = 5% a priori and then, after seeing the results, change it to 7% post hoc just to reach significance.
+❗You cannot change the rules of the game once you have seen the outcome.
+Uncertainty Generated by Random Sampling
+19
+25/03/2026
+Slide 20:
+Quantitative designs
+20
+25/03/2026
+The general procedure for hypothesis testing consists of setting the significance level α at a small value (often 0.05) so that the probability of committing a Type I error is limited.
+Given a fixed value of α, we select a statistical test, defined by its rejection region, that makes β (the probability of a Type II error) as small as possible.
+
+In other words, we aim to find the most powerful test for the specified significance level.
+🧪
+By doing so, we prioritise H₀ over H₁, acknowledging that a Type I error is typically considered more serious than a Type II error.
+Slide 21:
+Quantitative designs
+21
+25/03/2026
+Population under H0(we care about the parameters)
+H0: (Y | 💊 ) = (Y | 🚫💊)
+Under the null hypothesis, the average blood pressure level of individuals who took the medication (💊) and those who did not take the medication (🚫💊) is the same.
+🧪  Null hypothesis (H0)
+Within the population, a medication administered to reduce blood pressure has no effect.
+🚫💊
+💊
+🚫💊 Mean value of the blood pressure in those who were not exposed to de medication  in the population under H0
+💊 Mean value of blood pressure in those who were not exposed to de medication in the population under H0
+Slide 22:
+Quantitative designs
+22
+25/03/2026
+🚫💊
+💊
+Population under H0(we care about the parameters)
+🚫💊
+💊
+Observed sample(we care about the indicators)
+🚫💊Observed average blood pressure in those who were not exposed to de medication in the sample
+💊Observed average blood pressure in those who were exposed to de medication in the sample
+Slide 23:
+Quantitative designs
+23
+25/03/2026
+🚫💊
+💊
+Observed sample(we care about the indicators)
+If this probability is low:
+How probable is it to obtain a sample in which the estimated effect appears as least as large as observed, if the medication has no effect in the population?
+Then we must ask whether, in the population, the medication might indeed have an effect.
+
+In such cases, the observed sample result may provide sufficient evidence to reject H₀, because what we observe in the sample is inconsistent with what is established under the null hypothesis (H₀).
+Slide 24:
+Quantitative designs
+24
+25/03/2026
+🚫💊
+💊
+Observed sample(we care about the indicators)
+P-Value:
+How far is the observed sample result from what the null hypothesis (H₀) predicts?
+The p‑value answers this question.
+
+It is the probability of obtaining a sample whose indicators deviate as much as, or more than, those observed, assuming that H₀ is true.
+
+If this probability is low, the sample result is inconsistent with H₀, providing grounds to reject the null hypothesis.
+Slide 25:
+Quantitative designs
+25
+25/03/2026
+🚫💊
+💊
+Observed sample(we care about the indicators)
+P-Value:
+If the p‑value is 0.01
+What you are saying is: “If the treatment did not work, I would see data like this in only 1 out of every 100 experiments. Since that would be very rare, I am more inclined to believe that the treatment does have an effect.”
+You  are NOT saying “there is a 99% probability that the treatment works.”
+Slide 26:
+Quantitative designs
+26
+25/03/2026
+Type I error
+Rejecting H₀ when it is in fact true.
+Type II error
+Failing to reject H₀ when it is in fact false.
+🧪  Null Hypothesis (H₀)
+Within the population, a medication administered to reduce blood pressure has no effect.
+Slide 27:
+Quantitative designs
+Surveys
+Sampling
+27
+25/03/2026
+Slide 28:
+Determination of Sample Size
+Quantitative designs
+In which scenario is your research situated?
+
+Sample sizes determined by convenience, due to operational, economic, or ethical constraints.
+
+The survey design (or experimental design) must adapt to these limiting factors, to the operational aspects of selecting the sample, and to the identification of the population. 
+
+More complex survey or experimental designs require larger sample sizes.
+28
+25/03/2026
+Sample-to-item ratio
+Relationship between sample size and number of items
+1.
+Sample-to-variable ratio
+Relationship between sample size and number of variables
+2.
+Krejcie and Morgan table
+A table that provides the recommended sample size for different population sizes
+3.
+Roscoe, Green y Kline guides
+Expert recommendations for determining adequate sample sizes in research.
+4.
+Slide 29:
+Determination of Sample Size: Power
+Quantitative designs
+Sample‑size calculations (based on power) depend on the specific hypothesis test that will be used in the research:
+Example 👀
+1
+Significance level
+2
+Test power
+3
+Effect size
+29
+25/03/2026
+Slide 30:
+30
+25/03/2026
+Determination of Sample Size: Power
+Quantitative designs
+1
+Significance level
+α is the probability of committing a Type I error,  that is, rejecting the null hypothesis (H₀) when it is true. 
+
+This corresponds to a false positive: concluding that there is a treatment effect (or a correlation) when there is none. 
+
+Therefore, it is essential to choose an appropriate significance level for your tests to minimise the probability of such errors. 
+
+It is commonly set at 5%, although other levels may be used.
+2
+Test power
+3
+Effect size
+Slide 31:
+31
+25/03/2026
+Determination of Sample Size: Power
+Quantitative designs
+Power of the test (1 − β)
+Power is the probability of correctly rejecting the null hypothesis when the true effect is not zero (e.g., ATE ≠ 0 or the correlation is non‑zero). 
+
+A conventional benchmark is 80% power: β is the Type II error, failing to reject H₀ when it is false (a false negative).
+
+An experimental design is said to have 80% statistical power if 80% of all possible random assignments would produce observable results (i.e., allow detection of the effect) when the effect actually exists.
+3
+Effect size
+2
+Test power
+1
+Significance level
+Slide 32:
+32
+25/03/2026
+Determination of Sample Size: Power
+Quantitative designs
+Effect Size (relationship) and Minimum Detectable Effect (MDE)
+
+(SES or d)  The effect size is the magnitude of the relationship or difference that the study aims to detect. Planning requires specifying a minimum detectable effect (MDE).
+
+To compute it, one must first identify the minimum detectable effect (MDE). 
+
+MDE: the minimum difference in outcomes between the treatment group (T) and the control group (C) that the study is designed to detect.
+2
+Test power
+1
+Significance level
+3
+Effect size
+Rules of thumb :
+
+If SES = 0.2, the effect size is small.
+If SES = 0.5, the effect size is medium.
+If SES = 0.8, the effect size is large.
+In practice, the sizes of MDE, SD and SES are often taken from:
+
+Published studies with similar interventions or objectives
+Pilots.
+(Cohen, 1969)
+Slide 33:
+33
+25/03/2026
+Determination of Sample Size: Power
+Quantitative designs
+If your analysis plan includes detecting a significant association between variables of interest, a power analysis can help estimate a target sample size.
+
+The input values for a formal power analysis will depend on the questions you wish to address in your design.
+
+This power analysis for determining sample size must be conducted during the planning phase of the study and before enrolling any participants.
+Hypothesis: there exists an association between hours of class and subjective well‑being.
+Estimated correlation (r): can be obtained from prior, similar studies.
+Alpha (α) — significance: Type I error rate, commonly set at 0.05 (a 5% risk of a false positive).
+Beta (β): Type II error rate, commonly set at 0.20 (80% statistical power — risk of a false negative).
+Slide 34:
+Determination of Sample Size: Power
+Quantitative designs
+Define thetest type
+Menu : Tests
+Tests: Means
+Medias: Two independent groups
+Effect size: Medium ~ SES = 0.5
+Tests: Two tails ~ given the structure of the Null H0: μ1 = μ0
+Power: (1- β)  = 0.8
+Significance: α = 0.5
+1.
+Define theparameters for the power calculation
+2.
+34
+25/03/2026
+Slide 35:
+Determination of Sample Size: Power
+Quantitative designs
+Simulate the effect size
+3.
+Simulate sample size scenarios
+4.
+Input parameter : Determine
+Medias: by group
+Deviations: by group 
+Individuals per group: by case
+X Y plot for a range of values:
+Power: (1- β) 
+Significance: α 
+Effect size: SES/d
+35
+25/03/2026
+Slide 36:
+Determination of Sample Size: Power
+Quantitative designs
+Define thetest type
+Menu : Tests
+Tests: F tests
+Multiple linear regression: Fixed model, R² increase
+1.
+Define theparameters for the power calculation
+2.
+Number of predictors: 3
+Number of tested predictors:1
+Power: (1- β)  = 0.8
+Significance: α = 0.5
+36
+25/03/2026
+Slide 37:
+Determination of Sample Size: Power
+Quantitative designs
+What happens if the number of participants is limited by the available resources?
+Define theparameters for the power calculation
+37
+25/03/2026
+Sometimes, limited resources (e.g., time, budget, or participant availability) determine the maximum number of participants you can include in your study.
+Number of predictors: 3
+Number of tested predictors:1
+Sample :100
+Power: (1- β)  = 0.8
+Significance: α = 0.5
+Slide 38:
+38
+25/03/2026
+Quantitative designs
+Surveys
+1
+Purpose of the Instrument
+2
+Sampling Process
+3
+Instrument Development
+Slide 39:
+Instrument Development
+In a survey, questions and answers are relevant because of their relationship to what they are supposed to measure.
+
+Good questions are:
+Designing a survey question means designing a measurement, not engaging in a conversational inquiry.
+
+The value of the response depends on whether it can be shown to have a predictable relationship with the facts or subjective states of interest.
+Good questions maximise the relationship between the recorded answers and what the researcher seeks to measure.
+Survey responses are reactions
+ evoked in an artificial situation designed by the researcher.
+A respondent tells us that they voted for Rodolfo instead of Petro in the 2022 presidential election.
+
+We care about is which box they marked in the voting booth.
+The response given in the survey may differ from what truly happened for several reasons:
+39
+25/03/2026
+A respondent tells us how many times they visited a doctor for medical care in the past year
+Slide 40:
+Instrument Development
+In a survey, questions and answers are relevant because of their relationship to what they are supposed to measure.
+
+Good questions are:
+Designing a survey question means designing a measurement, not engaging in a conversational inquiry.
+
+The value of the response depends on whether it can be shown to have a predictable relationship with the facts or subjective states of interest.
+Good questions maximise the relationship between the recorded answers and what the researcher seeks to measure.
+Survey responses are reactions
+ evoked in an artificial situation designed by the researcher.
+40
+25/03/2026
+Many surveys are analyzed and interpreted as if the researcher knew with certainty what the respondent’s answer means.
+Reliability
+1.
+When two respondents are in the same situation, they should respond to the question in the same way.
+
+Whenever inconsistency arises among respondents, random error is introduced and the measurement becomes less precise.
+Validity
+2.
+Validity refers to what a response means in relation to what the researcher intends to measure, that is, the correspondence between the response and the true value, and how this correspondence can be improved.
+Slide 41:
+Instrument Development
+Reliability
+In an ideal setting, it is assumed that differences in respondents’ answers are due to differences in what respondents have to say, and not due to differences in the stimuli to which they have been exposed.
+41
+25/03/2026
+The types of responses that constitute an adequate answer to the question are communicated consistently to all respondents.
+1.
+Data/information collection
+Data collection in a survey is an interaction between a researcher and a respondent.
+In both cases, the survey instrument is the protocol governing part of the interaction
+For the data collection experience to be consistent for all respondents, a good question must have the following properties:
+The question means the same thing for all respondents.
+2.
+The question‑and‑answer process is fully scripted, so that the questions, exactly as written, fully prepare the respondent to answer.
+3.
+Slide 42:
+Instrument Development
+42
+25/03/2026
+Reliability
+Inadequate Wording
+Age?
+Wording does not constitute a complete question.
+How old were you on your last birthday?
+Reason for going to the doctor?
+What was the main medical problem or reason for which you most recently visited the doctor?
+At times, optional wording is necessary to adapt to respondents’ circumstances.
+Interviewers (or respondents) may need to add or modify words in order to answer the questions based on the wording provided in the left‑hand column.
+Optional Wording
+In virtual interviews, it is possible to design multiple versions of the questions.
+In paper questionnaires, a common convention is to place optional text in parentheses.
+Slide 43:
+Instrument Development
+43
+25/03/2026
+Reliability
+Unacceptable Phrasing
+What do you like most about this neighborhood? (We are interested in anything such as the houses, the people, the parks, or whatever it may be.)
+Wording does not constitute a complete question.
+From a measurement perspective, the use of clarifying text in parentheses undermines the principle of the standardised interview.
+Incomplete phrasing
+The correct procedure is to formulate a well‑designed question from the outset.
+I am going to ask you to evaluate different characteristics of your neighborhood. I want you to think carefully about your responses. How would you rate (CHARACTERISTIC)?
+
+good, fair, or poor
+Slide 44:
+Instrument Development
+44
+25/03/2026
+Reliability
+Poorly Defined Items
+Questions must mean the same thing for all respondents. If two respondents interpret the meaning of the question differently, their answers may differ solely for that reason, rather than because of substantive differences in their experiences or views.
+We would like to ask you about your visits to a doctor and the medical advice you have received. In this question, we are interested in all professional staff who hold a medical degree or who work directly for a doctor in the practice, such as nurses or physician assistants
+How many times in the last year have you visited or spoken to a doctor about your health?
+An additional approach is to include follow‑up questions about events that respondents are especially likely to omit.
+Slide 45:
+Instrument Development
+45
+25/03/2026
+Reliability
+Poorly Defined Items
+Did you have breakfast yesterday?
+If the objective is to measure morning food consumption, the results will likely contain error due to inconsistent interpretations of what “breakfast” means.
+For our purposes, consider breakfast to be a meal eaten before 10:00 a.m. that includes a protein (such as eggs, meat, or milk), a cereal (such as toast or cereal), and a fruit or vegetable, including juice. According to this definition, did you have breakfast yesterday?
+Instead of attempting to impose a definition on respondents, the researcher may simply ask respondents to report everything they consumed before 10:00 a.m.
+
+During coding, the researcher can then evaluate objectively whether the respondent’s food intake meets the established definition of breakfast, without requiring all respondents to share the same understanding of the term.
+Slide 46:
+Instrument Development
+46
+25/03/2026
+Reliability
+Poorly Defined Items
+Are you in favour of or against legislation on front‑of‑package nutritional labelling?
+Legislation on food‑labelling warnings may involve:
+A proposal for food‑control policy is that no food product exceeding certain permitted levels of sugar, fat, or sodium may be sold without a clear nutritional warning label. Would you be in favour of or against legislation of this kind?
+This is only one of several possible strategies for regulating food products through nutritional warning labels.
+That is precisely the point: 
+
+if multiple questions about different regulatory strategies are required, they should be separate, specific, and phrased in a way that all respondents can understand uniformly and that researchers can interpret correctly.
+Requiring producers to label their food products clearly and accurately.
+Setting limits on the permitted levels of components such as sugars, fats, or sodium in food products.
+Establishing restrictions on the types of products that may be marketed to the public.
+Consumers’ responses cannot be interpreted without making assumptions about how they understand the meaning of the labelling.
+?
+Slide 47:
+Instrument Development
+47
+25/03/2026
+Reliability
+Poorly Defined Items
+Do you want to be rich and famous?
+Some questions that appear to be single items actually require the respondent to answer several sub‑questions before producing a response.
+In the past 30 days, how many times did you withdraw money from an ATM
+In the past 30 days, when you withdrew money from an ATM, how often was it less than 100,000 pesos: always, usually, sometimes, never?
+Although technically one question, it requires multiple mental calculations, compromising reliability.
+(IF APPLICABLE) In how many of those times did you withdraw less than 100,000 pesos?
+Slide 48:
+Instrument Development
+48
+25/03/2026
+Reliability
+Response Options: “Don’t know”
+When respondents are asked about their own lives, feelings, or experiences, a “don’t know” response is often an indication that they are not willing to invest the cognitive effort required to provide an answer.
+However, in some cases, respondents are legitimately unaware of the topic. The further the topic is from their immediate lives, the more plausible it becomes that respondents lack the information needed.
+Do you have the information necessary to answer this question?
+1.
+In such cases, the question effectively contains two questions at once:
+If so, what is your answer?
+2.
+Slide 49:
+Instrument Development
+49
+25/03/2026
+Reliability
+In addition to:
+Another key component of a good question is ensuring that respondents share the same perception of what constitutes an adequate answer.
+Closed questions
+The simplest way to ensure that respondents share a common understanding of what counts as an acceptable response is to provide a list of acceptable answers.
+What was the main reason you visited the doctor? A new health problem, a follow‑up for a previous problem, a routine check‑up, or any other reason?
+Closed questions are not suitable in all cases.
+In such cases, the question should communicate as clearly as possible the type of response that is desired.
+Standardised expectations for the type of response
+Slide 50:
+Instrument Development
+50
+25/03/2026
+Reliability
+Standardised expectations for the type of response
+“How old were you when you had pneumonia?”
+When did you have pneumonia?
+The question does not specify the terms in which the respondent is expected to answer.
+
+All of the following could be provided by the same person, and all are “correct” answers given the way the question is written:
+Because these responses differ in format and meaning, the lack of standardised expectations reduces reliability.
+Slide 51:
+Instrument Development
+51
+25/03/2026
+Validity
+Question types
+You can obtain perfect reliability and still not be measuring what you intend to measure. 
+
+The extent to which the response provided is a true measure and means what the researcher wants or expects it to mean is called validity.
+Validity
+To study validity, it is necessary to distinguish between:
+
+Questions designed to measure objectively measurable facts or events
+Questions designed to measure subjective states (such as attitudes, opinions, and feelings).
+Independent observation
+The measure of validity becomes the similarity between the survey report and the value of some “true” measure.
+Non available independent observation
+The validity of reports about a person’s degree of happiness, tiredness, or interest can only be assessed by their correlation with other responses or with other facts from the respondent’s life that one believes ought to be related to what is being measured.
+For the data collection experience to be consistent for all respondents, a good question must have the following properties:
+Slide 52:
+Instrument Development
+52
+25/03/2026
+Validity
+Levels of measurement
+The levels of measurement produce four different kinds of tasks for respondents and four different kinds of data for analysis.
+People or events are classified into unordered categories.
+(Are you male or female?)
+Nominal
+1.
+People or events are ordered or placed into ordered categories along a single dimension.(How would you rate your health: very good, good, fair, or poor?)
+Ordinal
+2.
+Numbers are attached that provide meaningful information about the distance between ordered stimuli or classes.(Fahrenheit temperature)
+Interval
+3.
+Numbers are assigned so that ratios between values are meaningful, as are the intervals between them. Common examples are counts or measurements based on an objective physical metric, such as distance, weight, or time.(How old were you on your last birthday?)
+Ratios
+4.
+Slide 53:
+Instrument Development
+53
+25/03/2026
+Validity
+Open and closed questions
+What health problems do you have? (open)
+Which of the following illnesses do you currently have? (READ THE LIST) (closed)
+What do you consider to be the most important problem facing our country today? (open)
+This is a list of problems that concern many people in the country. Which do you consider to be the most important problem facing our country today? (closed)
+When the objective is to classify people into unordered categories (nominal data) or ordered ones (ordinal data), the researcher can choose to formulate either an open or a closed question.
+Open questions
+1.
+Closed questions
+2.
+Slide 54:
+Instrument Development
+54
+25/03/2026
+Validity
+Types of questions : Continuous
+If ordinal data are desired, categories must be provided to respondents. 
+
+One cannot reliably order responses along a single continuum unless the question specifies an admissible set of ordered responses. 
+
+There is an assumed dimension that runs from the most negative possible feelings to the most positive possible feelings.
+FEELING ABOUT (SOMETHING)
+Two‑category scale
+Bad
+Good
+Three‑category scale
+Bad
+Good
+Fair
+Four‑category scale
+Very good
+Very bad
+Fair
+Good
+Five‑category scale
+Excellent
+Bad
+Fair
+Bueno
+Very good
+Eleven‑category scale
+10
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Slide 55:
+Instrument Development
+55
+25/03/2026
+Validity
+Types of questions : Agreement/Disagreement Items
+The task presented to respondents in this type of item is different from that of placing themselves in an ordered category.
+The statement is positioned along a continuum, and the respondent’s position on that continuum is inferred from whether they are close to the statement (agree) or far from it (disagree)
+“My health is poor. Do you strongly agree, agree, disagree, or strongly disagree?”
+“How would you rate your health: excellent, very good, good, fair, or poor?”
+Rating scales provide more information by classifying respondents into multiple categories, whereas agreement–disagreement questions generally separate them into just two groups (agree/disagree).
+Acquiescence bias
+Some respondents tend to agree with statements regardless of their content. They may agree both with “health is poor” and “health is not poor” if the statement is phrased negatively.
+Slide 56:
+Instrument Development
+56
+25/03/2026
+Validity
+Objective Reports
+When a researcher asks a respondent an objective question, the aim is for the respondent to answer with complete accuracy: to give the same answer the researcher would provide if the researcher had access to the necessary information to answer the question.
+The accuracy of responses depends on what is being asked and how it is being asked. There are four reasons why respondents may report events inaccurately:
+If respondents do not all interpret what is being asked in the same way, error can arise. To avoid this, a researcher may:
+They do not understand the question
+1.
+However, the first step in maximising the validity of objective survey data is to write questions that all respondents can understand.
+A lack of knowledge as a source of error arises in two main ways
+They do not know the answer
+2.
+In the first case, the solution lies in choosing the appropriate respondent, not in redesigning the question. Thus, it is possible to:
+Slide 57:
+Instrument Development
+57
+25/03/2026
+Validity
+Objective Reports
+When a researcher asks a respondent an objective question, the aim is for the respondent to answer with complete accuracy: to give the same answer the researcher would provide if the researcher had access to the necessary information to answer the question.
+The accuracy of responses depends on what is being asked and how it is being asked. There are four reasons why respondents may report events inaccurately:
+When respondents are asked questions about themselves that they cannot answer, this is a problem of question design.
+They cannot remember, even though they do know it
+3.
+In theory, one could distinguish between information that the respondent cannot remember and information that the respondent never had.
+In both cases, the problem for the researcher is to design questions that almost everyone can answer. Possible solutions include:
+Slide 58:
+Instrument Development
+58
+25/03/2026
+Validity
+Objective Reports
+When a researcher asks a respondent an objective question, the aim is for the respondent to answer with complete accuracy: to give the same answer the researcher would provide if the researcher had access to the necessary information to answer the question.
+The accuracy of responses depends on what is being asked and how it is being asked. There are four reasons why respondents may report events inaccurately:
+It is important to recognise that there are some things that researchers would like people to report, but they cannot.
+They do not want to give the answer in the context of the interview
+4.
+There are certain facts or events that respondents would prefer not to report accurately in an interview.
+If a researcher realistically expects someone to admit something that is very embarrassing or illegal, efforts are required to convince respondents that the risks are minimal and that the reasons for disclosing the information are meaningful.
+Such as paper or computer‑based forms, which reduce social desirability bias.
+Ensure that responses cannot be linked to respondents through methods such as anonymous forms or other strategies specifically designed for sensitive topics.
+Avoid implicit judgements in the wording and create a neutral response context, since respondents interpret both the wording of questions and the interviewer’s behaviour as cues about how their answers will be evaluated.
+Slide 59:
+Instrument Development
+59
+25/03/2026
+Validity
+Subjective Reports
+The validity of subjective questions differs from that of objective questions because no external criterion exists for measuring it. 
+
+The only way to estimate the validity of a subjective measure is through the expected association between responses to these questions and other characteristics of the individual, or related responses.
+
+This means that subjective measures are evaluated by patterns, not by universal standards. To increase the validity of these questions, it is essential that they be as reliable as possible. This includes:
+Objective Reports
+When a researcher asks a respondent an objective question, the aim is for the respondent to answer with complete accuracy: to give the same answer the researcher would provide if the researcher had access to the necessary information to answer the question.
+The accuracy of responses depends on what is being asked and how it is being asked. There are four reasons why respondents may report events inaccurately:
+Slide 60:
+60
+25/03/2026
+Instrument Development
+Validity
+Defining the construct: having a clear definition of what you want to measure.
+Developing theory‑based questions: formulating questions that align with the theoretical construct and reviewing the literature to ensure that all of its dimensions are covered.
+Involving experts: to validate the content, invite experts to review the instrument.
+Collecting pilot data: Conduct a pilot study with a small sample to test the instrument and run statistical analyses.
+Applying statistical analyses: 
+For construct validity, use factorial analyses.
+For criterion validity, use correlations with other instruments.
+For nomological validity, test theoretical relationships with other constructs.
+Slide 61:
+61
+25/03/2026
+Hipótesis
+Para poder contrastar una hipótesis nula respecto a una especificación alternativa, necesitamos seleccionar una prueba estadística (o estadístico) y un valor crítico
+La elección del estadístico y del valor crítico se basa en la conveniencia y en el deseo de maximizar la potencia (asociada al error tipo II) dado un nivel de significación (asociada al error tipo I) para la prueba.
+La muestra y la población
+Determinación del tamaño de muestra
+T. También definido como estadístico de prueba, es una función de una muestra aleatoria. Cuando se calcula el estadístico para un resultado especifico, este se define como t.
+Prueba estadística
+Valor crítico
+C. Dado que identificamos un estadístico de prueba, es posible definir las reglas de rechazo que determinan si H0 se rechaza a favor de H1. Todas las reglas de rechazo se basan en la comparación del valor de un estadístico de prueba, t, con un valor crítico, c. Los valores de t que resultan en el rechazo de la hipótesis nula se conocen como la región de rechazo.
+¿Qué pruebas estadísticas se deben utilizar?
+a
+Definición del nivel de significancia (Alpha)
+b
+Dado Alpha, el valor critico C se determina a partir de la distribución de T, asumiendo que H0 es verdadera.
+La hipótesis acerca de la media de una población que se distribuye de manera normal se presenta de la siguiente manera:
+En este caso mu0 es un valor de la media que especificamos bajo la estructura de H0, en muchas aplicaciones ese valor es cero.
+Diseños cuantitativos
+Slide 62:
+62
+25/03/2026
+Definición de la región de rechazo
+Considerando esta especificación de H1, deberíamos rechazar H0 a favor de H1 cuando el valor de la media muestral es suficientemente mayor que mu0.
+¿Como determinar que el valor de la medición muestral es grande, para rechazar H0 dado el nivel de  confianza predeterminado?
+Para esto es necesario conocer la probabilidad de rechazar la hipótesis nula cuando es cierta.
+Bajo la hipótesis nula, la variable aleatoria T de distribuye así:
+Con c definido, la región de rechazo es:
+Donde c es el percentil 100(1-alpha) en una distribución t con n-1 grados de libertad.
+Con un nivel de significancia del 5%, el valor critico c se escoge de tal manera de que  la probabilidad del error de tipo I sea 5%.
+Región de rechazo para una prueba de un lado con un nivel de significancia del 5% frente a la alternativa mu>mu0
+La muestra y la población
+Determinación del tamaño de muestra
+Diseños cuantitativos
+Slide 63:
+63
+25/03/2026
+Hipótesis
+Para poder contrastar una hipótesis nula respecto a una especificación alternativa, necesitamos seleccionar una prueba estadística (o estadístico) y un valor crítico
+La elección del estadístico y del valor crítico se basa en la conveniencia y en el deseo de maximizar la potencia (asociada al error tipo II) dado un nivel de significación (asociada al error tipo I) para la prueba.
+La muestra y la población
+Determinación del tamaño de muestra
+T. También definido como estadístico de prueba, es una función de una muestra aleatoria. Cuando se calcula el estadístico para un resultado especifico, este se define como t.
+Prueba estadística
+Valor crítico
+C. Dado que identificamos un estadístico de prueba, es posible definir las reglas de rechazo que determinan si H0 se rechaza a favor de H1. Todas las reglas de rechazo se basan en la comparación del valor de un estadístico de prueba, t, con un valor crítico, c. Los valores de t que resultan en el rechazo de la hipótesis nula se conocen como la región de rechazo.
+¿Qué pruebas estadísticas se deben utilizar?
+a
+Definición del nivel de significancia (Alpha)
+b
+Dado Alpha, el valor critico C se determina a partir de la distribución de T, asumiendo que H0 es verdadera.
+La hipótesis acerca de la media de una población que se distribuye de manera normal se presenta de la siguiente manera:
+En este caso mu0 es un valor de la media que especificamos bajo la estructura de H0, en muchas aplicaciones ese valor es cero.
+Diseños cuantitativos
+Slide 64:
+64
+25/03/2026
+Definición de la región de rechazo
+Considerando esta especificación de H1, deberíamos rechazar H0 a favor de H1 cuando el valor de la media muestral es suficientemente mayor que mu0.
+¿Como determinar que el valor de la medición muestral es grande, para rechazar H0 dado el nivel de  confianza predeterminado?
+Para esto es necesario conocer la probabilidad de rechazar la hipótesis nula cuando es cierta.
+Bajo la hipótesis nula, la variable aleatoria T de distribuye así:
+Con c definido, la región de rechazo es:
+Donde c es el percentil 100(1-alpha) en una distribución t con n-1 grados de libertad.
+Con un nivel de significancia del 5%, el valor critico c se escoge de tal manera de que  la probabilidad del error de tipo I sea 5%.
+Región de rechazo para una prueba de un lado con un nivel de significancia del 5% frente a la alternativa mu>mu0
+La muestra y la población
+Determinación del tamaño de muestra
+Diseños cuantitativos
+Slide 65:
+65
+25/03/2026
+🧪  Hipótesis
+Para poder contrastar una hipótesis nula respecto a una especificación alternativa, necesitamos seleccionar una prueba estadística (o estadístico) y un valor crítico
+La elección del estadístico y del valor crítico se basa en la conveniencia y en el deseo de maximizar la potencia (asociada al error tipo II) dado un nivel de significación(asociada al error tipo I) para la prueba.
+Pruebas de hipótesis acerca de la media en una población normal
+1
+Prueba estadística
+2
+Valor crítico
+Slide 66:
+66
+25/03/2026
+T. También definido como estadístico de prueba, es una función de una muestra aleatoria. Cuando se calcula el estadístico para un resultado especifico, este se define como t.
+Pruebas de hipótesis acerca de la media en una población normal
+1
+Prueba estadística
+C. Dado que identificamos un estadístico de prueba, es posible definir las reglas de rechazo que determinan si H0 se rechaza a favor de H1. Todas las reglas de rechazo se basan en la comparación del valor de un estadístico de prueba, t, con un valor crítico, c.
+
+Los valores de t que resultan en el rechazo de la hipótesis nula se conocen como la región de rechazo.
+Slide 67:
+67
+25/03/2026
+Pruebas de hipótesis acerca de la media en una población normal
+a
+Definición del nivel de significancia (Alpha)
+Pasos para la definición del valor crítico
+b
+Dado Alpha, el valor critico C se determina a partir de la distribución de T, asumiendo que H0 es verdadera.
+🧪  Hipótesis
+La hipótesis acerca de la media de una población que se distribuye de manera normal se presenta de la siguiente manera:
+En este caso mu0 es un valor de la media que especificamos bajo la estructura de H0, en muchas aplicaciones ese valor es cero
+Slide 68:
+68
+25/03/2026
+Pruebas de hipótesis acerca de la media en una población normal
+Definición de la región de rechazo
+La región de rechazo que se escoja depende de la naturaleza de la hipótesis alternativa. Para el caso de hipótesis simples respecto a la media contamos con las siguientes posibilidades
+Alternativas de un lado
+Apropiadas cuando estamos interesados en  valor del parámetro cuando este es al menos tan grande como el valor de comparación (mu0)
+Alternativas de dos lados
+Apropiadas cuando estamos interesados en cualquier tipo de diferencia respecto al valor establecido en la hipótesis nula
+Slide 69:
+69
+25/03/2026
+Pruebas de hipótesis acerca de la media en una población normal
+Definición de la región de rechazo
+Considerando esta especificación de H1, deberíamos rechazar H0 a favor de H1 cuando el valor de la media muestral es suficientemente mayor que mu0.
+¿Como determinar que el valor de la medición muestral es grande, para rechazar H0 dado el nivel de  confianza predeterminado?
+Para esto es necesario conocer la probabilidad de rechazar la hipótesis nula cuando es cierta.
+🧪
+Bajo la hipótesis nula, la variable aleatoria T de distribuye así:
+Slide 70:
+70
+25/03/2026
+Pruebas de hipótesis acerca de la media en una población normal
+Definición de la región de rechazo
+Región de rechazo para una prueba de un lado con un nivel de significancia del 5% frente a la alternativa mu>mu0
+Con un nivel de significancia del 5%, el valor critico c se escoge de tal manera de que  la probabilidad del error de tipo I sea 5%.
+Con c definido, la región de rechazo es:
+Donde c es el percentil 100(1-alpha) en una distribución t con n-1 grados de libertad.
+Slide 71:
+71
+25/03/2026
+Pruebas de hipótesis acerca de la media en una población normal
+Definición de la región de rechazo
+Región de rechazo para una prueba de un lado con un nivel de significancia del 5% frente a la alternativa mu<mu0
+Con un nivel de significancia del 5%, el valor critico c se escoge de tal manera de que  la probabilidad del error de tipo I sea 5%.
+Con c definido, la región de rechazo es:
+Slide 72:
+72
+25/03/2026
+Pruebas de hipótesis acerca de la media en una población normal
+Definición de la región de rechazo
+Región de rechazo para una prueba de un lado con un nivel de significancia del 5% frente a la alternativa mu diferente de mu0
+En el caso de alternativas de dos lados es importante seleccionar un valor critico que permita que el nivel de significancia de la prueba siga siendo ɑ.
+Con c definido, la región de rechazo es:
+En este caso c es el percentil 100(1- ɑ/2) de la distribución t con n-1 grados de libertad
+Slide 73:
+73
+25/03/2026
+Cálculo y uso de valores P
+¿Cuál es el mayor nivel de significación al que podríamos realizar la prueba y aun así no rechazar la hipótesis nula? Este valor se conoce como valor p de una prueba
+En comparación con la elección anticipada de un nivel de significancia y la obtención de un valor crítico, el cálculo de un valor p es algo más difícil.
+Con el valor t establecido, podemos encontrar el mayor nivel de significancia al que no podríamos rechazar H0. Este es el nivel de asociado al uso de t como valor crítico. Dado que nuestro estadístico de prueba T tiene una distribución normal estándar bajo H0, tenemos
+Donde Phi denota la función de densidad normal estándar.
+En otras palabras, el valor p en este ejemplo es el área a la derecha de 1.52, el valor observado del estadístico de prueba, en una distribución normal estándar
+Slide 74:
+74
+25/03/2026
+Cálculo y uso de valores P
+En otras palabras, el valor p en este ejemplo es el área a la derecha de 1.52, el valor observado del estadístico de prueba, en una distribución normal estándar.
+Dado que el valor p es 0.065, el mayor nivel de significancia al que podemos realizar esta prueba y no rechazarla es el 6,5%.
+
+Si realizamos la prueba a un nivel inferior al 6,5% (por ejemplo, al 5%), no rechazaremos H0.
+ Si realizamos la prueba a un nivel superior al 6,5% (por ejemplo, al 10%), rechazamos H0. 
+
+El valor p en este ejemplo tiene otra interpretación útil: es la probabilidad de que observemos un valor de T tan grande como 1.52 cuando la hipótesis nula es cierta. 
+
+Si la hipótesis nula es realmente cierta, observaríamos un valor de T tan grande como 1.52 debido al azar sólo el 6.5% de las veces. Que esto sea lo suficientemente pequeño como para rechazar H0 depende de nuestra tolerancia a un error de tipo I.
+Slide 75:
+75
+25/03/2026
+Cálculo y uso de valores P
+En otras palabras, el valor p en este ejemplo es el área a la derecha de 1.52, el valor observado del estadístico de prueba, en una distribución normal estándar.
+Generalmente, los valores p pequeños son una prueba contra H0, ya que indican que el resultado de los datos se produce con poca probabilidad si H0 es cierta.
+
+En el ejemplo anterior, si t hubiera sido un valor mayor, digamos, t = 2.85, entonces el valor p sería 0.002. 
+
+Esto significa que, si la hipótesis nula fuera cierta, observaríamos un valor de T tan grande como 2.85 con probabilidad .002.
+O bien hemos obtenido una muestra muy poco habitual
+O la hipótesis nula es falsa. 
+
+A menos que tengamos una tolerancia muy pequeña al error de tipo I, rechazaríamos la hipótesis nula.
+Slide 76:
+76
+25/03/2026
+Cálculo y uso de valores P
+El cálculo de un valor p para una prueba bilateral es similar, pero debemos tener en cuenta la naturaleza de dos colas de la regla de rechazo. Para las pruebas t sobre medias poblacionales, el valor p se calcula como
+Donde t es el valor del estadístico de prueba y T es una variable aleatoria t. (Para n grande, sustituya T por una variable aleatoria normal estándar.) 
+
+Así, calcule el valor absoluto del estadístico t, encuentre el área a la derecha de este valor en una distribución t y multiplique el área por dos.
+Elija un estadístico de prueba T y decida la naturaleza de la hipótesis alternativa. 
+
+Esto determina si la regla de rechazo es 
+t > c
+ t<-c  
+ |t| > c
+1
+2
+Utilice el valor observado de la estadística t como valor crítico y calcule el correspondiente nivel de significación de la prueba. Éste es el valor p. Si la regla de rechazo es de la forma:
+ t > c, entonces p-valor =  P(T>t)
+ t < -c, entonces p-valor = P(T<t) 
+|t| > c, entonces p-valor = P(|T|>|t|)
+3
+Si se ha elegido un nivel de significancia , entonces no rechazamos H0 a ese nivel si p-valor > ɑ . Si p-valor < ɑ , entonces rechazamos H0 al nivel 100 ɑ %.
+Slide 77:
+77
+25/03/2026
+Kahneman, D., Sibony, O., & Sunstein, C. R. - Noise: A flaw in human judgment
+Diseños cuantitativos
+Si  se quiere estimar el valor medio de una variable relevante en una población, se pueden aplicar métodos de muestreo.
+
+ Debido a la naturaleza estocástica del proceso de selección de la muestra, algunas observaciones estarán por encima o por debajo del promedio general.
+
+Por lo tanto, no todas las estimaciones de la muestra serán exactamente iguales al promedio verdadero de la población.
+
+Estas diferencias con respecto a la media de la población son los errores.
+ Con suficientes observaciones de la muestra, este error tiende a cero, esperamos que los errores sean aleatorios, no sistemáticos.

@@ -1,0 +1,856 @@
+
+--- FILE: W2. EDA and linear regression.pptx ---
+Slide 1:
+1
+2/8/2026
+Methods: EDA and linear regression
+Luis Carlos Guevara
+
+Faculty of Finance, Government and International Relations
+2026-I
+Slide 2:
+2
+2/8/2026
+Philosophical assumptions
+Research designs
+Methods for data collection, analysis, and interpretation
+Positivist
+Constructivist
+Transformative
+Pragmatic
+Questions
+Data Collection
+Data Analysis
+Interpretation
+Validation
+Quantitative
+Qualitative
+Mixed Methods
+Approaches to research
+A Framework for Research
+Research problem
+Research question
+Innovation in research
+Slide 3:
+3
+2/8/2026
+Philosophical assumptions
+Research design
+A Framework for Research, from the problem
+Sampling
+Ethics
+Measurement
+Analysis
+Methods for data collection, analysis, and interpretation
+The distinction between qualitative and quantitative is important for processes such as coding, measurement, and analysis; however, it is not a distinction that defines a research design.
+Question
+Problem
+All research designs can generate quantitative data, qualitative data, or both. Research designs should therefore not be categorised based on the type of data they might produce, because data categories are not mutually exclusive
+Slide 4:
+2/8/2026
+What is the purpose of an Exploratory Data Analysis?
+4
+2/8/2026
+To examine the data in terms of its:
+
+Distribution
+Relationships between variables
+Outliers and anomalies
+John W Tukey (1977)
+John W. Tukey (1977) introduced EDA, and since then it has become standard practice for analysing datasets.
+Howard Seltman
+“Any method that examines the data without formal statistical modelling or inference is considered exploratory data analysis”.
+Data analysis
+EDA is a crucial step after data collection and preprocessing, where the data are visualised, plotted, and manipulated without assumptions.
+Slide 5:
+2/8/2026
+What is the purpose of an Exploratory Data Analysis?
+5
+2/8/2026
+Data analysis
+Graphical
+Non-Graphical
+Univariate
+Multi - variate
+Slide 6:
+6
+2/8/2026
+Métodos cuantitativos
+Types of Data and Graphical EDA Techniques
+Slide 7:
+2/8/2026
+7
+2/8/2026
+cyl_table <- table(mtcars$cyl)
+print(cyl_table)
+Types of Data and Graphical EDA Techniques
+Freq tables
+ggplot(mtcars, aes(x = cyl, fill = cyl)) +  
+geom_bar(color = "black") +  
+scale_fill_viridis_d(option = "magma") +  
+labs(x = "Número de Cilindros", 
+     y = "Cantidad",      
+     title = "Distribución de Carros por Número de Cilindros") +  theme_minimal()
+Bar plots
+Data analysis
+Slide 8:
+2/8/2026
+8
+2/8/2026
+ggplot(mtcars, aes(x = mpg)) +  
+geom_histogram(binwidth = 2, aes(fill = ..count..), color = "black") +  scale_fill_viridis_c(option = "magma") +  
+labs(x = "Millas por Galón (mpg)",        
+    y = "Frecuencia",       
+    title = "Histograma de MPG") +  
+theme_minimal()
+Histogram
+mtcars <- mtcars %>% mutate(index = row_number()) 
+# Gráfico de líneas del MPG a través del índice de carros
+ggplot(mtcars, aes(x = index, y = mpg)) +  
+geom_line(color = "purple") + 
+labs(	x = "Índice de Carros",        
+	y = "MPG",      
+             title = "Gráfico de Líneas del MPG Vs Carros") +  
+theme_minimal()
+Line plots
+Data analysis
+Types of Data and Graphical EDA Techniques
+Slide 9:
+2/8/2026
+9
+2/8/2026
+ggplot(mtcars, aes(x = hp, y = mpg)) + 
+geom_point(size = 3, aes(color = hp)) +  
+scale_color_viridis_c(option = "magma") +  
+labs(	x = "Caballos de Fuerza",        
+	y = "Millas por Galón (mpg)",       
+	title = "Gráfico de Dispersión: MPG vs Caballos de Fuerza") +
+  theme_minimal()
+Scatter plot
+# Selecciona variables continuas para la correlación: MPG, disp, HP y peso (wt)
+numeric_vars <- mtcars %>% select(mpg, disp, hp, wt)
+corr_matrix  <- round(cor(numeric_vars), 2)
+melted_corr  <- melt(corr_matrix)
+
+# Mapa de calor usando la paleta magma
+ggplot(melted_corr, aes(x = Var1, y = Var2, fill = value)) +  geom_tile(color = "white") +  
+scale_fill_viridis_c(option = "magma", direction = -1) +  
+labs(x = "",        y = "",        title = "Mapa de Calor de Correlación para Variables Seleccionadas de mtcars") +
+theme_minimal()
+Correlation matrix
+Data analysis
+Types of Data and Graphical EDA Techniques
+Slide 10:
+2/8/2026
+10
+2/8/2026
+p3d <- plot_ly(mtcars,
+x = ~mpg,
+y = ~hp, 
+z = ~wt,
+type = "scatter3d",
+mode = "markers",
+       marker = list(size = 5,color = ~as.numeric(cyl),
+       colorscale = "Magma", 
+       colorbar = list(title = "Cilindros"))) %>% 
+layout(title = "Gráfico 3D: MPG vs Caballos de Fuerza vs Peso",         scene = list(xaxis = list(title = "MPG"),   
+             yaxis = list(title = "Caballos de Fuerza"),
+             zaxis = list(title = "Peso")))
+3D Scatter plot
+Data analysis
+Types of Data and Graphical EDA Techniques
+Slide 11:
+2/8/2026
+11
+2/8/2026
+ggplot(mtcars, aes(x = carb, y = mpg, fill = carb)) +  
+geom_boxplot() +  
+scale_fill_viridis_d(option = "magma") + 
+ labs(x = "Número de Carburadores",
+        y = "MPG",
+       title = "Diagrama de Caja de MPG por Número de Carburadores") +  theme_minimal()ggplot(mtcars, aes(x = carb, y = index, fill = carb)) +  
+geom_boxplot() +  
+scale_fill_viridis_d(option = "magma") + 
+ labs(x = "Número de Carburadores",
+        y = "MPG",
+       title = "Diagrama de Caja de MPG por Número de Carburadores") +  theme_minimal()
+Box plots
+Data analysis
+Types of Data and Graphical EDA Techniques
+Slide 12:
+12
+2/8/2026
+Métodos cuantitativos
+Types of Data and non-graphical EDA Techniques
+Given an X numerical variable
+Slide 13:
+2/8/2026
+13
+2/8/2026
+Frequency tabulation for categories.
+Used for categorical variables. It consists of constructing a table that contains the count and the proportion (or frequency) of the data corresponding to each category.
+The median is the central value in an ordered list of data. Because the median is less affected by extreme values and outliers, it is considered more “robust” than the mean.
+Types of Data and non-graphical EDA Techniques
+Data analysis
+Slide 14:
+2/8/2026
+14
+2/8/2026
+Measures of Central TendencyThe arithmetic mean is the sum of all observations divided by the number of values. The median is the central value in a list containing all observations ordered from smallest to largest.
+Sample mean
+Types of Data and non-graphical EDA Techniques
+Data analysis
+Slide 15:
+2/8/2026
+15
+2/8/2026
+VarianceWhen variance is calculated using the entire population, the result is obtained by dividing the sum of squares by the population size. 
+
+The sample formula for variance conventionally uses n−1 in the denominator to achieve the property of unbiasedness.
+
+This means, approximately, that when calculated for many different random samples from the same population, the average of the sample variances should coincide with the corresponding population parameter.
+Types of Data and non-graphical EDA Techniques
+Data analysis
+Slide 16:
+2/8/2026
+16
+2/8/2026
+Standard DeviationThe standard deviation is the square root of the variance. Because of this, it has the same units as the original data, which makes it more interpretable. 
+
+The sample standard deviation is commonly represented by the symbol s. 
+
+For a theoretical Gaussian distribution, the mean ± 1, 2, or 3 standard deviations encompasses 68.3%, 95.4%, and 99.7% of the probability density, respectively. This is known as the empirical interval.
+Types of Data and non-graphical EDA Techniques
+Data analysis
+Slide 17:
+2/8/2026
+17
+2/8/2026
+Interquartile Range (IQR)The interquartile range (IQR) is calculated using the limits of the data located between the first and third quartiles. The IQR is a more robust measure of dispersion than the variance or the standard deviation and should therefore be preferred for small or asymmetric distributions.
+
+For symmetric distributions (not necessarily normal) and N > 30, results should be expressed as mean ± standard deviation.
+For asymmetric distributions, N < 30, or when there is evidence of outliers, results should be expressed as median ± IQR, as these are more robust.
+IQR
+Q1
+39,024
+25%
+Q2
+40,701
+Median
+25%
+Q3
+44,260
+25%
+25%
+50%
+The difference between Q1 and Q2 indicates the dispersion of the central 50% of the values
+Types of Data and non-graphical EDA Techniques
+Data analysis
+Slide 18:
+2/8/2026
+18
+2/8/2026
+Cross tabulationCross‑tabulation represents a bivariate non‑graphical exploratory data analysis (EDA) technique. It is an extension of tabulation and is applicable to categorical data as well as quantitative data with only a few variables.
+
+For two variables, a two‑way table is constructed with:
+
+Column headers corresponding to the levels of one variable, and
+Row headers corresponding to the levels of the other variable.
+
+The table is then filled with the counts of all individuals who share each pair of levels.
+Types of Data and non-graphical EDA Techniques
+# Crear tabla de tabulación cruzadatabla_cruzada <- table(datos$Variable1, datos$Variable2)# Convertir tabla cruzada a un data frametabla_cruzada_df <- as.data.frame(tabla_cruzada)# Agregar columna de frecuencia relativatabla_cruzada_df$FrecuenciaRelativa <- tabla_cruzada_df$Freq / sum(tabla_cruzada_df$Freq)
+Cross tabulation
+Data analysis
+Slide 19:
+2/8/2026
+19
+2/8/2026
+Covariance and Correlation
+These measures assess the degree of relationship between two random variables and express the extent to which they vary together.
+Covariance
+1.
+2.
+3.
+4.
+Correlation coefficient
+The correlation test helps determine the degree of association between two variables. This association does not imply causality. The correlation coefficient is a number between –1 and 1 that indicates the strength and direction of the relationship between variables:
+1 indicates a perfect positive correlation: as one variable increases, so does the other.
+0 indicates no correlation: the variables show no linear association.
+–1 indicates a perfect negative correlation: as one variable increases, the other decreases.
+Types of Data and non-graphical EDA Techniques
+Data analysis
+Slide 20:
+2/8/2026
+20
+2/8/2026
+Pearson Correlation Coefficient
+The Pearson correlation measures the linear relationship between two continuous quantitative variables. It evaluates how the values of both variables vary together while maintaining a proportional relationship. The coefficient ranges from –1 to 1:
+Pearson’s correlation is sensitive to outliers, as these can considerably influence its value.
+Spearman Correlation Coefficient
+Types of Data and non-graphical EDA Techniques
+Data analysis
+Slide 21:
+21
+2/8/2026
+Métodos cuantitativos
+Identification of Data Types and Study Objectives
+Study Objectives
+Identifying the objective of the study is an extremely important aspect when planning data analysis. A vague or poorly described objective often leads to poorly executed analysis.
+The study objective must clearly identify:
+
+The study population
+The outcome of interest
+The covariate(s) of interest
+The relevant temporal points of the study
+What is intended to be done with these elements
+Investing time in making the objective as specific and clear as possible often saves time in the long term.
+
+“To evaluate the reduction in the unemployment rate within the population that has completed tertiary education in Colombia over the past five years.”
+
+“To evaluate the impact of programmes aimed at expanding access to higher education in rural areas of Colombia, considering as the study population young people aged 17–25 from municipalities with low educational access. The outcome of interest will be the increase in enrolment and graduation rates, while covariates will include available educational infrastructure, socioeconomic status, and governmental support received. The evolution of these factors will be analysed over the past seven years.”
+Slide 22:
+2/8/2026
+22
+2/8/2026
+After specifying a clear study objective, the next step is to determine the types of data that will be used in the analysis.
+Data types
+Dependent variables
+Numericaldata
+Numerical data
+Categorical data
+Categorical data
+Outcomes are the variables that the study aims to investigate, improve, or influence. 
+In the case of analyzing the impact of tertiary education on employability, the outcome would be the rate of labor market insertion
+Covariates are variables that may influence the outcome or should be considered to avoid bias. 
+For instance, in assessing the impact of tertiary education on employment, covariates may include educational level attained, field of study, and region of residence.
+Numerical data are values that may take any numerical value within a range.
+For example, graduates’ income levels would be continuous data in a study analysing the impact of education on employment.
+Categorical data are values that take a limited number of categories.
+Such as educational level (technical, undergraduate, postgraduate).
+Data analysis
+Covariates / independent variables
+Slide 23:
+2/8/2026
+23
+2/8/2026
+Data types and model selection
+Data analysis
+Binary
+Logit/probit regression
+Objective
+Outcome variable
+Covariates
+Categorical
+Numerical
+Ordered
+Multinomial
+Multinominal logit regression
+Ordered logit regression
+Cox proportional hazards model
+Linear regression
+Poisson regression
+Negative binomial regression
+Beta regression
+Data structure
+Cross section
+Time series
+Panel
+Repeated cross section
+Linear probability
+In some cases, this framework is unsuitable, requiring the use of alternative methods
+Slide 24:
+24
+2/8/2026
+Linear regression
+Luis Carlos Guevara
+
+Faculty of Finance, Government and International Relations
+2026-I
+Slide 25:
+25
+2/8/2026
+Linear regression
+Linear regression provides the foundation for many analytical approaches used to study a dependent continuous variable in relation to a set of independent variables.
+
+In the simplest case (univariate linear regression) the objective is to relate a continuous outcome to a single continuous or categorical covariate, by estimating values for β0​ and β1​ in the model:
+Scatter Plot: PCO₂ and TCO₂ in a Sample of 1,776 Patients
+A scatter plot of total carbon dioxide (TCO₂) (dependent variable, y‑axis) against partial pressure of carbon dioxide (PCO₂) (independent variable, x‑axis) shows that as PCO₂ increases, TCO₂ also increases. 
+
+This visual pattern suggests that a linear regression model could be appropriately fitted to describe how TCO₂ varies as a function of PCO₂.
+Slide 26:
+2/8/2026
+26
+2/8/2026
+Simple linear regression
+Data analysis
+Simple linear regression is used to examine the relationship between a single independent variable and a continuous dependent variable, assuming that this relationship can be adequately represented by a straight line.
+Are there exact relationships between x and y?
+Is there a functional relationship between x and y?
+Is there a ceteris paribus relationship between x and y?
+Slide 27:
+2/8/2026
+27
+2/8/2026
+Simple linear regression
+Data analysis
+Simple linear regression model  
+Or bivariate linear regression model
+This model is assumed to hold in the population of interest, and it enables us to relate two variables: a dependent variable, an independent variable, and an error term (or disturbance) that captures unexplained variation in the relationship.
+
+A simple regression analysis treats all factors that affect y, and which are different from x, as unobserved factors.
+Systematic part of the model: the component of y that is explained by x.
+Non‑systematic part of the model: the component of y that is explained by u.
+is the slope parameter in the relationship between y and x, when all other factors contained in u remain constant.
+Slide 28:
+2/8/2026
+28
+2/8/2026
+Simple linear regression
+Data analysis
+How to assess the relationship between the independent variable and the error term?
+Correlation coefficient
+Conditional expectation
+Conditional mean zero assumption.The average value of u does not depend on the value of x.
+Slide 29:
+29
+2/8/2026
+Simple linear regression
+The wage is measured as the pesos earned per hour, and education is measured in years:therefore, β₁ measures the change in the hourly wage for each additional year of education, keeping all other factors constant.
+
+Work experience
+Innate abilities
+Tenure in the current job
+Work ethic
+According to the assumptions about the relationship between X and U, it is required, for example, that the average level of ability be the same regardless of years of schooling.
+In an experimental context, for example, causal inference based on regression methods is developed under the assumption that when the observed variables are “made equal” in the control and treatment groups, the selection bias from factors that we cannot observe is eliminated.
+In which cases would we expect this model to satisfy the equation                          ?
+Slide 30:
+2/8/2026
+30
+2/8/2026
+Simple linear regression
+Data analysis
+Population regression function
+Slide 31:
+31
+2/8/2026
+Simple linear regression
+The intercept, β₀, represents the value of y when x equals 0.
+The slope, β₁, represents the increase in y associated with a one‑unit increase in x.
+Slide 32:
+32
+2/8/2026
+Simple linear regression
+Bivariate Regression and Covariance
+The covariance of a variable with itself is its variance.
+The covariance between linear functions of the variables of interest is given by:
+If the expected value of either variable is zero, then the covariance between the two variables is the expected value of their products
+Slide 33:
+33
+2/8/2026
+Simple linear regression
+Bivariate Regression and Covariance
+The connection between regression and covariance can be observed in a bivariate regression model (with regressor X and dependent variable Y). 
+
+The slope and intercept of this regression correspond to the values of β0 and β1​ that minimise the residual sum of squares (RSS). 
+
+
+
+The term RSS refers to a sum of squares because, when performing this minimisation on a particular sample, the expectation is replaced by a sample mean or sample sum.
+An implication of this is that when two variables are not correlated (i.e., have a covariance of zero), the regression of either variable on the other yields a slope coefficient equal to zero.
+Slide 34:
+2/8/2026
+34
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 35:
+2/8/2026
+35
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 36:
+2/8/2026
+36
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 37:
+2/8/2026
+37
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 38:
+2/8/2026
+38
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 39:
+2/8/2026
+39
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 40:
+2/8/2026
+40
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 41:
+2/8/2026
+41
+2/8/2026
+Simple linear regression
+Data analysis
+Adjusted Values and Residuals: Ordinary Least Squares (OLS) Estimator
+Slide 42:
+42
+8/02/2026
+Adjusted Values and Residuals
+Ordinary Least Squares (OLS) Estimates
+If
+Then
+Where do we begin?
+Under which conditions?
+Simple linear regression
+Data analysis
+Slide 43:
+43
+8/02/2026
+Adjusted Values and Residuals
+Ordinary Least Squares (OLS) Estimates
+Where do we begin?
+Under which conditions?
+Simple linear regression
+Data analysis
+What are we looking for?
+To choose estimates of β₀ and β₁ that solve the sample counterparts of the equations.
+That is,
+Slide 44:
+44
+8/02/2026
+Adjusted Values and Residuals
+Ordinary Least Squares (OLS) Estimates
+Where do we begin?
+Under which conditions?
+Simple linear regression
+Data analysis
+What are we looking for? : β0
+Slide 45:
+45
+8/02/2026
+Adjusted Values and Residuals
+Ordinary Least Squares (OLS) Estimates
+Where do we begin?
+Under which conditions?
+Simple linear regression
+Data analysis
+What are we looking for? : β1
+Slide 46:
+46
+2/8/2026
+Simple linear regression
+Ordinary Least Squares (OLS) Estimates
+Slide 47:
+47
+2/8/2026
+Simple linear regression
+Variation in the hourly wage corresponding to an additional year of education.
+How can we study the relationship between years of education and wages?
+If education is zero (no years of schooling), is the wage negative?⚠️ These may be sample effects!
+Each additional year of education, holding all other relevant variables constant, implies an increase of $0.54 in the hourly wage.
+Ordinary Least Squares (OLS) Estimates
+Slide 48:
+48
+2/8/2026
+Simple linear regression
+Unbiasedness of OLS estimators
+Under LSA 1, 2, 3, and 4, it can be shown that the OLS estimators are unbiased.
+Unbiasedness is a property of the sampling distributions of β1​ and β0​; it says nothing about the estimates obtained from any particular sample.In general, unbiasedness does not hold when any of the four assumptions is not satisfied. This is why it is very important to reflect on the truth of each assumption in the particular application being studied.
+Slide 49:
+49
+2/8/2026
+Simple linear regression
+Unbiasedness of OLS estimators
+In general, unbiasedness does not hold when any of the four assumptions is not satisfied. This is why it is very important to reflect on the truth of each assumption in the particular application being studied.
+Slide 50:
+50
+2/8/2026
+Simple linear regression
+LSA5
+Homoscedasticity
+Variance of the OLS estimators
+We need to add an assumption in cross‑sectional analysis which states that the variance of the unobservable factors u, conditional on x, is constant.
+The unbiasedness of the regression estimators (which we demonstrated using assumptions RLS1 to RLS4) does not depend on the assumption of homoscedasticity. 
+If we assume that u and x are independent, then the distribution of u given x does not depend on x. 
+This allows us to see the connection between RLS4 and RLS5. 
+Here we have a problem: the assumption of conditional mean independence can be very strong and difficult to justify.
+LSA4
+LSA5
+Slide 51:
+2/8/2026
+51
+2/8/2026
+Results of the Linear Regression Model
+Simple linear regression
+Slide 52:
+2/8/2026
+52
+2/8/2026
+Results of the Linear Regression Model
+Simple linear regression
+
+--- FILE: W2. From problem to question to design.docx ---
+
+--- FILE: W2. Problem and research questions - Copy.pptx ---
+Slide 1:
+1
+2/8/2026
+Problem and research questions
+Luis Carlos Guevara
+
+Faculty of Finance, Government and International Relations
+2026-I
+Slide 2:
+2
+2/8/2026
+Philosophical assumptions
+Research designs
+Methods for data collection, analysis, and interpretation
+Positivist
+Constructivist
+Transformative
+Pragmatic
+Questions
+Data Collection
+Data Analysis
+Interpretation
+Validation
+Quantitative
+Qualitative
+Mixed Methods
+Approaches to research
+A Framework for Research
+Research problem
+Research question
+Innovation in research
+Slide 3:
+3
+2/8/2026
+Philosophical assumptions
+Research design
+A Framework for Research, from the problem
+Sampling
+Ethics
+Measurement
+Analysis
+Methods for data collection, analysis, and interpretation
+The distinction between qualitative and quantitative is important for processes such as coding, measurement, and analysis; however, it is not a distinction that defines a research design.
+Question
+Problem
+All research designs can generate quantitative data, qualitative data, or both. Research designs should therefore not be categorised based on the type of data they might produce, because data categories are not mutually exclusive
+Slide 4:
+4
+2/8/2026
+How to select the right method?
+Data analysis
+The question “Which method?” is particularly important when selecting research designs, because the choice of design significantly influences most of the subsequent decisions a researcher must make.
+Focus on the problem
+Research designs are most effective, and have the greatest potential for innovation, when they are determined by the nature of the research problem.
+
+This choice is central to innovation because, if researchers do not approach it consciously, they may simply maintain the status quo of an existing paradigm, following established traditions without making deliberate methodological decisions.
+Therefore, you should actively seek the most effective methods, rather than simply following conventional or pre‑existing methodological paths.
+Slide 5:
+2/8/2026
+5
+2/8/2026
+Surveys
+Quant
+There’s non‑exclusivity of Methods within Research Designs
+Survey design requires multiple iterations of question phrasing and structural refinement, particularly about the audience’s comprehension of the content and purpose of each question.
+Although the analysis of survey data is frequently quantitative, it is not exclusively so. Surveys may be used to collect qualitative, quantitative, or mixed forms of evidence
+How to select the right method?
+Data analysis
+This is true even for items whose responses are ultimately numerically coded.
+🖼️
+Slide 6:
+2/8/2026
+6
+2/8/2026
+Data analysis
+Design BEFORE methods
+The Design Shapes the Method
+1.
+Changing the design to accommodate the methods is costly
+2.
+Research design informs the development of methodological procedures, including:
+
+Sample selection
+Ethical considerations
+The construction of instruments or strategies for data collection.
+Changing the design is costly. Changing the design requires starting again from the beginning, as it determines the entire structure of the research process.
+Slide 7:
+2/8/2026
+7
+2/8/2026
+Data analysis
+How to select the right method?
+Students are leaving university early, but why they leave is not clearly understood
+What is the essence of the problem?
+Problem
+Question
+Which are the main factors driving the dropout rates in the university?
+Which type of knowledge is needed to address this question?
+Design
+Mixed methods, sequential explanatory design to:
+Understanding students lived experiences
+Determining which factors statistically predict dropout
+Sample
+Who, where, when?
+Ethics
+Measurement
+How?
+Analysis
+Methods
+Slide 8:
+2/8/2026
+So, lets move from a problem, to a question to a design
+8
+Slide 9:
+9
+08/02/2026
+Research designs
+Convergent design
+Sequential explanatory design
+Sequential exploratory design
+Embedded (nested) design
+Experiments
+Surveys
+Single‑subject designs
+Longitudinal designs
+Descriptive methods
+Narratives
+Phenomenology
+Ethnography
+Case studies
+Grounded theory
+Qualitative
+Quantitative
+Mixed
+Within the available methods (quantitative, qualitative, and mixed methods), YOU, as a researcher, must select the specific designs used to develop the project.
+
+Research designs are types of inquiry within methodological approaches that provide a specific direction for the procedures to be carried out in a study.
+Slide 10:
+10
+8/02/2026
+Researchdesigns
+Research designs require the researcher to choose, from among available quantitative, qualitative, and mixed‑methods approaches, the specific design that will be used to develop the project.
+
+Research designs are types of inquiry within methodological approaches that provide a specific direction for the procedures to be carried out in a study.
+“A research design is a plan for collecting evidence that can be used to answer a research question.”
+A sound research design must be justified in relation to the research question. 
+
+At a minimum, the researcher should provide a clear rationale demonstrating that the chosen design is effective for addressing the task posed by the question.
+Slide 11:
+2/8/2026
+11
+2/8/2026
+Data analysis
+How do we move from a research question and problem to a research design?
+Decisions about how to code and analyse the evidence, that is, decisions about methods, must not determine the answers to these questions.
+
+If this happens, the researcher risks confusing the aim of answering the research question with the nature of the evidence used to answer it.
+Nature of the answers needed to address the research problem.
+Nature of the data or sources of evidence required to address the problem.
+Problem, question and design
+Slide 12:
+2/8/2026
+12
+2/8/2026
+Data analysis
+How do we move from a research question and problem to a research design?
+Any effort to relate one thing to another (one variable to another, or one phenomenon to another) is ultimately causal.
+Problem, question and design
+1
+There are multiple methods for making causal inferences (e.g., experiments and quasi‑experiments).
+A causal approach does not exclude non‑causal descriptive elements within a piece of research.
+Because justified causal inferences arise more from the design than from measurement or analysis, it is crucial to incorporate causal considerations at the early stages of planning a research project.
+Slide 13:
+2/8/2026
+13
+2/8/2026
+Data analysis
+How do we move from a research question and problem to a research design?
+It is essential to determine whether the primary interest lies in the specific cases within the sample, or whether the intention is to generalise.
+Problem, question and design
+2
+Although generalisation is not a purely dichotomous decision (since any processing of results entails some degree of generalization) clarity on this point is necessary.
+Slide 14:
+2/8/2026
+14
+2/8/2026
+Data analysis
+How do we move from a research question and problem to a research design?
+It is necessary to determine whether the interest lies in studying:
+
+Individuals, cases, or variables over time
+Or whether a cross‑sectional approach is sufficient.
+Problem, question and design
+3
+Slide 15:
+2/8/2026
+15
+2/8/2026
+Data analysis
+How do we move from a research question and problem to a research design?
+It is necessary to determine whether direct interaction with the objects of study will provide information that could not be obtained otherwise. 
+
+Interaction may also bias the results and the data‑generation process.
+Problem, question and design
+4
+Slide 16:
+2/8/2026
+16
+2/8/2026
+Data analysis
+How do we move from a research question and problem to a research design?
+Problem, question and design
+5
+Determining the sources of data is crucial, as in some cases no alternative exists to answer the research question other than generating one’s own evidence.
+Slide 17:
+2/8/2026
+17
+2/8/2026
+Data analysis
+How do we move from a research question and problem to a research design?
+Problem, question and design
+6
+Slide 18:
+18
+8/02/2026
+Problem, question and design
+“Evaluating the six questions (proposed by Vogt) helps to clarify the available design options. Designing a research project involves a long journey across somewhat unfamiliar terrain and requires many decisions. These decisions must be made at an early stage”
+Slide 19:
+2/8/2026
+19
+2/8/2026
+Data analysis
+Problem, question and design
+1.
+Identify three topics
+2.
+Develop the identification‑of‑design matrix: https://uexternadoedu-my.sharepoint.com/:w:/g/personal/luis_guevara_uexternado_edu_co/IQBNpEtpRTa9T79RVke-3aOBAcq_WbM3ciuQ-ungugUZkjA?e=wkO88d
+3.
+Select one main topic, based on the feasibility of implementing the design and its capacity to answer the research question.

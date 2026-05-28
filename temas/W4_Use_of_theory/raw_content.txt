@@ -1,0 +1,576 @@
+
+--- FILE: W4. Use of theory.pptx ---
+Slide 1:
+1
+25/02/2026
+Use oftheory
+Identify the steps required to locate and employ theories for incorporation into a proposal or study.
+Quantitative Approach. Examine the steps involved in defining variables, measuring them, and developing causal models for their inclusion in quantitative research.
+Qualitative Approach. Distinguish between the deductive approach, a theoretical standpoint, and an endpoint perspective as ways to incorporate theory into qualitative research.
+Slide 2:
+2
+25/02/2026
+Use of theory
+What is a theory?
+Slide 3:
+2/25/2026
+Steps in the process of developing a research proposal
+3
+2/25/2026
+Data analysis
+The topic (of the research) is the subject or matter proposed for study. It is the central idea to learn about or explore in a study.
+Title
+Object of review
+Significance
+¿Should the problem be studied?
+¿Can de problem be studied?
+Availability of data 
+Availability of resources
+Detailed examination of the research topic.
+Slide 4:
+25/02/2026
+4
+25/02/2026
+Literature review
+Identification of Theories
+Which theories could be used to explore the study’s research questions?
+Quantitative Approach
+Testing hypotheses derived from theories.
+ A quantitative dissertation often includes an entire section of the research proposal devoted to presenting the broader theory that guides the study.
+Qualitative Approach
+The use of theory is far more varied. 
+Grounded theory: the researcher may generate a theory as a result of the study and position it at the end of the project, as is the case in. 
+Other qualitative studies: the theory is introduced at the beginning and provides a perspective that shapes the approach and research questions, such as in ethnographies or in social justice–oriented research.
+Mixed Methods Approach
+Test and to generate theories. 
+Moreover, theories inform different parts of the design, such as the development of quantitative instruments or qualitative interview questions.
+Use of theory
+Slide 5:
+5
+25/02/2026
+Diversity in the Use of Theory
+The nature of a theory varies considerably across different types of research. 
+
+Design. The use of theory depends on the type of research design: quantitative, qualitative, or mixed methods. 
+Approach. Theory may serve either as a prediction of what the researcher expects to find or as an inductive or deductive framework for a study.
+1. Identification of theories through the literature review
+2. Inclusion of an a priori framework
+3. Development of the content
+4. Discussion of how theory is used in the literature
+5. Visualisation
+6. Theoretical support for the study
+7. Revisiting the framework considering the findings
+Where to
+include
+The development of the literature review enables researchers to identify examples of theories to be utilised.
+
+Multiple authors
+Multiple dates
+Multiple contexts
+Slide 6:
+6
+25/02/2026
+Use of
+theory
+Slide 7:
+25/02/2026
+Use of theory:
+Quantitative designs
+7
+Análisis de datos
+Slide 8:
+25/02/2026
+Use of theory:
+Quantitative designs
+8
+25/02/2026
+Historical Background:  a theory is regarded as a scientific prediction or an explanation that is expected to be observed.
+A theory is a set of constructs (variables), definitions, and interrelated propositions that presents a systematic view of phenomena by specifying the relationships among variables, with the aim of explaining natural phenomena.
+Kerlinger (1979)
+A theory has both a purpose and a procedure
+Purpose: to explain natural phenomena.
+Procedure: to study interrelated variables, whose relationships take the form of propositions or hypotheses.
+Labovitz, Hagedorn (1971)
+Theoretical Justification: This involves specifying how and why variables and relational statements are interrelated. 
+
+Why would an independent variable (X) influence or affect a dependent variable (Y)?The theory provides an explanation for this expectation or prediction.
+Where in the document can theory be addressed?
+
+A theoretical discussion may appear in:
+
+The literature review
+Separate section such as the theoretical foundation, theoretical justification, theoretical perspective, conceptual framework, or theoretical perspective.
+
+What content can be included when discussing theory?
+
+A theory may appear in a research study as:
+an argument 
+a discussion
+a figure
+a justification
+a visual model
+Slide 9:
+25/02/2026
+Use of theory:
+Quantitative designs
+9
+25/02/2026
+Historical Background:  a theory is regarded as a scientific prediction or an explanation that is expected to be observed.
+A theory is a set of constructs (variables), definitions, and interrelated propositions that presents a systematic view of phenomena by specifying the relationships among variables, with the aim of explaining natural phenomena.
+Kerlinger (1979)
+Labovitz, Hagedorn (1971)
+Theoretical Justification: This involves specifying how and why variables and relational statements are interrelated. 
+
+Why would an independent variable (X) influence or affect a dependent variable (Y)?The theory provides an explanation for this expectation or prediction.
+Theory Development Process
+
+Theories are developed when: researchers repeatedly test a prediction, drawing on combinations of independent, mediating, and dependent variables in questions formulated.
+
+The type of relationship (positive, negative, or unknown)
+The magnitude (for example, high or low).
+
+Theory develops as an explanatory framework that advances knowledge across a variety of fields.
+Slide 10:
+25/02/2026
+Use of theory:
+Quantitative designs
+10
+25/02/2026
+According to Neuman (2004), theories vary in the breadth of their coverage across three levels:
+Macro
+Meso
+Micro
+W. Lawrence Neuman(2004)
+Macro-level theory: Social theory that focuses on the macro level of social life (e.g., social institutions, major sectors of society, entire societies, or world regions) and on processes occurring over long periods (many years, multiple decades, or a century or more).
+
+Meso-level theory: Social theory that concentrates on relationships, processes, and structures at an intermediate level of social life (e.g., organisations, movements, communities), with events unfolding over moderate durations (many months, several years, or a decade).
+Micro-level theory: Social theory that examines the micro level of social life, focusing on short-term interactions (e.g., face‑to‑face interactions and encounters among individuals or small groups).
+Slide 11:
+25/02/2026
+Use of theory:
+Quantitative designs
+11
+Análisis de datos
+Slide 12:
+25/02/2026
+Use of theory:
+Quantitative designs
+12
+25/02/2026
+Theories explain the relationships between variables.
+A variable refers to a characteristic or attribute of an individual or organisation that researchers can measure or observe, and which varies among individuals or organisations.
+Independent
+Dependent
+PRedictivePredictors
+Response
+Mediating
+influences or affect the outcomes in studies
+are the outcomes influenced by the independent variables
+predicts an outcome in survey‑based studies
+outcomes affected by predictor variables in surveys
+transmits the effect of an IV on a DV
+Variables and the Use of Theories
+In a quantitative research study, relationships between variables are described to build theories and to answer specific research questions.
+
+Theories and variable specifications are used to generate hypotheses.
+A hypothesis is a prediction about a specific event or relationship between variables.
+Slide 13:
+25/02/2026
+Use of theory:
+Quantitative designs
+13
+25/02/2026
+X
+Y
+Education
+income
+Z
+X
+Y
+Education
+Income
+Z
+Moderating Variable
+Moderating variables are predictor variables that affect the direction and/or strength of the relationship between independent and dependent variables. They act upon (or interact with) the independent variables and, in combination with them, influence the dependent variables.
+Mediating Variable
+Mediating variables transmit the effect of an independent (or predictor) variable on a dependent (or response) variable. They explain the process through which two variables are related.
+Networks
+Quality of work experience
+Slide 14:
+25/02/2026
+Use of theory:
+Quantitative designs
+14
+Análisis de datos
+Slide 15:
+25/02/2026
+Use of theory:
+Quantitative designs
+15
+25/02/2026
+Causality
+A causal relationship reflects the expectation that variable X causes variable Y, that is, the relationship between cause and effect.
+
+A causal relationship involves not only correlation between variables, but also the mechanisms that produce these associations.
+X
+Y
+Education
+Income
+Confounding Variables
+When evaluating causal claims, it is crucial to assess the existence of an unmeasured third variable (Z) that may influence the outcome.
+In quantitative research, if a confounding variable is not measured, it may limit the ability to establish a causal relationship.
+Z
+If the aim of the research is to test a causal claim about the relationship between two or more variables, the most appropriate methodological option is to conduct an experiment, since it provides greater control over potential unmeasured variable
+If the aim is not to test a causal claim, or if conducting an experiment is not feasible, it is possible to use survey methods, administrative records, or census data to evaluate hypotheses about relationships between variables.
+Slide 16:
+25/02/2026
+Use of theory:
+Quantitative designs
+16
+25/02/2026
+The explanatory power of theory is greater than that of descriptive knowledge.
+
+A correlation may indicate causality, a relevant association, or a spurious association. 
+
+Therefore, if the intention is to draw conclusions about an explanatory process, it is essential to have a credible causal identification strategy.
+Searches for 'never gonna give you up'
+correlates with
+Tesla's stock price (TSLA)
+Spurious Correlations (tylervigen.com)
+Relative volume of Google searches for 'never gonna give you up'
+(without quotes, in the United States) · Source: Google Trends
+Opening price of Tesla (TSLA) on the first trading day of the year
+Source: LSEG Analytics (Refinitiv)
+2011-2023, r=0.945, r²=0.894, p<0.01 · tylervigen.com/spurious/correlation/5160
+Relative popularity
+Stock price
+60
+$383
+49
+$287
+37
+$192
+25
+$97
+13
+$2
+2011
+2013
+2015
+2017
+2019
+2021
+2023
+Slide 17:
+25/02/2026
+Use of theory:
+Quantitative designs
+17
+Análisis de datos
+Slide 18:
+25/02/2026
+Use of theory:
+Quantitative designs
+18
+25/02/2026
+How to Present a Causal Link?
+Use of Hypotheses
+Introduce the theory by using sets of hypotheses centred on the identified variables.
+
+Main hypothesis: Higher levels of education (X) are associated with higher individual income (Y).
+
+Mediating hypothesis: Parental income (Z) affects an individual’s level of education (X), which in turn influences their income (Y).
+
+Confounding hypothesis: Parental income (Z) directly affects an individual’s income (Y), in addition to the influence of education (X).
+Conditional Statements
+Provide an explanation of why independent variables are expected to influence or cause dependent variables.
+
+If an individual’s level of education (X) increases, then their income (Y) will also increase.
+
+Individuals with higher educational attainment express their skills and capabilities in professional and economic activities
+which may further enhance their income. 
+Additionally, higher parental income (Z) may influence the level of education obtained by their children, which subsequently affects their income.
+Visual Models
+Place dependent variables on the right-hand side of the diagram and independent variables on the left.
+Use unidirectional arrows from each determining variable to each variable it influences.
+Indicate the strength and direction of relationships by inserting positive (+) or negative (–) valence signs.
+Use double‑headed arrows to represent unanalysed relationships between variables that do not depend on other relationships in the model.
+Slide 19:
+25/02/2026
+19
+25/02/2026
+Visual Models
+X3
+X1
+X2
+Education
+Gender
+Socialnorms
+Z1
+Z2
+Parental income
+Economic activity sector
+Y
+Income
++
+-
+-
+-
++
++
+Use of theory:
+Quantitative designs
+How to Present a Causal Link?
+Slide 20:
+25/02/2026
+20
+25/02/2026
+Institutional Standards for Tenure
+Demographic Variables
+Type of Appointment
+Prior Research Training
+Self‑perception as a Researcher
+University Affiliation with Well‑being Centres
+Tenure Appointment
+Pressure to Conduct Research
+Workload
+Departmental Support
+Support from Colleagues
+Resources
+Collaboration
+Academic performance
+
+Presentations
+Articles
+Nook chapters
+Grants
+Professional networks
++
+-
+-
++
++
++
++
++
++
+-
++
++
++
++
++
++
++
++
+-
++
++
+Exogenous (x)
+Independent endogenous (y)
+Dependent
+What factors influence the academic research performance of a faculty member?
+
+After identifying these factors in the literature, the researcher adapted a theoretical framework.
+
+They developed a visual model representing the relationship among these factors, listing the independent variables on the far left, the intervening variables in the centre, and the dependent variables on the right.
+
+The direction of influence flowed from left to right, with plus (+) and minus (–) signs used to indicate the hypothesised direction of influence.
+Use of theory:
+Quantitative designs
+How to Present a Causal Link?
+Slide 21:
+25/02/2026
+Use of theory:
+Quantitative designs
+21
+Análisis de datos
+Slide 22:
+25/02/2026
+Use of theory:
+Quantitative designs
+22
+25/02/2026
+How to Include Theory?
+In quantitative studies, theory is used deductively and is placed near the beginning of the proposed study. 
+
+The aim is to test or verify a theory: the researcher advances a theory, collects data to test it, and reflects on whether it is confirmed or disconfirmed.
+
+The theory becomes a framework for the entire study, serving as an organising model for the research questions or hypotheses and for the procedures of data collection.
+
+The researcher tests or verifies a theory by examining hypotheses or questions derived from it.
+
+These hypotheses or questions contain variables (or constructs) that must be defined by the researcher.
+Identification and review of a theory
+Formulation of questions and hypotheses derived from the theory
+Definition and operationalisation of variables based on the theory
+Measurement of variables, using instruments, to test the hypotheses
+a
+b
+c
+d
+Slide 23:
+25/02/2026
+Use of theory:
+Quantitative designs
+23
+Análisis de datos
+Slide 24:
+25/02/2026
+Use of theory:
+Quantitative designs
+24
+25/02/2026
+“The theory I will use is ______ (name of the theory). It was developed by ______ (identify the origin, source, or developer of the theory) and has been used to study ______ (identify studies that apply the theory). This theory states ______ (identify the propositions or hypotheses in the theory). Applied to my study, this theory suggests that my independent variable(s) ______ (indicate the independent variables) would influence or explain the dependent variable(s) ______ (indicate the dependent variables) because ______ (provide a justification based on the logic of the theory).”
+a
+Search the scientific literature for existing theories that explain the phenomenon you wish to study and understand. If no suitable theories exist, develop your own theory.
+b
+Review previous studies addressing the topic or a related topic. Identify which theories the authors used. Limit the number of theories and identify one or two to explain the central hypothesis or main research question.
+c
+Present the theory according to the variables identified: What explains why the independent variables would influence the dependent variables? In which contexts and for whom does this apply?
+Slide 25:
+25
+25/02/2026
+Use of
+theory
+2
+Slide 26:
+25/02/2026
+Use of theory:
+Qualitative designs
+26
+25/02/2026
+Análisis de datos
+Slide 27:
+25/02/2026
+Use of theory:
+Qualitative designs
+27
+25/02/2026
+As a deductive explanation, a theoretical standpoint, or an endpoint for a study
+a
+Explanation and deduction
+In qualitative research, theory may serve as a broad and deductive explanation for behaviour and attitudes, which can be complemented by variables, constructs, and hypotheses.
+Ethnography
+Themes or cultural aspects used in qualitative projects,such as social control, language, stability and change, or social organisation (e.g., kinship or family structures), provide sets of hypotheses ready to be examined based on the literature.
+Anthropology
+The use of broad explanations to study behaviour and attitudes shared within a culture. This is a common approach in qualitative research in the health sciences.
+
+Researchers begin with a theoretical or conceptual model, such as health‑practice adoption or a quality‑of‑life assessment.
+Slide 28:
+25/02/2026
+28
+25/02/2026
+Theoretical Perspective
+A theoretical perspective provides general guidance for the study's questions concerning gender, class, and race (or other issues related to inequalities).
+
+It shapes the questions posed, informs how data are collected and analysed, and offers a call for action or change.
+The perspective guides researchers toward the important issues that require examination, such as:
+
+Marginalisation
+Empowerment
+Oppression
+Power
+
+It also indicates how researchers position themselves in the qualitative study (e.g., acknowledging personal, cultural, and historical contexts) and in the final report (e.g., avoiding further marginalisation of individuals, collaborating with participants) by recommending changes to improve lives and society.
+👩🏻Feminist theories
+👨🏼‍👩🏽‍👦🏾‍👦🏻Race‑centred discourses
+🏁
+Critical theory
+b
+Use of theory:
+Qualitative designs
+As a deductive explanation, a theoretical standpoint, or an endpoint for a study
+Slide 29:
+25/02/2026
+29
+25/02/2026
+Endpoint or Closing Point
+In contrast to the deductive use of theory and the theoretical‑standpoint orientation, qualitative studies may employ theory as an endpoint for the study.
+This theoretical endpoint implies that the qualitative study concludes with a theoretical model, a theory, or a conceptual model. 
+
+Qualitative research is an inductive process: it begins with data, moves toward broader themes, and eventually leads to a generalised model or theory.
+The process begins by gathering detailed information from participants, which is then organised into categories or themes.
+
+These themes are later developed into broader patterns, theories, or generalisations, which are compared with personal experiences or the existing literature on the topic.
+
+The development of themes and categories into patterns, theories, or generalisations suggests different possible endpoints for qualitative studies.
+
+Unlike the deductive form found in quantitative studies, these pattern‑based theories represent interconnected ideas or components linked to a coherent whole.
+Open‑ended questions are developed and information is collected
+Secondary data are examined to form themes and categories
+Themes and categories are developed into broader patterns, theories, or generalisations
+The researcher proposes generalisations or theories
+a
+b
+c
+d
+c
+Use of theory:
+Qualitative designs
+As a deductive explanation, a theoretical standpoint, or an endpoint for a study
+Slide 30:
+25/02/2026
+Use of theory:
+Qualitative designs
+30
+25/02/2026
+Análisis de datos
+Slide 31:
+31
+25/02/2026
+Use of
+theory
+2
+Slide 32:
+25/02/2026
+Use of theory:
+Mixed methods
+32
+25/02/2026
+Análisis de datos
+Creswell (2018) proposes the existence of two types of theoretical use in mixed‑methods studies: discipline‑based theories and social‑justice‑based theories.
+Discipline‑Based Theory
+Drawn from the literature in the social, behavioural, or health sciences. Examples include:
+
+organisational theories
+leadership theories
+adoption theories
+attribution theories
+health‑promotion theories
+
+These theories typically identify variables or constructs, interrelate them, and explain expected outcomes for individuals and organisations.
+Slide 33:
+25/02/2026
+Use of theory:
+Mixed methods
+33
+25/02/2026
+Why is theory important in mixed‑methods research?
+Differences between a Theory and a Worldview
+A worldview concerns the researcher’s beliefs and values and how these shape a study.
+
+Theories are less abstract, drawn from the literature, and provide a guiding perspective for designing aspects of the research process.
+Worldview
+ beliefs or values held by the researcher
+Theoretical perspective
+ feminist theory, social constructivism, human capital theory
+Methodological approach
+ethnography, experimentation
+Data‑collection methods
+ interviews, surveys
+a
+b
+c
+d
+Slide 34:
+34
+25/02/2026
+Use of
+theory
+📑 Further readingsLynhamQuantitative Research and theory building
+Dubin’s First Component (Hypothetico‑Deductive Approach). The first component proposed by Dubin (within the hypothetico‑deductive approach) supports a quantitative researcher in developing a conceptual framework informed by theory.
+
+The Notion of “Perpetual Theory Construction”. Dubin used the term “perpetual theory construction” to indicate that theory building is never truly finished. The slide prompts reflection: Has your theory changed throughout the research process?
+
+Quantitative Theory Construction. Quantitative theory construction links independent and dependent variables. The slide requests the following task: Develop a visual theoretical model that represents the relationship among your variables.
