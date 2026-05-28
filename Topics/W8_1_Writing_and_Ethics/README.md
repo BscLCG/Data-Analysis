@@ -3,7 +3,7 @@
 This section outlines the mechanics of structuring academic writing and the fundamental ethical requirements that must govern empirical research, particularly concerning human subjects.
 
 ## Required and Complementary Readings
-* [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../referencias/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 95–102, 115–121)
+* [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 95–102, 115–121)
 
 ## Detailed Reading: Academic Structure and Ethical Compliance
 

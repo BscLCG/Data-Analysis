@@ -3,8 +3,8 @@
 This section covers the systematic process of conducting a literature review, identifying gaps in existing research, and using literature maps to structure theoretical frameworks.
 
 ## Required and Complementary Readings
-* [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../referencias/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 52–75)
-* [Xiao, Y., & Watson, M. (2019). Guidance on Conducting a Systematic Literature Review.](../../referencias/Xiao%20and%20Watson%20-%202019%20-%20Guidance%20on%20Conducting%20a%20Systematic%20Literature%20Review.pdf) *Journal of Planning Education and Research*, 39(1), 93–112.
+* [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 52–75)
+* [Xiao, Y., & Watson, M. (2019). Guidance on Conducting a Systematic Literature Review.](../../References/Xiao%20and%20Watson%20-%202019%20-%20Guidance%20on%20Conducting%20a%20Systematic%20Literature%20Review.pdf) *Journal of Planning Education and Research*, 39(1), 93–112.
 
 ## Detailed Reading: Constructing a Systematic Review
 

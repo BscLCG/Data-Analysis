@@ -3,7 +3,7 @@
 This section covers the initial inspection of quantitative data distributions and the foundational mechanics of Simple Linear Regression using Ordinary Least Squares (OLS) estimation.
 
 ## Required and Complementary Readings
-* [Wooldridge, J. M. (2018). *Introductory econometrics: A modern approach* (Seventh edition).](../../referencias/Jeffrey%20M.%20Wooldridge%20-%202018-%20Introductury%20Econometrics.pdf) Cengage Learning. (pp. 60–105)
+* [Wooldridge, J. M. (2018). *Introductory econometrics: A modern approach* (Seventh edition).](../../References/Jeffrey%20M.%20Wooldridge%20-%202018-%20Introductury%20Econometrics.pdf) Cengage Learning. (pp. 60–105)
 * Angrist, J. D., & Pischke, J.-S. (2015). *Mastering ’metrics: The path from cause to effect*. Princeton University Press. (pp. 47–79)
 * Nahhas, R. W. (2025). *Introduction to Regression Methods for Public Health Using R*. [Ch. 5](https://bookdown.org/rwnahhas/RMPH/)
 

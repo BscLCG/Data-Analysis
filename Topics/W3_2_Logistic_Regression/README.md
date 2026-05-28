@@ -3,7 +3,7 @@
 This section covers the modelling of binary response variables using the logistic link function, addressing the limitations of the linear probability model and detailing the interpretation of log-odds and odds ratios.
 
 ## Required and Complementary Readings
-* [Wooldridge, J. M. (2018). *Introductory econometrics: A modern approach* (Seventh edition).](../../referencias/Jeffrey%20M.%20Wooldridge%20-%202018-%20Introductury%20Econometrics.pdf) Cengage Learning. (pp. 524–536)
+* [Wooldridge, J. M. (2018). *Introductory econometrics: A modern approach* (Seventh edition).](../../References/Jeffrey%20M.%20Wooldridge%20-%202018-%20Introductury%20Econometrics.pdf) Cengage Learning. (pp. 524–536)
 * Nahhas, R. W. (2025). *Introduction to Regression Methods for Public Health Using R*. [Ch. 6](https://bookdown.org/rwnahhas/RMPH/)
 
 ## Detailed Reading: Binomial Models and Logistic Regression

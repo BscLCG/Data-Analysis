@@ -3,9 +3,9 @@
 This section addresses the transition from theoretical constructs to empirical measurement. It covers sampling strategies, statistical power, survey instrument design, and the foundational concepts of validity and reliability.
 
 ## Required and Complementary Readings
-* [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../referencias/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 171–175)
-* [Stantcheva, S. (2023). How to Run Surveys: A Guide to Creating Your Own Identifying Variation and Revealing the Invisible.](../../referencias/Stantcheva%20-%202023%20-%20How%20to%20Run%20Surveys%20A%20Guide%20to%20Creating%20Your%20Own%20Identifying%20Variation%20and%20Revealin.pdf)
-* [Fowler, F. J. (2014). *Survey research methods* (5. ed).](../../referencias/Fowler%20-%202014%20-%20Survey%20research%20methods.pdf) SAGE. (pp. 14–99)
+* [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 171–175)
+* [Stantcheva, S. (2023). How to Run Surveys: A Guide to Creating Your Own Identifying Variation and Revealing the Invisible.](../../References/Stantcheva%20-%202023%20-%20How%20to%20Run%20Surveys%20A%20Guide%20to%20Creating%20Your%20Own%20Identifying%20Variation%20and%20Revealin.pdf)
+* [Fowler, F. J. (2014). *Survey research methods* (5. ed).](../../References/Fowler%20-%202014%20-%20Survey%20research%20methods.pdf) SAGE. (pp. 14–99)
 
 ## Detailed Reading: Sample Design and Instrumentation
 
