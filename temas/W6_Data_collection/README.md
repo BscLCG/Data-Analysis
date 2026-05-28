@@ -30,6 +30,32 @@ This week covers the fundamental aspects of data collection for quantitative res
 - **Power Calculations:** Determining sample size must be done *a priori* (during planning) based on expected effect sizes and desired statistical power, not post hoc.
 - **Qualtrics Best Practices:** Using "Randomizer" blocks and "Embedded Data" ensures that experimental conditions are correctly assigned and recorded for later analysis in software like R or Stata.
 
+## Detailed Reading 1: Instrument Design and Implementation
+
+In quantitative research, a survey is not a conversation; it is a measurement instrument. When a researcher asks a question in an interview, they can clarify misunderstandings. In a survey, the question must stand alone. If respondents interpret a question differently, the resulting data is useless. 
+
+Instrument design relies on two critical properties: reliability and validity. Reliability refers to consistency. If an instrument is reliable, it produces the same results under the same conditions. Validity refers to accuracy. If an instrument is valid, it measures exactly the theoretical construct it claims to measure, rather than something else. A survey question about "income" is invalid if respondents confuse gross income with net income.
+
+Researchers use digital platforms to operationalize these instruments. In this course, the standard platform is Qualtrics. Qualtrics allows researchers to structure surveys logically and run experimental designs directly within the questionnaire. 
+
+A Qualtrics survey is organized into blocks. Blocks group related questions (e.g., demographic block, treatment block, outcome block). To conduct an experiment, researchers use the "Randomizer" tool in the Survey Flow. The Randomizer assigns participants to different blocks (treatment or control) with mathematical probability. 
+
+To ensure the statistical software (like R) knows which treatment a participant received, researchers use "Embedded Data." Embedded Data creates hidden variables in the dataset that record the exact experimental condition assigned to the user. Without Embedded Data, the researcher has the survey responses but cannot identify the control group from the treatment group. Furthermore, researchers use logic flows, such as display logic and skip logic, to ensure participants only see questions relevant to their specific pathways.
+
+## Detailed Reading 2: Quantitative Sampling and Statistical Power
+
+Collecting data from an entire target population is usually impossible due to time and budget constraints. Researchers instead draw a sample. The target population is the complete group of interest. The sampling frame is the actual list or mechanism used to access potential respondents. When the sampling frame excludes part of the target population, the study suffers from coverage error. 
+
+Once researchers draw the sample, they face non-response error. This occurs when selected individuals refuse to participate. If the people who refuse are systematically different from those who participate (e.g., lower income individuals refusing a financial survey), the final data is biased. Attrition error is similar but occurs in longitudinal or multi-stage studies when participants drop out before completion.
+
+Because researchers use a sample rather than the full population, they introduce sampling error. Sampling error is the mathematical uncertainty caused by observing only a fraction of the population. Researchers quantify this uncertainty using hypothesis testing. 
+
+In hypothesis testing, the researcher establishes a null hypothesis ($H_0$), which typically states there is no effect or no difference. The p-value measures the probability of obtaining the observed sample results if the null hypothesis is completely true. A very low p-value indicates that the observed data is highly unlikely under $H_0$, leading the researcher to reject the null hypothesis.
+
+However, hypothesis testing carries the risk of two fundamental errors. A Type I Error (False Positive, denoted by $\alpha$) occurs when the researcher rejects $H_0$ but $H_0$ is actually true. In the social sciences, researchers typically set $\alpha$ at 0.05, accepting a 5% risk of a false positive. A Type II Error (False Negative, denoted by $\beta$) occurs when the researcher fails to reject $H_0$ but $H_0$ is actually false. The statistical power of a test is $1 - \beta$, which is the probability of correctly detecting an effect when it exists.
+
+To design a robust study, researchers must conduct a statistical power analysis before collecting data. This analysis calculates the required sample size based on three inputs: the chosen significance level ($\alpha$), the desired statistical power (typically 80%), and the Minimum Detectable Effect (MDE). The MDE is the smallest true effect size the researcher wants the test to detect reliably. Calculating the required sample size *a priori* ensures the researcher does not waste resources on an underpowered study that is mathematically incapable of detecting the desired effect.
+
 ## References and Materials
 
 - [W6. Forms in Qualtrics.docx](./W6.%20Forms%20in%20Qualtrics.docx)
