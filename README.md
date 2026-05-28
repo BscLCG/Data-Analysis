@@ -1,8 +1,9 @@
-# Curso de Análisis de Datos
+# Data Analysis
+Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.
 
-Bienvenido al repositorio del curso. Aquí se encuentran centralizados los materiales, presentaciones y scripts de R por tema.
+<img width="1898" height="1074" alt="image" src="https://github.com/user-attachments/assets/058a442b-41f0-4e33-a616-64a3f60243d8" />
 
-## Índice de Temas
+## Topics
 
 - [W1: Intro and research](temas/W1_Intro_and_research/README.md)
 - [W2.1: Problem and Research Questions](temas/W2_1_Problem_and_Research_Questions/README.md)
@@ -18,7 +19,7 @@ Bienvenido al repositorio del curso. Aquí se encuentran centralizados los mater
 - [W13.1: Causal Mediation Analysis](temas/W13_1_Mediation/README.md)
 - [W14.1: Final Presentations](temas/W14_1_Presentations/README.md)
 
-## Referencias
+## References
 
-Los archivos de lectura principal se encuentran en el directorio [referencias/](referencias/).
+All readings can be consulted in the [references/](referencias/) folder.
 
