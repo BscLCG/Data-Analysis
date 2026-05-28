@@ -1,0 +1,44 @@
+site_name: Data Analysis
+site_description: Course repository and materials
+docs_dir: .
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: README.md
+  - Topics:
+    - "Week 1: Intro and research": Topics/W1_Intro_and_research/README.md
+    - "Week 2.1: Problem & Research Questions": Topics/W2_1_Problem_and_Research_Questions/README.md
+    - "Week 2.2: EDA and Linear Regression": Topics/W2_2_EDA_and_Linear_Regression/README.md
+    - "Week 3.1: Literature Review": Topics/W3_1_Literature_Review/README.md
+    - "Week 3.2: Logistic Regression": Topics/W3_2_Logistic_Regression/README.md
+    - "Week 4.1: Use of Theory": Topics/W4_1_Use_of_Theory/README.md
+    - "Week 4.2: Ordered Logistic Regression": Topics/W4_2_Ordered_Logistic_Regression/README.md
+    - "Week 5.1: Mixed Methods": Topics/W5_1_Mixed_Methods/README.md
+    - "Week 6.1: Sampling & Data Collection": Topics/W6_1_Sampling_and_Data_Collection/README.md
+    - "Week 8.1: Writing and Ethics": Topics/W8_1_Writing_and_Ethics/README.md
+    - "Week 9.1: Logit Example": Topics/W9_1_Logit_Example/README.md
+    - "Week 13.1: Mediation Analysis": Topics/W13_1_Mediation/README.md
+    - "Week 14.1: Final Presentations": Topics/W14_1_Presentations/README.md
