@@ -5,6 +5,7 @@
 > This section explains the design and implementation of mixed methods research, focusing on the systematic integration of quantitative and qualitative data to answer complex research questions.
 
 ## Required and Complementary Readings
+
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 235–280)
 
 ## Detailed Reading: Mixed Methods Procedures
@@ -22,6 +23,7 @@ Implementing a mixed methods study requires selecting a specific structural desi
 Having two separate datasets in a study does not constitute mixed methods research; the data must be integrated. Researchers merge the findings to generate meta-inferences—conclusions that emerge specifically from the combination of the two methods.
 
 To achieve integration, researchers use specific tools:
+
 - **Joint Displays**: Tables or matrices that map statistical results directly alongside qualitative quotes or themes, facilitating direct comparison.
 - **Data Transformation**: Quantifying qualitative data by counting the frequency of a theme and applying statistical tests to those counts.
 

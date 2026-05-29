@@ -5,6 +5,7 @@
 > This section covers the sequence of moving from identifying a core research problem to formulating specific research questions, which ultimately dictate the selection of a research design.
 
 ## Required and Complementary Readings
+
 * [Vogt, W. P. (2008). The Dictatorship of the Problem: Choosing Research Methods.](../../References/Vogt%20-%202008%20-%20The%20Dictatorship%20of%20the%20Problem%20Choosing%20Research%20Methods.pdf) *Methodological Innovations Online*, 3(1).
 
 ## Detailed Reading: From Problem to Design

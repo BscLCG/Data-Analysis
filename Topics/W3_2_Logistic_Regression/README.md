@@ -5,6 +5,7 @@
 > This section covers the modelling of binary response variables using the logistic link function, addressing the limitations of the linear probability model and detailing the interpretation of log-odds and odds ratios.
 
 ## Required and Complementary Readings
+
 * [Wooldridge, J. M. (2018). *Introductory econometrics: A modern approach* (Seventh edition).](../../References/Jeffrey%20M.%20Wooldridge%20-%202018-%20Introductury%20Econometrics.pdf) Cengage Learning. (pp. 524–536)
 * Nahhas, R. W. (2025). *Introduction to Regression Methods for Public Health Using R*. [Ch. 6](https://bookdown.org/rwnahhas/RMPH/)
 
@@ -18,6 +19,7 @@ The most direct approach is to use the identity function as a link, leading to t
 $$ p(y=1 | X) = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k $$
 
 This approach has two main mechanical limitations:
+
 1. **Unbounded predictions**: The identity function does not constrain predictions. The model can produce probabilities below 0 or above 1.
 2. **Heteroskedasticity**: Because the outcome $y$ only takes the values 0 or 1, the residual is mechanically related to the covariates. The variance of a binomial variable depends on the mean: $Var(Y) = p(1-p)$. This violates the OLS homoskedasticity assumption, making standard errors biased unless corrected.
 

@@ -5,6 +5,7 @@
 > This section details how theoretical frameworks are identified, adapted, and employed in research. It distinguishes between the deductive application of theory in quantitative designs and the varied structural roles theory plays in qualitative research.
 
 ## Required and Complementary Readings
+
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. 
 
 ## Detailed Reading: Theory in Research Design
@@ -16,6 +17,7 @@ In quantitative research, theory is used deductively. It operates as an upfront 
 
 #### Variable Definitions
 Quantitative theoretical models rely on precisely defined variables:
+
 - **Independent Variables (Predictors)**: Variables that influence or affect the outcomes.
 - **Dependent Variables (Response)**: Outcomes influenced by the predictors.
 - **Mediating Variables**: Variables that transmit the effect of an independent variable on a dependent variable, explaining the mechanism or process of the relationship.

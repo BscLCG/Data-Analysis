@@ -5,6 +5,7 @@
 > This section outlines the mechanics of structuring academic writing and the fundamental ethical requirements that must govern empirical research, particularly concerning human subjects.
 
 ## Required and Complementary Readings
+
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 95–102, 115–121)
 
 ## Detailed Reading: Academic Structure and Ethical Compliance
@@ -13,6 +14,7 @@ The culmination of research design and data analysis is the formal communication
 
 ### Academic Writing Structure
 A standard quantitative or mixed methods empirical paper follows the conventional IMRAD structure:
+
 - **Introduction**: Establishes the real-world problem, summarizes the gaps in the existing literature, states the theoretical framework, and explicitly presents the research questions and hypotheses.
 - **Methods**: Details the study design, population, sampling strategy, data collection instruments, and statistical models. This section must contain enough detail to allow another researcher to replicate the study exactly.
 - **Results**: Presents the empirical findings objectively, without interpretation. It relies heavily on visual data representations, such as tables of regression coefficients and coefficient plots.
@@ -22,6 +24,7 @@ Writing should be direct and sober. Researchers must avoid promotional language 
 
 ### Research Ethics
 Empirical research involving human subjects requires rigorous ethical oversight to prevent harm. Modern ethical standards derive from documents such as the Belmont Report, which establishes three core principles:
+
 1. **Respect for Persons**: Participants must be treated as autonomous agents. This necessitates informed consent—individuals must understand the purpose of the study, the risks involved, and their right to withdraw at any time without penalty.
 2. **Beneficence**: Researchers must maximize possible benefits and minimize possible harms. They must protect participants' privacy through anonymization or secure data encryption.
 3. **Justice**: The burdens and benefits of research must be distributed equitably. Researchers cannot exploit vulnerable populations simply because they are accessible.

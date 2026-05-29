@@ -12,6 +12,7 @@ The culmination of the research process is the formal communication of findings.
 Presenting applied data analysis requires synthesizing complex, multi-month projects into strict timeframes. Researchers typically have 25 minutes to present their complete study, followed by a Q&A session. This format mirrors academic conferences and professional consulting environments. 
 
 The presentation structure directly tracks the [formal academic structure](../W8_1_Writing_and_Ethics/README.md):
+
 1. **Problem and Theoretical Framework**: Presenters must establish the research problem and articulate the primary research question. This section justifies the relevance of the problem using key literature and explicit [theoretical models](../W4_1_Use_of_Theory/README.md).
 2. **Methodology**: The presentation details the empirical approach. For quantitative projects, this involves defining the population, the [sampling strategy](../W6_1_Sampling_and_Data_Collection/README.md), the operationalization of variables, and the specific statistical estimators used (e.g., [Logistic regression](../W3_2_Logistic_Regression/README.md)). For [mixed-methods projects](../W5_1_Mixed_Methods/README.md), the section must explain the integration process and structural design.
 3. **Results**: This is the core of the presentation. Researchers use visual aids—such as coefficient plots, predicted probability graphs, and [joint displays](../W5_1_Mixed_Methods/README.md)—to convey complex relationships efficiently.

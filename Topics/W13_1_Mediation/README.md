@@ -5,6 +5,7 @@
 > This section explores multiple mediation analysis, focusing on scenarios where the independent variable, mediators, and dependent variable are categorical, requiring structural equation modeling (SEM) estimation.
 
 ## Required and Complementary Readings
+
 * Facer, M., & Collins, S. (2014). Structural Equation Modeling with Categorical Variables.
 
 ## Detailed Reading: Analyzing Mechanisms with SEM
@@ -12,6 +13,7 @@
 Determining that an independent variable ($X$) affects a dependent variable ($Y$) is often insufficient for robust empirical research. Researchers must identify the mechanism through which that effect occurs. A mediating variable ($M$) represents that exact mechanism. 
 
 When researchers introduce a mediator into their model, they partition the total effect of $X$ on $Y$ into two components: 
+
 1. The **direct effect** of $X$ on $Y$ ($c'$).
 2. The **indirect effect** of $X$ on $Y$ transmitted through $M$ ($a \times b$).
 

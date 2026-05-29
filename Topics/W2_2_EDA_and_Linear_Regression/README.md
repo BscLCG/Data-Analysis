@@ -5,6 +5,7 @@
 > This section covers the initial inspection of quantitative data distributions and the foundational mechanics of Simple Linear Regression using Ordinary Least Squares (OLS) estimation.
 
 ## Required and Complementary Readings
+
 * [Wooldridge, J. M. (2018). *Introductory econometrics: A modern approach* (Seventh edition).](../../References/Jeffrey%20M.%20Wooldridge%20-%202018-%20Introductury%20Econometrics.pdf) Cengage Learning. (pp. 60–105)
 * Angrist, J. D., & Pischke, J.-S. (2015). *Mastering ’metrics: The path from cause to effect*. Princeton University Press. (pp. 47–79)
 * Nahhas, R. W. (2025). *Introduction to Regression Methods for Public Health Using R*. [Ch. 5](https://bookdown.org/rwnahhas/RMPH/)
@@ -15,6 +16,7 @@
 Before applying formal statistical models, researchers must understand their data's structure. EDA identifies missing values, locates outliers, and reveals baseline distributions without imposing rigid assumptions. 
 
 EDA employs two main approaches:
+
 1. **Non-graphical techniques**: Calculation of summary statistics. For single variables, this includes the mean, median, variance, standard deviation, and interquartile range. For bivariate relationships, researchers compute correlation coefficients (Pearson for linear relationships between continuous variables, Spearman for monotonic relationships with ranked data).
 2. **Graphical techniques**: Visual representation of data. Histograms and box plots illustrate the central tendency and dispersion of single variables, while scatter plots visualize the direction and shape of relationships between two variables. 
 
@@ -24,6 +26,7 @@ Simple Linear Regression estimates the relationship between a single independent
 $$ y = \beta_0 + \beta_1 x + u $$
 
 Where:
+
 - $\beta_0$ is the intercept (the expected value of $y$ when $x=0$).
 - $\beta_1$ is the slope (the change in $y$ for a one-unit increase in $x$).
 - $u$ represents the unobserved error term (all other factors affecting $y$).
@@ -41,6 +44,7 @@ $$ \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x} $$
 
 ### OLS Assumptions
 For OLS to provide valid, unbiased estimators of the population parameters, certain statistical conditions must hold:
+
 1. **Linearity in parameters**: The relationship between $x$ and $y$ must be linear.
 2. **Random sampling**: The data must be a random sample from the population.
 3. **No perfect collinearity**: Independent variables must not be perfectly correlated (relevant for multiple regression).

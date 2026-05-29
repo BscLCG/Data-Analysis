@@ -5,6 +5,7 @@
 > This section presents a practical application of logistic regression, analyzing racial discrimination in the sharing economy through field experiments.
 
 ## Required and Complementary Readings
+
 * Edelman, B., Luca, M., & Svirsky, D. (2017). Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment. *American Economic Journal: Applied Economics*, 9(2), 1–22.
 
 ## Detailed Reading: Analyzing Discrimination
@@ -21,6 +22,7 @@ Logistic regression demonstrated that this gap persisted even when controlling f
 
 ### Validity Critiques
 While the statistical model is robust, all experimental designs must be evaluated for validity:
+
 - **Internal Validity**: The extent to which a study isolates the causal mechanism. Critics note that the sample contained very few same-race/same-gender interactions (1.92% of all host-guest pairs), limiting the statistical power to draw definitive conclusions about intragroup discrimination.
 - **External Validity**: The extent to which findings generalize to other populations. The experiment heavily sampled hosts from large urban centers. This geographic concentration suggests the observed discrimination effects might be locally specific rather than a universal platform feature.
 

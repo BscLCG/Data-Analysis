@@ -5,6 +5,7 @@
 > This section extends the logistic framework to model ordinal categorical dependent variables. It introduces the proportional odds model, threshold parameters, and the latent variable conceptualization of ordered categories.
 
 ## Required and Complementary Readings
+
 * Nahhas, R. W. (2025). *Introduction to Regression Methods for Public Health Using R*. [Ch. 6](https://bookdown.org/rwnahhas/RMPH/)
 
 ## Detailed Reading: Modelling Ordinal Categories
@@ -35,6 +36,7 @@ A central constraint of this model is the Proportional Odds (or parallel-regress
 If the true slopes differ across cut-points, the single estimated $\beta$ becomes an average that fits poorly at the extremes of the ordinal scale. Researchers must formally test this assumption using tests such as the **Brant test**, which compares the coefficients from separate binary logit models estimated for each threshold.
 
 If the assumption is violated, the researcher must decide whether to:
+
 1. Re-categorize the variable (if theoretically justified).
 2. Fit a multinomial logit model (which ignores ordinality).
 3. Fit a partial proportional odds model, relaxing the assumption only for the specific variables that violate it.

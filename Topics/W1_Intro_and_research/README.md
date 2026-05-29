@@ -5,6 +5,7 @@
 > This section introduces the foundational competencies for data analysis and research methodology. It covers the structural integration of Large Language Models (LLMs) in academic settings, the philosophical assumptions guiding research design, and the distinction between research approaches. It also establishes the technical tooling (R, RStudio, and R Markdown) required for reproducible workflows.
 
 ## Required and Complementary Readings
+
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 30–52)
 
 ## Detailed Reading: Worldviews and Reproducibility
