@@ -248,12 +248,6 @@ window.Quarto = {
   <li><a href="#multiple-mediation-and-structural-equation-modeling" id="toc-multiple-mediation-and-structural-equation-modeling" class="nav-link" data-scroll-target="#multiple-mediation-and-structural-equation-modeling">Multiple Mediation and Structural Equation Modeling</a></li>
   <li><a href="#estimating-categorical-endogenous-variables" id="toc-estimating-categorical-endogenous-variables" class="nav-link" data-scroll-target="#estimating-categorical-endogenous-variables">Estimating Categorical Endogenous Variables</a></li>
   </ul></li>
-  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references">Cross-References</a></li>
-  <li><a href="#references-and-materials" id="toc-references-and-materials" class="nav-link" data-scroll-target="#references-and-materials">References and Materials</a>
-  <ul class="collapse">
-  <li><a href="#view-pdfs" id="toc-view-pdfs" class="nav-link" data-scroll-target="#view-pdfs">View (PDFs)</a></li>
-  <li><a href="#download-originals-scripts" id="toc-download-originals-scripts" class="nav-link" data-scroll-target="#download-originals-scripts">Download (Originals &amp; Scripts)</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -266,7 +260,9 @@ window.Quarto = {
 
 <section id="week-13.1-causal-mediation-analysis" class="level1">
 <h1>Week 13.1: Causal Mediation Analysis</h1>
-<p>This section explores multiple mediation analysis, focusing on scenarios where the independent variable, mediators, and dependent variable are categorical, requiring structural equation modeling (SEM) estimation.</p>
+<blockquote class="blockquote">
+<p>[!info] Overview This section explores multiple mediation analysis, focusing on scenarios where the independent variable, mediators, and dependent variable are categorical, requiring structural equation modeling (SEM) estimation.</p>
+</blockquote>
 <section id="required-and-complementary-readings" class="level2">
 <h2 class="anchored" data-anchor-id="required-and-complementary-readings">Required and Complementary Readings</h2>
 <ul>
@@ -287,27 +283,13 @@ window.Quarto = {
 <p>Standard Ordinary Least Squares (OLS) or Maximum Likelihood (ML) estimation fails when endogenous variables (mediators and outcomes) are discrete. In <code>lavaan</code>, the researcher must explicitly define these variables as “ordered.” This triggers a shift from ML to the Diagonally Weighted Least Squares (DWLS) estimator. DWLS computes polychoric and tetrachoric correlations to map the underlying continuous distribution of the categorical variables, ensuring unbiased parameter estimates.</p>
 <p>The syntax for path modeling explicitly defines direct and indirect pathways. The researcher specifies the pathways from <span class="math inline">\(X\)</span> to each mediator (labeled <span class="math inline">\(a_1, a_2, a_3\)</span>), and the pathways from each mediator to <span class="math inline">\(Y\)</span> (labeled <span class="math inline">\(b_1, b_2, b_3\)</span>). The specific indirect effect for any given mechanism is the mathematical product of its two paths (<span class="math inline">\(a \times b\)</span>). The sum of all specific indirect effects constitutes the total indirect effect.</p>
 <p>This level of granularity is essential. An independent variable may show zero direct effect on <span class="math inline">\(Y\)</span>, but possess a strong, statistically significant indirect effect through a specific mediator (<span class="math inline">\(M_2\)</span>). Identifying this pathway provides the empirical evidence required to validate complex <a href="../../Topics/W4_1_Use_of_Theory/README.html">theoretical frameworks</a>.</p>
-</section>
-</section>
-<section id="cross-references" class="level2">
-<h2 class="anchored" data-anchor-id="cross-references">Cross-References</h2>
-<ul>
-<li>Return to the <a href="../../README.md">Course Root</a></li>
-<li>Previous topic: <a href="../../Topics/W9_1_Logit_Example/README.html">Logit Example</a></li>
-<li>Next topic: <a href="../../Topics/W14_1_Presentations/README.html">Final Presentations</a></li>
-</ul>
-</section>
-<section id="references-and-materials" class="level2">
-<h2 class="anchored" data-anchor-id="references-and-materials">References and Materials</h2>
-<section id="view-pdfs" class="level3">
-<h3 class="anchored" data-anchor-id="view-pdfs">View (PDFs)</h3>
-<p><em>No PDF materials for this week.</em></p>
-</section>
-<section id="download-originals-scripts" class="level3">
-<h3 class="anchored" data-anchor-id="download-originals-scripts">Download (Originals &amp; Scripts)</h3>
-<ul>
-<li><a href="./W13.Mediation.R">W13.Mediation.R</a></li>
-</ul>
+<blockquote class="blockquote">
+<p>[!tip] Cross-References * Return to the <a href="../../README.md">Course Root</a> * Previous topic: <a href="../../Topics/W9_1_Logit_Example/README.html">Logit Example</a> * Next topic: <a href="../../Topics/W14_1_Presentations/README.html">Final Presentations</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[!note] References and Materials <strong>View (PDFs)</strong> <em>No PDF materials for this week.</em></p>
+<p><strong>Download (Originals &amp; Scripts)</strong> - <a href="./W13.Mediation.R">W13.Mediation.R</a></p>
+</blockquote>
 
 
 </section>
