@@ -1,6 +1,21 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - index.md
+    - Topics/W1_Intro_and_research/README.md
+    - Topics/W2_1_Problem_and_Research_Questions/README.md
+    - Topics/W2_2_EDA_and_Linear_Regression/README.md
+    - Topics/W3_1_Literature_Review/README.md
+    - Topics/W3_2_Logistic_Regression/README.md
+    - Topics/W4_1_Use_of_Theory/README.md
+    - Topics/W4_2_Ordered_Logistic_Regression/README.md
+    - Topics/W5_1_Mixed_Methods/README.md
+    - Topics/W6_1_Sampling_and_Data_Collection/README.md
+    - Topics/W8_1_Writing_and_Ethics/README.md
+    - Topics/W9_1_Logit_Example/README.md
+    - Topics/W13_1_Mediation/README.md
+    - Topics/W14_1_Presentations/README.md
 
 website:
   title: "Data Analysis"
