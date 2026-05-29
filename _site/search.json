@@ -1,0 +1,87 @@
+[
+  {
+    "objectID": "Topics/W2_1_Problem_and_Research_Questions/README.html",
+    "href": "Topics/W2_1_Problem_and_Research_Questions/README.html",
+    "title": "Week 2.1: Problem Formulation and Research Questions",
+    "section": "",
+    "text": "This section covers the sequence of moving from identifying a core research problem to formulating specific research questions, which ultimately dictate the selection of a research design.\n\n\n\nVogt, W. P. (2008). The Dictatorship of the Problem: Choosing Research Methods. Methodological Innovations Online, 3(1).\n\n\n\n\nA research project must begin with a concrete, real-world problem rather than a methodological preference. The nature of the problem establishes the context and highlights the deficiency in existing knowledge. It is this deficiency that the researcher aims to resolve.\n\n\nOnce the problem is delimited, the researcher drafts a primary research question. This question must be directly answerable through empirical data. Broad, philosophical, or purely normative questions are typically unsuited for empirical research unless reformulated to target observable phenomena.\nThe specific phrasing of the research question dictates the required methodological approach. If the question asks “how much,” “what is the impact of,” or “to what extent,” the researcher must adopt a quantitative design to measure magnitudes and test relationships. If the question asks “how” or “why” individuals interpret an event, the researcher must adopt a qualitative design to capture mechanisms and subjective experiences.\n\n\n\nThe sequence is strictly linear: Problem \\(\\rightarrow\\) Question \\(\\rightarrow\\) Design.\nResearchers cannot select methods (such as surveys, interviews, or regressions) before defining the exact question they aim to answer. Designing an instrument or selecting a statistical model beforehand leads to structural errors, mismatched data, and wasted resources. For instance, choosing to run a logistic regression before verifying that the outcome of interest is binary forces the data into an inappropriate framework. The research design must serve the question, not the other way around.\n\n\n\n\n\nReturn to the Course Root\nPrevious topic: Introduction and Research\nNext topic: EDA and Linear Regression\n\n\n\n\n\n\n\nW2. From problem to question to design.pdf\nW2. Problem and research questions - Copy.pdf\n\n\n\n\n\nW2. From problem to question to design.docx\nW2. Problem and research questions - Copy.pptx",
+    "crumbs": [
+      "Topics",
+      "Week 2.1: Problem and Research Questions"
+    ]
+  },
+  {
+    "objectID": "Topics/W2_1_Problem_and_Research_Questions/README.html#required-and-complementary-readings",
+    "href": "Topics/W2_1_Problem_and_Research_Questions/README.html#required-and-complementary-readings",
+    "title": "Week 2.1: Problem Formulation and Research Questions",
+    "section": "",
+    "text": "Vogt, W. P. (2008). The Dictatorship of the Problem: Choosing Research Methods. Methodological Innovations Online, 3(1).",
+    "crumbs": [
+      "Topics",
+      "Week 2.1: Problem and Research Questions"
+    ]
+  },
+  {
+    "objectID": "Topics/W2_1_Problem_and_Research_Questions/README.html#detailed-reading-from-problem-to-design",
+    "href": "Topics/W2_1_Problem_and_Research_Questions/README.html#detailed-reading-from-problem-to-design",
+    "title": "Week 2.1: Problem Formulation and Research Questions",
+    "section": "",
+    "text": "A research project must begin with a concrete, real-world problem rather than a methodological preference. The nature of the problem establishes the context and highlights the deficiency in existing knowledge. It is this deficiency that the researcher aims to resolve.\n\n\nOnce the problem is delimited, the researcher drafts a primary research question. This question must be directly answerable through empirical data. Broad, philosophical, or purely normative questions are typically unsuited for empirical research unless reformulated to target observable phenomena.\nThe specific phrasing of the research question dictates the required methodological approach. If the question asks “how much,” “what is the impact of,” or “to what extent,” the researcher must adopt a quantitative design to measure magnitudes and test relationships. If the question asks “how” or “why” individuals interpret an event, the researcher must adopt a qualitative design to capture mechanisms and subjective experiences.\n\n\n\nThe sequence is strictly linear: Problem \\(\\rightarrow\\) Question \\(\\rightarrow\\) Design.\nResearchers cannot select methods (such as surveys, interviews, or regressions) before defining the exact question they aim to answer. Designing an instrument or selecting a statistical model beforehand leads to structural errors, mismatched data, and wasted resources. For instance, choosing to run a logistic regression before verifying that the outcome of interest is binary forces the data into an inappropriate framework. The research design must serve the question, not the other way around.",
+    "crumbs": [
+      "Topics",
+      "Week 2.1: Problem and Research Questions"
+    ]
+  },
+  {
+    "objectID": "Topics/W2_1_Problem_and_Research_Questions/README.html#cross-references",
+    "href": "Topics/W2_1_Problem_and_Research_Questions/README.html#cross-references",
+    "title": "Week 2.1: Problem Formulation and Research Questions",
+    "section": "",
+    "text": "Return to the Course Root\nPrevious topic: Introduction and Research\nNext topic: EDA and Linear Regression",
+    "crumbs": [
+      "Topics",
+      "Week 2.1: Problem and Research Questions"
+    ]
+  },
+  {
+    "objectID": "Topics/W2_1_Problem_and_Research_Questions/README.html#references-and-materials",
+    "href": "Topics/W2_1_Problem_and_Research_Questions/README.html#references-and-materials",
+    "title": "Week 2.1: Problem Formulation and Research Questions",
+    "section": "",
+    "text": "W2. From problem to question to design.pdf\nW2. Problem and research questions - Copy.pdf\n\n\n\n\n\nW2. From problem to question to design.docx\nW2. Problem and research questions - Copy.pptx",
+    "crumbs": [
+      "Topics",
+      "Week 2.1: Problem and Research Questions"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.\n\n\n\nW1: Intro and research\nW2.1: Problem and Research Questions\nW2.2: EDA and Linear Regression\nW3.1: Literature Review\nW3.2: Logistic Regression\nW4.1: Use of Theory\nW4.2: Ordered Logistic Regression\nW5.1: Mixed Methods\nW6.1: Sampling and Data Collection\nW8.1: Writing and Ethics\nW9.1: Logit Example\nW13.1: Causal Mediation Analysis\nW14.1: Final Presentations\n\n\n\n\nAll readings can be consulted in the references/ folder.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#topics",
+    "href": "index.html#topics",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "W1: Intro and research\nW2.1: Problem and Research Questions\nW2.2: EDA and Linear Regression\nW3.1: Literature Review\nW3.2: Logistic Regression\nW4.1: Use of Theory\nW4.2: Ordered Logistic Regression\nW5.1: Mixed Methods\nW6.1: Sampling and Data Collection\nW8.1: Writing and Ethics\nW9.1: Logit Example\nW13.1: Causal Mediation Analysis\nW14.1: Final Presentations",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "All readings can be consulted in the references/ folder.",
+    "crumbs": [
+      "Home"
+    ]
+  }
+]
