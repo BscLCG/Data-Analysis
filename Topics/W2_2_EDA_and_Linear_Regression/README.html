@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Analysis</title>
+<title>readme – Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W2_2_EDA_and_Linear_Regression/README.html">Week 2.2: EDA and Linear Regression</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Data Analysis</a> 
+      <a href="../../">Data Analysis</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -123,79 +152,79 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W1_Intro_and_research/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W1_Intro_and_research/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: Intro and research approaches</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W2_1_Problem_and_Research_Questions/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W2_1_Problem_and_Research_Questions/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2.1: Problem and Research Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W2_2_EDA_and_Linear_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W2_2_EDA_and_Linear_Regression/README.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 2.2: EDA and Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W3_1_Literature_Review/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W3_1_Literature_Review/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3.1: Literature Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W3_2_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W3_2_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3.2: Logistic Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W4_1_Use_of_Theory/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W4_1_Use_of_Theory/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4.1: Use of Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W4_2_Ordered_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W4_2_Ordered_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4.2: Ordered Logistic Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W5_1_Mixed_Methods/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W5_1_Mixed_Methods/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5.1: Mixed Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W6_1_Sampling_and_Data_Collection/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W6_1_Sampling_and_Data_Collection/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6.1: Sampling and Data Collection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W8_1_Writing_and_Ethics/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W8_1_Writing_and_Ethics/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8.1: Writing and Ethics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W9_1_Logit_Example/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W9_1_Logit_Example/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9.1: Logit Example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W13_1_Mediation/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W13_1_Mediation/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 13.1: Causal Mediation Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 14.1: Final Presentations</span></a>
   </div>
 </li>
@@ -211,46 +240,96 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link active" data-scroll-target="#data-analysis">Data Analysis</a>
+  <li><a href="#week-2.2-exploratory-data-analysis-and-linear-regression" id="toc-week-2.2-exploratory-data-analysis-and-linear-regression" class="nav-link active" data-scroll-target="#week-2.2-exploratory-data-analysis-and-linear-regression">Week 2.2: Exploratory Data Analysis and Linear Regression</a>
   <ul class="collapse">
-  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#required-and-complementary-readings" id="toc-required-and-complementary-readings" class="nav-link" data-scroll-target="#required-and-complementary-readings">Required and Complementary Readings</a></li>
+  <li><a href="#detailed-reading-eda-and-linear-modelling" id="toc-detailed-reading-eda-and-linear-modelling" class="nav-link" data-scroll-target="#detailed-reading-eda-and-linear-modelling">Detailed Reading: EDA and Linear Modelling</a>
+  <ul class="collapse">
+  <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a></li>
+  <li><a href="#simple-linear-regression" id="toc-simple-linear-regression" class="nav-link" data-scroll-target="#simple-linear-regression">Simple Linear Regression</a></li>
+  <li><a href="#ordinary-least-squares-ols-estimation" id="toc-ordinary-least-squares-ols-estimation" class="nav-link" data-scroll-target="#ordinary-least-squares-ols-estimation">Ordinary Least Squares (OLS) Estimation</a></li>
+  <li><a href="#ols-assumptions" id="toc-ols-assumptions" class="nav-link" data-scroll-target="#ols-assumptions">OLS Assumptions</a></li>
+  </ul></li>
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references">Cross-References</a></li>
+  <li><a href="#references-and-materials" id="toc-references-and-materials" class="nav-link" data-scroll-target="#references-and-materials">References and Materials</a>
+  <ul class="collapse">
+  <li><a href="#view-pdfs" id="toc-view-pdfs" class="nav-link" data-scroll-target="#view-pdfs">View (PDFs)</a></li>
+  <li><a href="#download-originals-scripts" id="toc-download-originals-scripts" class="nav-link" data-scroll-target="#download-originals-scripts">Download (Originals &amp; Scripts)</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W2_2_EDA_and_Linear_Regression/README.html">Week 2.2: EDA and Linear Regression</a></li></ol></nav></header>
 
 
 
 
-<section id="data-analysis" class="level1">
-<h1>Data Analysis</h1>
-<p>Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.</p>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<section id="week-2.2-exploratory-data-analysis-and-linear-regression" class="level1">
+<h1>Week 2.2: Exploratory Data Analysis and Linear Regression</h1>
+<p>This section covers the initial inspection of quantitative data distributions and the foundational mechanics of Simple Linear Regression using Ordinary Least Squares (OLS) estimation.</p>
+<section id="required-and-complementary-readings" class="level2">
+<h2 class="anchored" data-anchor-id="required-and-complementary-readings">Required and Complementary Readings</h2>
 <ul>
-<li><a href="./Topics/W1_Intro_and_research/README.html">W1: Intro and research</a></li>
-<li><a href="./Topics/W2_1_Problem_and_Research_Questions/README.html">W2.1: Problem and Research Questions</a></li>
-<li><a href="./Topics/W2_2_EDA_and_Linear_Regression/README.html">W2.2: EDA and Linear Regression</a></li>
-<li><a href="./Topics/W3_1_Literature_Review/README.html">W3.1: Literature Review</a></li>
-<li><a href="./Topics/W3_2_Logistic_Regression/README.html">W3.2: Logistic Regression</a></li>
-<li><a href="./Topics/W4_1_Use_of_Theory/README.html">W4.1: Use of Theory</a></li>
-<li><a href="./Topics/W4_2_Ordered_Logistic_Regression/README.html">W4.2: Ordered Logistic Regression</a></li>
-<li><a href="./Topics/W5_1_Mixed_Methods/README.html">W5.1: Mixed Methods</a></li>
-<li><a href="./Topics/W6_1_Sampling_and_Data_Collection/README.html">W6.1: Sampling and Data Collection</a></li>
-<li><a href="./Topics/W8_1_Writing_and_Ethics/README.html">W8.1: Writing and Ethics</a></li>
-<li><a href="./Topics/W9_1_Logit_Example/README.html">W9.1: Logit Example</a></li>
-<li><a href="./Topics/W13_1_Mediation/README.html">W13.1: Causal Mediation Analysis</a></li>
-<li><a href="./Topics/W14_1_Presentations/README.html">W14.1: Final Presentations</a></li>
+<li><a href="../../References/Jeffrey M. Wooldridge - 2018- Introductury Econometrics.pdf">Wooldridge, J. M. (2018). <em>Introductory econometrics: A modern approach</em> (Seventh edition).</a> Cengage Learning. (pp.&nbsp;60–105)</li>
+<li>Angrist, J. D., &amp; Pischke, J.-S. (2015). <em>Mastering ’metrics: The path from cause to effect</em>. Princeton University Press. (pp.&nbsp;47–79)</li>
+<li>Nahhas, R. W. (2025). <em>Introduction to Regression Methods for Public Health Using R</em>. <a href="https://bookdown.org/rwnahhas/RMPH/">Ch. 5</a></li>
 </ul>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>All readings can be consulted in the <a href="References/">references/</a> folder.</p>
+<section id="detailed-reading-eda-and-linear-modelling" class="level2">
+<h2 class="anchored" data-anchor-id="detailed-reading-eda-and-linear-modelling">Detailed Reading: EDA and Linear Modelling</h2>
+<section id="exploratory-data-analysis-eda" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h3>
+<p>Before applying formal statistical models, researchers must understand their data’s structure. EDA identifies missing values, locates outliers, and reveals baseline distributions without imposing rigid assumptions.</p>
+<p>EDA employs two main approaches: 1. <strong>Non-graphical techniques</strong>: Calculation of summary statistics. For single variables, this includes the mean, median, variance, standard deviation, and interquartile range. For bivariate relationships, researchers compute correlation coefficients (Pearson for linear relationships between continuous variables, Spearman for monotonic relationships with ranked data). 2. <strong>Graphical techniques</strong>: Visual representation of data. Histograms and box plots illustrate the central tendency and dispersion of single variables, while scatter plots visualize the direction and shape of relationships between two variables.</p>
+</section>
+<section id="simple-linear-regression" class="level3">
+<h3 class="anchored" data-anchor-id="simple-linear-regression">Simple Linear Regression</h3>
+<p>Simple Linear Regression estimates the relationship between a single independent variable (<span class="math inline">\(x\)</span>) and a continuous dependent variable (<span class="math inline">\(y\)</span>). The model fits a straight line through the data points governed by the equation:</p>
+<p><span class="math display">\[ y = \beta_0 + \beta_1 x + u \]</span></p>
+<p>Where: - <span class="math inline">\(\beta_0\)</span> is the intercept (the expected value of <span class="math inline">\(y\)</span> when <span class="math inline">\(x=0\)</span>). - <span class="math inline">\(\beta_1\)</span> is the slope (the change in <span class="math inline">\(y\)</span> for a one-unit increase in <span class="math inline">\(x\)</span>). - <span class="math inline">\(u\)</span> represents the unobserved error term (all other factors affecting <span class="math inline">\(y\)</span>).</p>
+</section>
+<section id="ordinary-least-squares-ols-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="ordinary-least-squares-ols-estimation">Ordinary Least Squares (OLS) Estimation</h3>
+<p>The standard procedure for estimating <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> is Ordinary Least Squares (OLS). OLS calculates the specific line that minimizes the sum of squared differences (residuals) between the observed values in the sample and the values predicted by the model.</p>
+<p>The OLS estimator for the slope parameter is derived as the sample covariance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> divided by the sample variance of <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[ \hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} \]</span></p>
+<p>Once the slope is estimated, the intercept is computed as:</p>
+<p><span class="math display">\[ \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x} \]</span></p>
+</section>
+<section id="ols-assumptions" class="level3">
+<h3 class="anchored" data-anchor-id="ols-assumptions">OLS Assumptions</h3>
+<p>For OLS to provide valid, unbiased estimators of the population parameters, certain statistical conditions must hold: 1. <strong>Linearity in parameters</strong>: The relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> must be linear. 2. <strong>Random sampling</strong>: The data must be a random sample from the population. 3. <strong>No perfect collinearity</strong>: Independent variables must not be perfectly correlated (relevant for multiple regression). 4. <strong>Zero conditional mean</strong>: The expected value of the error term <span class="math inline">\(u\)</span>, conditional on <span class="math inline">\(x\)</span>, must be zero (<span class="math inline">\(E[u|x] = 0\)</span>). 5. <strong>Homoscedasticity</strong>: The variance of the error term must be constant across all values of <span class="math inline">\(x\)</span> (<span class="math inline">\(Var(u|x) = \sigma^2\)</span>).</p>
+<p>If these conditions are met, OLS produces the Best Linear Unbiased Estimator (BLUE). However, researchers must be careful not to conflate correlation with causation; an estimated <span class="math inline">\(\beta_1 \neq 0\)</span> implies a linear association, but causal inference requires rigorous research design to isolate the effect from confounding variables.</p>
+</section>
+</section>
+<section id="cross-references" class="level2">
+<h2 class="anchored" data-anchor-id="cross-references">Cross-References</h2>
+<ul>
+<li>Return to the <a href="../../README.md">Course Root</a></li>
+<li>Previous topic: <a href="../../Topics/W2_1_Problem_and_Research_Questions/README.html">Problem and Research Questions</a></li>
+<li>Next topic: <a href="../../Topics/W3_1_Literature_Review/README.html">Literature Review</a></li>
+</ul>
+</section>
+<section id="references-and-materials" class="level2">
+<h2 class="anchored" data-anchor-id="references-and-materials">References and Materials</h2>
+<section id="view-pdfs" class="level3">
+<h3 class="anchored" data-anchor-id="view-pdfs">View (PDFs)</h3>
+<ul>
+<li><a href="./W2. EDA and linear regression.pdf">W2. EDA and linear regression.pdf</a></li>
+<li><a href="./W2. Inference and statistical significance.pdf">W2. Inference and statistical significance.pdf</a></li>
+</ul>
+</section>
+<section id="download-originals-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="download-originals-scripts">Download (Originals &amp; Scripts)</h3>
+<ul>
+<li><a href="./W2. EDA and linear regression.pptx">W2. EDA and linear regression.pptx</a></li>
+<li><a href="./W2. Inference and statistical significance.pptx">W2. Inference and statistical significance.pptx</a></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 

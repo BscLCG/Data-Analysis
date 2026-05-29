@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Analysis</title>
+<title>readme – Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W4_1_Use_of_Theory/README.html">Week 4.1: Use of Theory</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Data Analysis</a> 
+      <a href="../../">Data Analysis</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -123,79 +152,79 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W1_Intro_and_research/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W1_Intro_and_research/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: Intro and research approaches</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W2_1_Problem_and_Research_Questions/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W2_1_Problem_and_Research_Questions/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2.1: Problem and Research Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W2_2_EDA_and_Linear_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W2_2_EDA_and_Linear_Regression/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2.2: EDA and Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W3_1_Literature_Review/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W3_1_Literature_Review/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3.1: Literature Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W3_2_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W3_2_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3.2: Logistic Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W4_1_Use_of_Theory/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W4_1_Use_of_Theory/README.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 4.1: Use of Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W4_2_Ordered_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W4_2_Ordered_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4.2: Ordered Logistic Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W5_1_Mixed_Methods/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W5_1_Mixed_Methods/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5.1: Mixed Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W6_1_Sampling_and_Data_Collection/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W6_1_Sampling_and_Data_Collection/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6.1: Sampling and Data Collection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W8_1_Writing_and_Ethics/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W8_1_Writing_and_Ethics/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8.1: Writing and Ethics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W9_1_Logit_Example/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W9_1_Logit_Example/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9.1: Logit Example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W13_1_Mediation/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W13_1_Mediation/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 13.1: Causal Mediation Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 14.1: Final Presentations</span></a>
   </div>
 </li>
@@ -211,46 +240,88 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link active" data-scroll-target="#data-analysis">Data Analysis</a>
+  <li><a href="#week-4.1-use-of-theory" id="toc-week-4.1-use-of-theory" class="nav-link active" data-scroll-target="#week-4.1-use-of-theory">Week 4.1: Use of Theory</a>
   <ul class="collapse">
-  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#required-and-complementary-readings" id="toc-required-and-complementary-readings" class="nav-link" data-scroll-target="#required-and-complementary-readings">Required and Complementary Readings</a></li>
+  <li><a href="#detailed-reading-theory-in-research-design" id="toc-detailed-reading-theory-in-research-design" class="nav-link" data-scroll-target="#detailed-reading-theory-in-research-design">Detailed Reading: Theory in Research Design</a>
+  <ul class="collapse">
+  <li><a href="#theory-in-quantitative-designs" id="toc-theory-in-quantitative-designs" class="nav-link" data-scroll-target="#theory-in-quantitative-designs">Theory in Quantitative Designs</a></li>
+  <li><a href="#theory-in-qualitative-designs" id="toc-theory-in-qualitative-designs" class="nav-link" data-scroll-target="#theory-in-qualitative-designs">Theory in Qualitative Designs</a></li>
+  </ul></li>
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references">Cross-References</a></li>
+  <li><a href="#references-and-materials" id="toc-references-and-materials" class="nav-link" data-scroll-target="#references-and-materials">References and Materials</a>
+  <ul class="collapse">
+  <li><a href="#view-pdfs" id="toc-view-pdfs" class="nav-link" data-scroll-target="#view-pdfs">View (PDFs)</a></li>
+  <li><a href="#download-originals-scripts" id="toc-download-originals-scripts" class="nav-link" data-scroll-target="#download-originals-scripts">Download (Originals &amp; Scripts)</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W4_1_Use_of_Theory/README.html">Week 4.1: Use of Theory</a></li></ol></nav></header>
 
 
 
 
-<section id="data-analysis" class="level1">
-<h1>Data Analysis</h1>
-<p>Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.</p>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<section id="week-4.1-use-of-theory" class="level1">
+<h1>Week 4.1: Use of Theory</h1>
+<p>This section details how theoretical frameworks are identified, adapted, and employed in research. It distinguishes between the deductive application of theory in quantitative designs and the varied structural roles theory plays in qualitative research.</p>
+<section id="required-and-complementary-readings" class="level2">
+<h2 class="anchored" data-anchor-id="required-and-complementary-readings">Required and Complementary Readings</h2>
 <ul>
-<li><a href="./Topics/W1_Intro_and_research/README.html">W1: Intro and research</a></li>
-<li><a href="./Topics/W2_1_Problem_and_Research_Questions/README.html">W2.1: Problem and Research Questions</a></li>
-<li><a href="./Topics/W2_2_EDA_and_Linear_Regression/README.html">W2.2: EDA and Linear Regression</a></li>
-<li><a href="./Topics/W3_1_Literature_Review/README.html">W3.1: Literature Review</a></li>
-<li><a href="./Topics/W3_2_Logistic_Regression/README.html">W3.2: Logistic Regression</a></li>
-<li><a href="./Topics/W4_1_Use_of_Theory/README.html">W4.1: Use of Theory</a></li>
-<li><a href="./Topics/W4_2_Ordered_Logistic_Regression/README.html">W4.2: Ordered Logistic Regression</a></li>
-<li><a href="./Topics/W5_1_Mixed_Methods/README.html">W5.1: Mixed Methods</a></li>
-<li><a href="./Topics/W6_1_Sampling_and_Data_Collection/README.html">W6.1: Sampling and Data Collection</a></li>
-<li><a href="./Topics/W8_1_Writing_and_Ethics/README.html">W8.1: Writing and Ethics</a></li>
-<li><a href="./Topics/W9_1_Logit_Example/README.html">W9.1: Logit Example</a></li>
-<li><a href="./Topics/W13_1_Mediation/README.html">W13.1: Causal Mediation Analysis</a></li>
-<li><a href="./Topics/W14_1_Presentations/README.html">W14.1: Final Presentations</a></li>
+<li><a href="../../References/John W. Creswell, David J. Creswell - Research Design Qualitative, Quantitative, and Mixed Methods Approaches.pdf">Creswell, J. W., &amp; Creswell, J. D. (2023). <em>Research design: Qualitative, quantitative, and mixed methods approach</em> (Sixth edition).</a> Sage.</li>
 </ul>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>All readings can be consulted in the <a href="References/">references/</a> folder.</p>
+<section id="detailed-reading-theory-in-research-design" class="level2">
+<h2 class="anchored" data-anchor-id="detailed-reading-theory-in-research-design">Detailed Reading: Theory in Research Design</h2>
+<p>A theory provides a systematic view of phenomena by specifying the relationships among variables with the aim of explaining natural events. Its use varies depending on the research approach.</p>
+<section id="theory-in-quantitative-designs" class="level3">
+<h3 class="anchored" data-anchor-id="theory-in-quantitative-designs">Theory in Quantitative Designs</h3>
+<p>In quantitative research, theory is used deductively. It operates as an upfront framework that organizes the research questions and dictates data collection procedures. Theories explain how and why specific variables relate to one another.</p>
+<section id="variable-definitions" class="level4">
+<h4 class="anchored" data-anchor-id="variable-definitions">Variable Definitions</h4>
+<p>Quantitative theoretical models rely on precisely defined variables: - <strong>Independent Variables (Predictors)</strong>: Variables that influence or affect the outcomes. - <strong>Dependent Variables (Response)</strong>: Outcomes influenced by the predictors. - <strong>Mediating Variables</strong>: Variables that transmit the effect of an independent variable on a dependent variable, explaining the mechanism or process of the relationship. - <strong>Moderating Variables</strong>: Variables that interact with independent variables, changing the direction or strength of the relationship. - <strong>Confounding Variables</strong>: Unmeasured third variables that may independently influence the outcome, obscuring true causal relationships if not controlled.</p>
+</section>
+<section id="causal-links-and-visual-models" class="level4">
+<h4 class="anchored" data-anchor-id="causal-links-and-visual-models">Causal Links and Visual Models</h4>
+<p>Researchers construct causal models to represent these relationships. A visual model typically lists independent variables on the left, intervening/mediating variables in the center, and dependent variables on the right. Arrows indicate the direction of influence, and valence signs (<span class="math inline">\(+\)</span> or <span class="math inline">\(-\)</span>) denote the hypothesized positive or negative impact.</p>
+</section>
+</section>
+<section id="theory-in-qualitative-designs" class="level3">
+<h3 class="anchored" data-anchor-id="theory-in-qualitative-designs">Theory in Qualitative Designs</h3>
+<p>In qualitative research, theory is employed in three distinct ways:</p>
+<ol type="1">
+<li><strong>As a Deductive Explanation</strong>: Ethnographic or anthropological studies often begin with established cultural themes (e.g., social control, kinship structures) that provide a framework of hypotheses to be examined through fieldwork.</li>
+<li><strong>As a Theoretical Perspective (Standpoint)</strong>: The theory provides general guidance concerning structural inequalities (e.g., feminist theories, critical race discourses). It shapes the questions, dictates data collection methods, and often includes a call for social action.</li>
+<li><strong>As an Endpoint (Inductive)</strong>: In approaches like grounded theory, the study begins with participant data, groups them into themes, and systematically builds up to a generalized model. Here, the theory is the final product, rather than the starting point.</li>
+</ol>
+</section>
+</section>
+<section id="cross-references" class="level2">
+<h2 class="anchored" data-anchor-id="cross-references">Cross-References</h2>
+<ul>
+<li>Return to the <a href="../../README.md">Course Root</a></li>
+<li>Previous topic: <a href="../../Topics/W3_2_Logistic_Regression/README.html">Logistic Regression</a></li>
+<li>Next topic: <a href="../../Topics/W4_2_Ordered_Logistic_Regression/README.html">Ordered Logistic Regression</a></li>
+</ul>
+</section>
+<section id="references-and-materials" class="level2">
+<h2 class="anchored" data-anchor-id="references-and-materials">References and Materials</h2>
+<section id="view-pdfs" class="level3">
+<h3 class="anchored" data-anchor-id="view-pdfs">View (PDFs)</h3>
+<ul>
+<li><a href="./W4. Use of theory.pdf">W4. Use of theory.pdf</a></li>
+</ul>
+</section>
+<section id="download-originals-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="download-originals-scripts">Download (Originals &amp; Scripts)</h3>
+<ul>
+<li><a href="./W4. Use of theory.pptx">W4. Use of theory.pptx</a></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 

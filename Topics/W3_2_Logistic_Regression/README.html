@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Analysis</title>
+<title>readme – Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W3_2_Logistic_Regression/README.html">Week 3.2: Logistic Regression</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Data Analysis</a> 
+      <a href="../../">Data Analysis</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -123,79 +152,79 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W1_Intro_and_research/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W1_Intro_and_research/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: Intro and research approaches</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W2_1_Problem_and_Research_Questions/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W2_1_Problem_and_Research_Questions/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2.1: Problem and Research Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W2_2_EDA_and_Linear_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W2_2_EDA_and_Linear_Regression/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2.2: EDA and Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W3_1_Literature_Review/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W3_1_Literature_Review/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3.1: Literature Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W3_2_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W3_2_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 3.2: Logistic Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W4_1_Use_of_Theory/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W4_1_Use_of_Theory/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4.1: Use of Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W4_2_Ordered_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W4_2_Ordered_Logistic_Regression/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4.2: Ordered Logistic Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W5_1_Mixed_Methods/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W5_1_Mixed_Methods/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5.1: Mixed Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W6_1_Sampling_and_Data_Collection/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W6_1_Sampling_and_Data_Collection/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6.1: Sampling and Data Collection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W8_1_Writing_and_Ethics/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W8_1_Writing_and_Ethics/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8.1: Writing and Ethics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W9_1_Logit_Example/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W9_1_Logit_Example/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9.1: Logit Example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W13_1_Mediation/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W13_1_Mediation/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 13.1: Causal Mediation Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 14.1: Final Presentations</span></a>
   </div>
 </li>
@@ -211,46 +240,100 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link active" data-scroll-target="#data-analysis">Data Analysis</a>
+  <li><a href="#week-3.2-logistic-regression" id="toc-week-3.2-logistic-regression" class="nav-link active" data-scroll-target="#week-3.2-logistic-regression">Week 3.2: Logistic Regression</a>
   <ul class="collapse">
-  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#required-and-complementary-readings" id="toc-required-and-complementary-readings" class="nav-link" data-scroll-target="#required-and-complementary-readings">Required and Complementary Readings</a></li>
+  <li><a href="#detailed-reading-binomial-models-and-logistic-regression" id="toc-detailed-reading-binomial-models-and-logistic-regression" class="nav-link" data-scroll-target="#detailed-reading-binomial-models-and-logistic-regression">Detailed Reading: Binomial Models and Logistic Regression</a>
+  <ul class="collapse">
+  <li><a href="#the-linear-probability-model-lpm-and-its-limitations" id="toc-the-linear-probability-model-lpm-and-its-limitations" class="nav-link" data-scroll-target="#the-linear-probability-model-lpm-and-its-limitations">The Linear Probability Model (LPM) and its Limitations</a></li>
+  <li><a href="#the-logit-model" id="toc-the-logit-model" class="nav-link" data-scroll-target="#the-logit-model">The Logit Model</a></li>
+  <li><a href="#interpreting-coefficients-odds-ratios-and-marginal-effects" id="toc-interpreting-coefficients-odds-ratios-and-marginal-effects" class="nav-link" data-scroll-target="#interpreting-coefficients-odds-ratios-and-marginal-effects">Interpreting Coefficients: Odds Ratios and Marginal Effects</a></li>
+  </ul></li>
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references">Cross-References</a></li>
+  <li><a href="#references-and-materials" id="toc-references-and-materials" class="nav-link" data-scroll-target="#references-and-materials">References and Materials</a>
+  <ul class="collapse">
+  <li><a href="#view-pdfs" id="toc-view-pdfs" class="nav-link" data-scroll-target="#view-pdfs">View (PDFs)</a></li>
+  <li><a href="#download-originals-scripts" id="toc-download-originals-scripts" class="nav-link" data-scroll-target="#download-originals-scripts">Download (Originals &amp; Scripts)</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W3_2_Logistic_Regression/README.html">Week 3.2: Logistic Regression</a></li></ol></nav></header>
 
 
 
 
-<section id="data-analysis" class="level1">
-<h1>Data Analysis</h1>
-<p>Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.</p>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<section id="week-3.2-logistic-regression" class="level1">
+<h1>Week 3.2: Logistic Regression</h1>
+<p>This section covers the modelling of binary response variables using the logistic link function, addressing the limitations of the linear probability model and detailing the interpretation of log-odds and odds ratios.</p>
+<section id="required-and-complementary-readings" class="level2">
+<h2 class="anchored" data-anchor-id="required-and-complementary-readings">Required and Complementary Readings</h2>
 <ul>
-<li><a href="./Topics/W1_Intro_and_research/README.html">W1: Intro and research</a></li>
-<li><a href="./Topics/W2_1_Problem_and_Research_Questions/README.html">W2.1: Problem and Research Questions</a></li>
-<li><a href="./Topics/W2_2_EDA_and_Linear_Regression/README.html">W2.2: EDA and Linear Regression</a></li>
-<li><a href="./Topics/W3_1_Literature_Review/README.html">W3.1: Literature Review</a></li>
-<li><a href="./Topics/W3_2_Logistic_Regression/README.html">W3.2: Logistic Regression</a></li>
-<li><a href="./Topics/W4_1_Use_of_Theory/README.html">W4.1: Use of Theory</a></li>
-<li><a href="./Topics/W4_2_Ordered_Logistic_Regression/README.html">W4.2: Ordered Logistic Regression</a></li>
-<li><a href="./Topics/W5_1_Mixed_Methods/README.html">W5.1: Mixed Methods</a></li>
-<li><a href="./Topics/W6_1_Sampling_and_Data_Collection/README.html">W6.1: Sampling and Data Collection</a></li>
-<li><a href="./Topics/W8_1_Writing_and_Ethics/README.html">W8.1: Writing and Ethics</a></li>
-<li><a href="./Topics/W9_1_Logit_Example/README.html">W9.1: Logit Example</a></li>
-<li><a href="./Topics/W13_1_Mediation/README.html">W13.1: Causal Mediation Analysis</a></li>
-<li><a href="./Topics/W14_1_Presentations/README.html">W14.1: Final Presentations</a></li>
+<li><a href="../../References/Jeffrey M. Wooldridge - 2018- Introductury Econometrics.pdf">Wooldridge, J. M. (2018). <em>Introductory econometrics: A modern approach</em> (Seventh edition).</a> Cengage Learning. (pp.&nbsp;524–536)</li>
+<li>Nahhas, R. W. (2025). <em>Introduction to Regression Methods for Public Health Using R</em>. <a href="https://bookdown.org/rwnahhas/RMPH/">Ch. 6</a></li>
 </ul>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>All readings can be consulted in the <a href="References/">references/</a> folder.</p>
+<section id="detailed-reading-binomial-models-and-logistic-regression" class="level2">
+<h2 class="anchored" data-anchor-id="detailed-reading-binomial-models-and-logistic-regression">Detailed Reading: Binomial Models and Logistic Regression</h2>
+<p>When the dependent variable is binary (e.g., admitted or not admitted, employed or unemployed), it takes only two mutually exclusive values: 0 and 1. The relevant statistical distribution is a binomial distribution with a single trial. The expected value of the variable, <span class="math inline">\(\mu\)</span>, represents the probability of success <span class="math inline">\(p(y=1)\)</span>.</p>
+<section id="the-linear-probability-model-lpm-and-its-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="the-linear-probability-model-lpm-and-its-limitations">The Linear Probability Model (LPM) and its Limitations</h3>
+<p>The most direct approach is to use the identity function as a link, leading to the Linear Probability Model, which can be estimated using Ordinary Least Squares (OLS):</p>
+<p><span class="math display">\[ p(y=1 | X) = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k \]</span></p>
+<p>This approach has two main mechanical limitations: 1. <strong>Unbounded predictions</strong>: The identity function does not constrain predictions. The model can produce probabilities below 0 or above 1. 2. <strong>Heteroskedasticity</strong>: Because the outcome <span class="math inline">\(y\)</span> only takes the values 0 or 1, the residual is mechanically related to the covariates. The variance of a binomial variable depends on the mean: <span class="math inline">\(Var(Y) = p(1-p)\)</span>. This violates the OLS homoskedasticity assumption, making standard errors biased unless corrected.</p>
+</section>
+<section id="the-logit-model" class="level3">
+<h3 class="anchored" data-anchor-id="the-logit-model">The Logit Model</h3>
+<p>To ensure predicted probabilities always remain within the <span class="math inline">\([0,1]\)</span> interval, non-linear models use alternative link functions. The logit model uses the logistic cumulative distribution function:</p>
+<p><span class="math display">\[ p(y=1 | X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \dots + \beta_k X_k)}} \]</span></p>
+<p>By transforming this equation, we move from probability to odds, and then to log-odds. The odds of an event is the probability of success divided by the probability of failure. The logit model specification is linear in the log-odds:</p>
+<p><span class="math display">\[ \text{Log-odds} = \ln\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k \]</span></p>
+<p>This transformation converts a bounded variable (probability between 0 and 1) into an unbounded one (log-odds range from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(+\infty\)</span>), simplifying statistical modelling.</p>
+</section>
+<section id="interpreting-coefficients-odds-ratios-and-marginal-effects" class="level3">
+<h3 class="anchored" data-anchor-id="interpreting-coefficients-odds-ratios-and-marginal-effects">Interpreting Coefficients: Odds Ratios and Marginal Effects</h3>
+<p>The estimated coefficients <span class="math inline">\(\beta\)</span> are in units of log-odds, which means they cannot be interpreted directly like OLS coefficients.</p>
+<section id="odds-ratios" class="level4">
+<h4 class="anchored" data-anchor-id="odds-ratios">Odds Ratios</h4>
+<p>To interpret a coefficient, researchers apply the exponential function to obtain the Odds Ratio (OR):</p>
+<p><span class="math display">\[ \text{OR} = e^{\beta_k} \]</span></p>
+<p>For example, if the estimated coefficient is <span class="math inline">\(\beta = 0.1\)</span>, the odds ratio is <span class="math inline">\(e^{0.1} \approx 1.105\)</span>. This means that a one-unit increase in the independent variable multiplies the initial odds by <span class="math inline">\(1.105\)</span>, which translates to a 10.5% increase in the relative probability of the outcome. Note that this is a change in the <em>odds</em>, not the absolute <em>probability</em>, because the relationship between odds and probability is non-linear.</p>
+</section>
+<section id="marginal-effects-and-the-0.25-rule" class="level4">
+<h4 class="anchored" data-anchor-id="marginal-effects-and-the-0.25-rule">Marginal Effects and the 0.25 Rule</h4>
+<p>To estimate the maximum change in probability resulting from a one-unit change in the predictor, researchers use the derivative of the logistic function evaluated at its inflection point (where <span class="math inline">\(p = 0.5\)</span>).</p>
+<p><span class="math display">\[ \text{Max Change in Probability} \approx \beta_k \times [p(1-p)] \approx \beta_k \times 0.25 \]</span></p>
+<p>This rule provides a quick approximation: dividing the coefficient by 4 yields the maximum percentage point change in the probability of success.</p>
+</section>
+</section>
+</section>
+<section id="cross-references" class="level2">
+<h2 class="anchored" data-anchor-id="cross-references">Cross-References</h2>
+<ul>
+<li>Return to the <a href="../../README.md">Course Root</a></li>
+<li>Previous topic: <a href="../../Topics/W3_1_Literature_Review/README.html">Literature Review</a></li>
+<li>Next topic: <a href="../../Topics/W4_1_Use_of_Theory/README.html">Use of Theory</a></li>
+</ul>
+</section>
+<section id="references-and-materials" class="level2">
+<h2 class="anchored" data-anchor-id="references-and-materials">References and Materials</h2>
+<section id="view-pdfs" class="level3">
+<h3 class="anchored" data-anchor-id="view-pdfs">View (PDFs)</h3>
+<ul>
+<li><a href="./W3. Logistic link model.pdf">W3. Logistic link model.pdf</a></li>
+</ul>
+</section>
+<section id="download-originals-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="download-originals-scripts">Download (Originals &amp; Scripts)</h3>
+<ul>
+<li><a href="./W3. Logistic link model.pptx">W3. Logistic link model.pptx</a></li>
+<li><a href="./W3. Linear regression.R">W3. Linear regression.R</a></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
