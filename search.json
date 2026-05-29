@@ -224,7 +224,7 @@
     "href": "README.html",
     "title": "Data Analysis",
     "section": "",
-    "text": "Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.\n\n\n\nW1: Intro and research\nW2.1: Problem and Research Questions\nW2.2: EDA and Linear Regression\nW3.1: Literature Review\nW3.2: Logistic Regression\nW4.1: Use of Theory\nW4.2: Ordered Logistic Regression\nW5.1: Mixed Methods\nW6.1: Sampling and Data Collection\nW8.1: Writing and Ethics\nW9.1: Logit Example\nW13.1: Causal Mediation Analysis\nW14.1: Final Presentations\n\n\n\n\nAll readings can be consulted in the references/ folder.",
+    "text": "Welcome to the course repository. Here, materials, presentations, and R scripts are centralized by topic.\n\n\n\nW1: Intro and research\nW2.1: Problem and Research Questions\nW2.2: EDA and Linear Regression\nW3.1: Literature Review\nW3.2: Logistic Regression\nW4.1: Use of Theory\nW4.2: Ordered Logistic Regression\nW5.1: Mixed Methods\nW6.1: Sampling and Data Collection\nW8.1: Writing and Ethics\nW9.1: Logit Example\nW13.1: Causal Mediation Analysis\nW14.1: Final Presentations\n\n\n\n\nAll readings can be consulted directly in the References repository folder.",
     "crumbs": [
       "Home"
     ]
@@ -244,7 +244,7 @@
     "href": "README.html#references",
     "title": "Data Analysis",
     "section": "",
-    "text": "All readings can be consulted in the references/ folder.",
+    "text": "All readings can be consulted directly in the References repository folder.",
     "crumbs": [
       "Home"
     ]
