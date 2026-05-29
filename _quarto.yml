@@ -9,7 +9,7 @@ website:
     search: true
     contents:
       - text: "Home"
-        file: README.md
+        file: index.md
       - section: "Topics"
         contents:
           - text: "Week 1: Intro and research approaches"
