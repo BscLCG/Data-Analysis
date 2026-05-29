@@ -6,19 +6,25 @@ function BlockQuote(el)
     if ctype then
       ctype = string.lower(ctype)
       
-      -- We will remove the first paragraph entirely, assuming it contains ONLY the [!type] Title
+      local alert_class = "alert-info"
+      if ctype == "tip" then alert_class = "alert-success"
+      elseif ctype == "warning" then alert_class = "alert-warning"
+      elseif ctype == "danger" or ctype == "error" then alert_class = "alert-danger"
+      elseif ctype == "note" then alert_class = "alert-secondary"
+      end
+      
       local div_content = {}
+      
+      if ctitle and ctitle ~= "" then
+        local title_div = pandoc.Div({pandoc.Strong({pandoc.Str(ctitle)})}, pandoc.Attr("", {"alert-heading"}))
+        table.insert(div_content, title_div)
+      end
+      
       for i = 2, #el.content do
         table.insert(div_content, el.content[i])
       end
       
-      -- Create the Div
-      local div = pandoc.Div(div_content, pandoc.Attr("", {"callout", "callout-" .. ctype}))
-      if ctitle and ctitle ~= "" then
-        div.attributes["title"] = ctitle
-      end
-      
-      return div
+      return pandoc.Div(div_content, pandoc.Attr("", {"alert", alert_class}))
     end
   end
 end
