@@ -1,6 +1,7 @@
 # Week 2.1: Problem Formulation and Research Questions
 
 > [!info] Overview
+>
 > This section covers the sequence of moving from identifying a core research problem to formulating specific research questions, which ultimately dictate the selection of a research design.
 
 ## Required and Complementary Readings
@@ -21,11 +22,13 @@ The sequence is strictly linear: **Problem $\rightarrow$ Question $\rightarrow$ 
 Researchers cannot select methods (such as surveys, interviews, or regressions) before defining the exact question they aim to answer. Designing an instrument or selecting a statistical model beforehand leads to structural errors, mismatched data, and wasted resources. For instance, choosing to run a logistic regression before verifying that the outcome of interest is binary forces the data into an inappropriate framework. The research design must serve the question, not the other way around.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [Introduction and Research](../W1_Intro_and_research/README.md)
 > * Next topic: [EDA and Linear Regression](../W2_2_EDA_and_Linear_Regression/README.md)
 
 > [!note] References and Materials
+>
 > **View (PDFs)**
 > - [W2. From problem to question to design.pdf](./W2.%20From%20problem%20to%20question%20to%20design.pdf)
 > - [W2. Problem and research questions - Copy.pdf](./W2.%20Problem%20and%20research%20questions%20-%20Copy.pdf)

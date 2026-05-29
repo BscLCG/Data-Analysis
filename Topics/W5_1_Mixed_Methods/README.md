@@ -1,6 +1,7 @@
 # Week 5.1: Mixed Methods
 
 > [!info] Overview
+>
 > This section explains the design and implementation of mixed methods research, focusing on the systematic integration of quantitative and qualitative data to answer complex research questions.
 
 ## Required and Complementary Readings
@@ -27,6 +28,7 @@ To achieve integration, researchers use specific tools:
 By explicitly integrating the data streams, researchers neutralize the limitations of isolated methods and provide empirical support for complex phenomena.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [Ordered Logistic Regression](../W4_2_Ordered_Logistic_Regression/README.md)
 > * Next topic: [Sampling and Data Collection](../W6_1_Sampling_and_Data_Collection/README.md)

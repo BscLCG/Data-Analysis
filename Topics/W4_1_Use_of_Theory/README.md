@@ -1,6 +1,7 @@
 # Week 4.1: Use of Theory
 
 > [!info] Overview
+>
 > This section details how theoretical frameworks are identified, adapted, and employed in research. It distinguishes between the deductive application of theory in quantitative designs and the varied structural roles theory plays in qualitative research.
 
 ## Required and Complementary Readings
@@ -32,11 +33,13 @@ In qualitative research, theory is employed in three distinct ways:
 3. **As an Endpoint (Inductive)**: In approaches like grounded theory, the study begins with participant data, groups them into themes, and systematically builds up to a generalized model. Here, the theory is the final product, rather than the starting point.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [Logistic Regression](../W3_2_Logistic_Regression/README.md)
 > * Next topic: [Ordered Logistic Regression](../W4_2_Ordered_Logistic_Regression/README.md)
 
 > [!note] References and Materials
+>
 > **View (PDFs)**
 > - [W4. Use of theory.pdf](./W4.%20Use%20of%20theory.pdf)
 >

@@ -1,6 +1,7 @@
 # Week 3.2: Logistic Regression
 
 > [!info] Overview
+>
 > This section covers the modelling of binary response variables using the logistic link function, addressing the limitations of the linear probability model and detailing the interpretation of log-odds and odds ratios.
 
 ## Required and Complementary Readings
@@ -49,11 +50,13 @@ $$ \text{Max Change in Probability} \approx \beta_k \times [p(1-p)] \approx \bet
 This rule provides a quick approximation: dividing the coefficient by 4 yields the maximum percentage point change in the probability of success.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [Literature Review](../W3_1_Literature_Review/README.md)
 > * Next topic: [Use of Theory](../W4_1_Use_of_Theory/README.md)
 
 > [!note] References and Materials
+>
 > **View (PDFs)**
 > - [W3. Logistic link model.pdf](./W3.%20Logistic%20link%20model.pdf)
 >

@@ -1,6 +1,7 @@
 # Week 6.1: Sampling and Data Collection
 
 > [!info] Overview
+>
 > This section addresses the transition from theoretical constructs to empirical measurement. It covers sampling strategies, statistical power, survey instrument design, and the foundational concepts of validity and reliability.
 
 ## Required and Complementary Readings
@@ -42,11 +43,13 @@ An instrument must be both valid and reliable.
   - *External validity*: The extent to which the findings generalize across different populations, settings, and times.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [Mixed Methods](../W5_1_Mixed_Methods/README.md)
 > * Next topic: [Writing and Ethics](../W8_1_Writing_and_Ethics/README.md)
 
 > [!note] References and Materials
+>
 > **View (PDFs)**
 > - [W6. Forms in Qualtrics.pdf](./W6.%20Forms%20in%20Qualtrics.pdf)
 > - [W6. Sample, data collection and instruments.pdf](./W6.%20Sample,%20data%20collection%20and%20instruments.pdf)

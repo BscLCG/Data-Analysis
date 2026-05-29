@@ -1,6 +1,7 @@
 # Week 3.1: Literature Review
 
 > [!info] Overview
+>
 > This section covers the systematic process of conducting a literature review, identifying gaps in existing research, and using literature maps to structure theoretical frameworks.
 
 ## Required and Complementary Readings
@@ -34,11 +35,13 @@ A literature map is a visual tool that organizes the reviewed articles to show h
 - **Set-based**: Uses intersecting circles to represent bodies of literature, locating the proposed study in the intersections where research is needed.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [EDA and Linear Regression](../W2_2_EDA_and_Linear_Regression/README.md)
 > * Next topic: [Logistic Regression](../W3_2_Logistic_Regression/README.md)
 
 > [!note] References and Materials
+>
 > **View (PDFs)**
 > - [W3. Literature review.pdf](./W3.%20Literature%20review.pdf)
 > - [W3. Zotero.pdf](./W3.%20Zotero.pdf)

@@ -1,6 +1,7 @@
 # Week 9.1: Logit Example
 
 > [!info] Overview
+>
 > This section presents a practical application of logistic regression, analyzing racial discrimination in the sharing economy through field experiments.
 
 ## Required and Complementary Readings
@@ -24,11 +25,13 @@ While the statistical model is robust, all experimental designs must be evaluate
 - **External Validity**: The extent to which findings generalize to other populations. The experiment heavily sampled hosts from large urban centers. This geographic concentration suggests the observed discrimination effects might be locally specific rather than a universal platform feature.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [Writing and Ethics](../W8_1_Writing_and_Ethics/README.md)
 > * Next topic: [Causal Mediation Analysis](../W13_1_Mediation/README.md)
 
 > [!note] References and Materials
+>
 > **View (PDFs)**
 > - [W9.poster 01.pdf](./W9.poster%2001.pdf)
 >

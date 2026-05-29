@@ -1,6 +1,7 @@
 # Week 8.1: Writing and Ethics
 
 > [!info] Overview
+>
 > This section outlines the mechanics of structuring academic writing and the fundamental ethical requirements that must govern empirical research, particularly concerning human subjects.
 
 ## Required and Complementary Readings
@@ -29,11 +30,13 @@ Empirical research involving human subjects requires rigorous ethical oversight 
 Before data collection begins, study protocols must be submitted to an Institutional Review Board (IRB) or equivalent ethics committee. The IRB assesses the methodology, the informed consent documents, and the data management plan to ensure compliance with ethical mandates. Researchers cannot collect data before receiving formal IRB approval.
 
 > [!tip] Cross-References
+>
 > * Return to the [Course Root](../../README.md)
 > * Previous topic: [Sampling and Data Collection](../W6_1_Sampling_and_Data_Collection/README.md)
 > * Next topic: [Logit Example](../W9_1_Logit_Example/README.md)
 
 > [!note] References and Materials
+>
 > **View (PDFs)**
 > - [W8. Writing and ethical considerations.pdf](./W8.%20Writing%20and%20ethical%20considerations.pdf)
 >
