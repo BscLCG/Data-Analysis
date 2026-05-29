@@ -137,7 +137,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -291,10 +291,15 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="the-proportional-odds-assumption">The Proportional Odds Assumption</h3>
 <p>A central constraint of this model is the Proportional Odds (or parallel-regression) assumption. It posits that the effect of a predictor <span class="math inline">\(X\)</span> is identical across all category splits. Graphically, an increase in <span class="math inline">\(X\)</span> shifts the cumulative distribution curve but does not change its shape or slope.</p>
 <p>If the true slopes differ across cut-points, the single estimated <span class="math inline">\(\beta\)</span> becomes an average that fits poorly at the extremes of the ordinal scale. Researchers must formally test this assumption using tests such as the <strong>Brant test</strong>, which compares the coefficients from separate binary logit models estimated for each threshold.</p>
-<p>If the assumption is violated, the researcher must decide whether to: 1. Re-categorize the variable (if theoretically justified). 2. Fit a multinomial logit model (which ignores ordinality). 3. Fit a partial proportional odds model, relaxing the assumption only for the specific variables that violate it.</p>
+<p>If the assumption is violated, the researcher must decide whether to:</p>
+<ol type="1">
+<li>Re-categorize the variable (if theoretically justified).</li>
+<li>Fit a multinomial logit model (which ignores ordinality).</li>
+<li>Fit a partial proportional odds model, relaxing the assumption only for the specific variables that violate it.</li>
+</ol>
 <div class="callout callout-tip" title="Cross-References">
 <ul>
-<li>Return to the <a href="../../README.md">Course Root</a></li>
+<li>Return to the <a href="../../README.html">Course Root</a></li>
 <li>Previous topic: <a href="../../Topics/W4_1_Use_of_Theory/README.html">Use of Theory</a></li>
 <li>Next topic: <a href="../../Topics/W5_1_Mixed_Methods/README.html">Mixed Methods</a></li>
 </ul>

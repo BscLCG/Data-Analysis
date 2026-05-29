@@ -137,7 +137,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -278,7 +278,11 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="the-linear-probability-model-lpm-and-its-limitations">The Linear Probability Model (LPM) and its Limitations</h3>
 <p>The most direct approach is to use the identity function as a link, leading to the Linear Probability Model, which can be estimated using Ordinary Least Squares (OLS):</p>
 <p><span class="math display">\[ p(y=1 | X) = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k \]</span></p>
-<p>This approach has two main mechanical limitations: 1. <strong>Unbounded predictions</strong>: The identity function does not constrain predictions. The model can produce probabilities below 0 or above 1. 2. <strong>Heteroskedasticity</strong>: Because the outcome <span class="math inline">\(y\)</span> only takes the values 0 or 1, the residual is mechanically related to the covariates. The variance of a binomial variable depends on the mean: <span class="math inline">\(Var(Y) = p(1-p)\)</span>. This violates the OLS homoskedasticity assumption, making standard errors biased unless corrected.</p>
+<p>This approach has two main mechanical limitations:</p>
+<ol type="1">
+<li><strong>Unbounded predictions</strong>: The identity function does not constrain predictions. The model can produce probabilities below 0 or above 1.</li>
+<li><strong>Heteroskedasticity</strong>: Because the outcome <span class="math inline">\(y\)</span> only takes the values 0 or 1, the residual is mechanically related to the covariates. The variance of a binomial variable depends on the mean: <span class="math inline">\(Var(Y) = p(1-p)\)</span>. This violates the OLS homoskedasticity assumption, making standard errors biased unless corrected.</li>
+</ol>
 </section>
 <section id="the-logit-model" class="level3">
 <h3 class="anchored" data-anchor-id="the-logit-model">The Logit Model</h3>
@@ -304,7 +308,7 @@ window.Quarto = {
 <p>This rule provides a quick approximation: dividing the coefficient by 4 yields the maximum percentage point change in the probability of success.</p>
 <div class="callout callout-tip" title="Cross-References">
 <ul>
-<li>Return to the <a href="../../README.md">Course Root</a></li>
+<li>Return to the <a href="../../README.html">Course Root</a></li>
 <li>Previous topic: <a href="../../Topics/W3_1_Literature_Review/README.html">Literature Review</a></li>
 <li>Next topic: <a href="../../Topics/W4_1_Use_of_Theory/README.html">Use of Theory</a></li>
 </ul>
