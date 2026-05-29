@@ -60,8 +60,10 @@ This rule provides a quick approximation: dividing the coefficient by 4 yields t
 > [!note] References and Materials
 >
 > **View (PDFs)**
+> 
 > - [W3. Logistic link model.pdf](./W3.%20Logistic%20link%20model.pdf)
 >
 > **Download (Originals & Scripts)**
+> 
 > - [W3. Logistic link model.pptx](./W3.%20Logistic%20link%20model.pptx)
 > - [W3. Linear regression.R](./W3.%20Linear%20regression.R)

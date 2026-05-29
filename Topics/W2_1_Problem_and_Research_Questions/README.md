@@ -31,9 +31,11 @@ Researchers cannot select methods (such as surveys, interviews, or regressions) 
 > [!note] References and Materials
 >
 > **View (PDFs)**
+> 
 > - [W2. From problem to question to design.pdf](./W2.%20From%20problem%20to%20question%20to%20design.pdf)
 > - [W2. Problem and research questions - Copy.pdf](./W2.%20Problem%20and%20research%20questions%20-%20Copy.pdf)
 >
 > **Download (Originals & Scripts)**
+> 
 > - [W2. From problem to question to design.docx](./W2.%20From%20problem%20to%20question%20to%20design.docx)
 > - [W2. Problem and research questions - Copy.pptx](./W2.%20Problem%20and%20research%20questions%20-%20Copy.pptx)

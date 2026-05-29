@@ -43,7 +43,9 @@ In qualitative research, theory is employed in three distinct ways:
 > [!note] References and Materials
 >
 > **View (PDFs)**
+> 
 > - [W4. Use of theory.pdf](./W4.%20Use%20of%20theory.pdf)
 >
 > **Download (Originals & Scripts)**
+> 
 > - [W4. Use of theory.pptx](./W4.%20Use%20of%20theory.pptx)

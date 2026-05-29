@@ -41,8 +41,10 @@ Before data collection begins, study protocols must be submitted to an Instituti
 > [!note] References and Materials
 >
 > **View (PDFs)**
+> 
 > - [W8. Writing and ethical considerations.pdf](./W8.%20Writing%20and%20ethical%20considerations.pdf)
 >
 > **Download (Originals & Scripts)**
+> 
 > - [W8. Ord Logit.R](./W8.%20Ord%20Logit.R)
 > - [W8. Writing and ethical considerations.pptx](./W8.%20Writing%20and%20ethical%20considerations.pptx)

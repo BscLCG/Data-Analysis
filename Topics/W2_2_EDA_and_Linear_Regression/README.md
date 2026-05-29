@@ -62,9 +62,11 @@ If these conditions are met, OLS produces the Best Linear Unbiased Estimator (BL
 > [!note] References and Materials
 >
 > **View (PDFs)**
+> 
 > - [W2. EDA and linear regression.pdf](./W2.%20EDA%20and%20linear%20regression.pdf)
 > - [W2. Inference and statistical significance.pdf](./W2.%20Inference%20and%20statistical%20significance.pdf)
 >
 > **Download (Originals & Scripts)**
+> 
 > - [W2. EDA and linear regression.pptx](./W2.%20EDA%20and%20linear%20regression.pptx)
 > - [W2. Inference and statistical significance.pptx](./W2.%20Inference%20and%20statistical%20significance.pptx)
