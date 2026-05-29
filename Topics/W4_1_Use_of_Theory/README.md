@@ -1,6 +1,7 @@
 # Week 4.1: Use of Theory
 
-This section details how theoretical frameworks are identified, adapted, and employed in research. It distinguishes between the deductive application of theory in quantitative designs and the varied structural roles theory plays in qualitative research.
+> [!info] Overview
+> This section details how theoretical frameworks are identified, adapted, and employed in research. It distinguishes between the deductive application of theory in quantitative designs and the varied structural roles theory plays in qualitative research.
 
 ## Required and Complementary Readings
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. 
@@ -30,15 +31,14 @@ In qualitative research, theory is employed in three distinct ways:
 2. **As a Theoretical Perspective (Standpoint)**: The theory provides general guidance concerning structural inequalities (e.g., feminist theories, critical race discourses). It shapes the questions, dictates data collection methods, and often includes a call for social action.
 3. **As an Endpoint (Inductive)**: In approaches like grounded theory, the study begins with participant data, groups them into themes, and systematically builds up to a generalized model. Here, the theory is the final product, rather than the starting point.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Logistic Regression](../W3_2_Logistic_Regression/README.md)
-* Next topic: [Ordered Logistic Regression](../W4_2_Ordered_Logistic_Regression/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Logistic Regression](../W3_2_Logistic_Regression/README.md)
+> * Next topic: [Ordered Logistic Regression](../W4_2_Ordered_Logistic_Regression/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W4. Use of theory.pdf](./W4.%20Use%20of%20theory.pdf)
-
-### Download (Originals & Scripts)
-- [W4. Use of theory.pptx](./W4.%20Use%20of%20theory.pptx)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W4. Use of theory.pdf](./W4.%20Use%20of%20theory.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W4. Use of theory.pptx](./W4.%20Use%20of%20theory.pptx)

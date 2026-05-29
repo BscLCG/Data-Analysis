@@ -1,6 +1,7 @@
 # Week 1: Introduction and Research Approaches
 
-This section introduces the foundational competencies for data analysis and research methodology. It covers the structural integration of Large Language Models (LLMs) in academic settings, the philosophical assumptions guiding research design, and the distinction between research approaches. It also establishes the technical tooling (R, RStudio, and R Markdown) required for reproducible workflows.
+> [!info] Overview
+> This section introduces the foundational competencies for data analysis and research methodology. It covers the structural integration of Large Language Models (LLMs) in academic settings, the philosophical assumptions guiding research design, and the distinction between research approaches. It also establishes the technical tooling (R, RStudio, and R Markdown) required for reproducible workflows.
 
 ## Required and Complementary Readings
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 30–52)
@@ -32,18 +33,17 @@ Data analysis requires software to manipulate datasets, execute statistical test
 
 Reproducibility is a mandatory requirement in modern analysis. It means an independent researcher can take the original data and code, run it, and produce the exact same results. To guarantee reproducibility, researchers use R Markdown. R Markdown integrates executable R code with narrative text. Upon rendering, it executes the code and embeds the outputs (tables, plots) directly into a final document. This workflow eliminates manual copying and pasting, directly preventing transcription errors in academic reporting.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Next topic: [Problem Formulation and Research Questions](../W2_1_Problem_and_Research_Questions/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Next topic: [Problem Formulation and Research Questions](../W2_1_Problem_and_Research_Questions/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W1. Intro and research approaches.pdf](./W1.%20Intro%20and%20%20research%20approaches.pdf)
-- [W1. DOA.pdf](./W1.%20DOA.pdf)
-- [W1. R studio y markdown.pdf](./W1.%20R%20studio%20y%20markdown.pdf)
-
-### Download (Originals & Scripts)
-- [W1. Intro and research approaches.pptx](./W1.%20Intro%20and%20%20research%20approaches.pptx)
-- [W1. DOA.docx](./W1.%20DOA.docx)
-- [W1. R studio y markdown.docx](./W1.%20R%20studio%20y%20markdown.docx)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W1. Intro and research approaches.pdf](./W1.%20Intro%20and%20%20research%20approaches.pdf)
+> - [W1. DOA.pdf](./W1.%20DOA.pdf)
+> - [W1. R studio y markdown.pdf](./W1.%20R%20studio%20y%20markdown.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W1. Intro and research approaches.pptx](./W1.%20Intro%20and%20%20research%20approaches.pptx)
+> - [W1. DOA.docx](./W1.%20DOA.docx)
+> - [W1. R studio y markdown.docx](./W1.%20R%20studio%20y%20markdown.docx)

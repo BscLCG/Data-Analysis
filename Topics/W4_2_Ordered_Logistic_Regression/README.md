@@ -1,6 +1,7 @@
 # Week 4.2: Ordered Logistic Regression
 
-This section extends the logistic framework to model ordinal categorical dependent variables. It introduces the proportional odds model, threshold parameters, and the latent variable conceptualization of ordered categories.
+> [!info] Overview
+> This section extends the logistic framework to model ordinal categorical dependent variables. It introduces the proportional odds model, threshold parameters, and the latent variable conceptualization of ordered categories.
 
 ## Required and Complementary Readings
 * Nahhas, R. W. (2025). *Introduction to Regression Methods for Public Health Using R*. [Ch. 6](https://bookdown.org/rwnahhas/RMPH/)
@@ -37,16 +38,15 @@ If the assumption is violated, the researcher must decide whether to:
 2. Fit a multinomial logit model (which ignores ordinality).
 3. Fit a partial proportional odds model, relaxing the assumption only for the specific variables that violate it.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Use of Theory](../W4_1_Use_of_Theory/README.md)
-* Next topic: [Mixed Methods](../W5_1_Mixed_Methods/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Use of Theory](../W4_1_Use_of_Theory/README.md)
+> * Next topic: [Mixed Methods](../W5_1_Mixed_Methods/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W4. OrderedLogistic model.pdf](./W4.%20OrderedLogistic%20model.pdf)
-
-### Download (Originals & Scripts)
-- [W4. OrderedLogistic model.pptx](./W4.%20OrderedLogistic%20model.pptx)
-- [W4. Logit.R](./W4.%20Logit.R)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W4. OrderedLogistic model.pdf](./W4.%20OrderedLogistic%20model.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W4. OrderedLogistic model.pptx](./W4.%20OrderedLogistic%20model.pptx)
+> - [W4. Logit.R](./W4.%20Logit.R)

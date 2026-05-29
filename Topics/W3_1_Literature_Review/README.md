@@ -1,6 +1,7 @@
 # Week 3.1: Literature Review
 
-This section covers the systematic process of conducting a literature review, identifying gaps in existing research, and using literature maps to structure theoretical frameworks.
+> [!info] Overview
+> This section covers the systematic process of conducting a literature review, identifying gaps in existing research, and using literature maps to structure theoretical frameworks.
 
 ## Required and Complementary Readings
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 52–75)
@@ -32,17 +33,16 @@ A literature map is a visual tool that organizes the reviewed articles to show h
 - **Flow-based**: Organizes literature sequentially from left to right.
 - **Set-based**: Uses intersecting circles to represent bodies of literature, locating the proposed study in the intersections where research is needed.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [EDA and Linear Regression](../W2_2_EDA_and_Linear_Regression/README.md)
-* Next topic: [Logistic Regression](../W3_2_Logistic_Regression/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [EDA and Linear Regression](../W2_2_EDA_and_Linear_Regression/README.md)
+> * Next topic: [Logistic Regression](../W3_2_Logistic_Regression/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W3. Literature review.pdf](./W3.%20Literature%20review.pdf)
-- [W3. Zotero.pdf](./W3.%20Zotero.pdf)
-
-### Download (Originals & Scripts)
-- [W3. Literature review.pptx](./W3.%20Literature%20review.pptx)
-- [W3. Zotero.docx](./W3.%20Zotero.docx)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W3. Literature review.pdf](./W3.%20Literature%20review.pdf)
+> - [W3. Zotero.pdf](./W3.%20Zotero.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W3. Literature review.pptx](./W3.%20Literature%20review.pptx)
+> - [W3. Zotero.docx](./W3.%20Zotero.docx)

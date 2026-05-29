@@ -1,6 +1,7 @@
 # Week 6.1: Sampling and Data Collection
 
-This section addresses the transition from theoretical constructs to empirical measurement. It covers sampling strategies, statistical power, survey instrument design, and the foundational concepts of validity and reliability.
+> [!info] Overview
+> This section addresses the transition from theoretical constructs to empirical measurement. It covers sampling strategies, statistical power, survey instrument design, and the foundational concepts of validity and reliability.
 
 ## Required and Complementary Readings
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 171–175)
@@ -40,18 +41,17 @@ An instrument must be both valid and reliable.
   - *Internal validity*: The extent to which the design eliminates confounding variables.
   - *External validity*: The extent to which the findings generalize across different populations, settings, and times.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Mixed Methods](../W5_1_Mixed_Methods/README.md)
-* Next topic: [Writing and Ethics](../W8_1_Writing_and_Ethics/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Mixed Methods](../W5_1_Mixed_Methods/README.md)
+> * Next topic: [Writing and Ethics](../W8_1_Writing_and_Ethics/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W6. Forms in Qualtrics.pdf](./W6.%20Forms%20in%20Qualtrics.pdf)
-- [W6. Sample, data collection and instruments.pdf](./W6.%20Sample,%20data%20collection%20and%20instruments.pdf)
-
-### Download (Originals & Scripts)
-- [W6. Forms in Qualtrics.docx](./W6.%20Forms%20in%20Qualtrics.docx)
-- [W6. Sample, data collection and instruments.pptx](./W6.%20Sample,%20data%20collection%20and%20instruments.pptx)
-- [W6.The Qualtrics handbook of question design.pdf](./W6.The%20Qualtrics%20handbook%20of%20question%20design.pdf)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W6. Forms in Qualtrics.pdf](./W6.%20Forms%20in%20Qualtrics.pdf)
+> - [W6. Sample, data collection and instruments.pdf](./W6.%20Sample,%20data%20collection%20and%20instruments.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W6. Forms in Qualtrics.docx](./W6.%20Forms%20in%20Qualtrics.docx)
+> - [W6. Sample, data collection and instruments.pptx](./W6.%20Sample,%20data%20collection%20and%20instruments.pptx)
+> - [W6.The Qualtrics handbook of question design.pdf](./W6.The%20Qualtrics%20handbook%20of%20question%20design.pdf)

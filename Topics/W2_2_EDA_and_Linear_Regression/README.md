@@ -1,6 +1,7 @@
 # Week 2.2: Exploratory Data Analysis and Linear Regression
 
-This section covers the initial inspection of quantitative data distributions and the foundational mechanics of Simple Linear Regression using Ordinary Least Squares (OLS) estimation.
+> [!info] Overview
+> This section covers the initial inspection of quantitative data distributions and the foundational mechanics of Simple Linear Regression using Ordinary Least Squares (OLS) estimation.
 
 ## Required and Complementary Readings
 * [Wooldridge, J. M. (2018). *Introductory econometrics: A modern approach* (Seventh edition).](../../References/Jeffrey%20M.%20Wooldridge%20-%202018-%20Introductury%20Econometrics.pdf) Cengage Learning. (pp. 60–105)
@@ -47,17 +48,16 @@ For OLS to provide valid, unbiased estimators of the population parameters, cert
 
 If these conditions are met, OLS produces the Best Linear Unbiased Estimator (BLUE). However, researchers must be careful not to conflate correlation with causation; an estimated $\beta_1 \neq 0$ implies a linear association, but causal inference requires rigorous research design to isolate the effect from confounding variables.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Problem and Research Questions](../W2_1_Problem_and_Research_Questions/README.md)
-* Next topic: [Literature Review](../W3_1_Literature_Review/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Problem and Research Questions](../W2_1_Problem_and_Research_Questions/README.md)
+> * Next topic: [Literature Review](../W3_1_Literature_Review/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W2. EDA and linear regression.pdf](./W2.%20EDA%20and%20linear%20regression.pdf)
-- [W2. Inference and statistical significance.pdf](./W2.%20Inference%20and%20statistical%20significance.pdf)
-
-### Download (Originals & Scripts)
-- [W2. EDA and linear regression.pptx](./W2.%20EDA%20and%20linear%20regression.pptx)
-- [W2. Inference and statistical significance.pptx](./W2.%20Inference%20and%20statistical%20significance.pptx)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W2. EDA and linear regression.pdf](./W2.%20EDA%20and%20linear%20regression.pdf)
+> - [W2. Inference and statistical significance.pdf](./W2.%20Inference%20and%20statistical%20significance.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W2. EDA and linear regression.pptx](./W2.%20EDA%20and%20linear%20regression.pptx)
+> - [W2. Inference and statistical significance.pptx](./W2.%20Inference%20and%20statistical%20significance.pptx)

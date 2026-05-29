@@ -1,6 +1,7 @@
 # Week 13.1: Causal Mediation Analysis
 
-This section explores multiple mediation analysis, focusing on scenarios where the independent variable, mediators, and dependent variable are categorical, requiring structural equation modeling (SEM) estimation.
+> [!info] Overview
+> This section explores multiple mediation analysis, focusing on scenarios where the independent variable, mediators, and dependent variable are categorical, requiring structural equation modeling (SEM) estimation.
 
 ## Required and Complementary Readings
 * Facer, M., & Collins, S. (2014). Structural Equation Modeling with Categorical Variables.
@@ -25,15 +26,14 @@ The syntax for path modeling explicitly defines direct and indirect pathways. Th
 
 This level of granularity is essential. An independent variable may show zero direct effect on $Y$, but possess a strong, statistically significant indirect effect through a specific mediator ($M_2$). Identifying this pathway provides the empirical evidence required to validate complex [theoretical frameworks](../W4_1_Use_of_Theory/README.md).
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Logit Example](../W9_1_Logit_Example/README.md)
-* Next topic: [Final Presentations](../W14_1_Presentations/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Logit Example](../W9_1_Logit_Example/README.md)
+> * Next topic: [Final Presentations](../W14_1_Presentations/README.md)
 
-## References and Materials
-
-### View (PDFs)
-_No PDF materials for this week._
-
-### Download (Originals & Scripts)
-- [W13.Mediation.R](./W13.Mediation.R)
+> [!note] References and Materials
+> **View (PDFs)**
+> _No PDF materials for this week._
+>
+> **Download (Originals & Scripts)**
+> - [W13.Mediation.R](./W13.Mediation.R)

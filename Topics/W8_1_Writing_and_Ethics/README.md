@@ -1,6 +1,7 @@
 # Week 8.1: Writing and Ethics
 
-This section outlines the mechanics of structuring academic writing and the fundamental ethical requirements that must govern empirical research, particularly concerning human subjects.
+> [!info] Overview
+> This section outlines the mechanics of structuring academic writing and the fundamental ethical requirements that must govern empirical research, particularly concerning human subjects.
 
 ## Required and Complementary Readings
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 95–102, 115–121)
@@ -27,16 +28,15 @@ Empirical research involving human subjects requires rigorous ethical oversight 
 ### Institutional Review Boards (IRB)
 Before data collection begins, study protocols must be submitted to an Institutional Review Board (IRB) or equivalent ethics committee. The IRB assesses the methodology, the informed consent documents, and the data management plan to ensure compliance with ethical mandates. Researchers cannot collect data before receiving formal IRB approval.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Sampling and Data Collection](../W6_1_Sampling_and_Data_Collection/README.md)
-* Next topic: [Logit Example](../W9_1_Logit_Example/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Sampling and Data Collection](../W6_1_Sampling_and_Data_Collection/README.md)
+> * Next topic: [Logit Example](../W9_1_Logit_Example/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W8. Writing and ethical considerations.pdf](./W8.%20Writing%20and%20ethical%20considerations.pdf)
-
-### Download (Originals & Scripts)
-- [W8. Ord Logit.R](./W8.%20Ord%20Logit.R)
-- [W8. Writing and ethical considerations.pptx](./W8.%20Writing%20and%20ethical%20considerations.pptx)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W8. Writing and ethical considerations.pdf](./W8.%20Writing%20and%20ethical%20considerations.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W8. Ord Logit.R](./W8.%20Ord%20Logit.R)
+> - [W8. Writing and ethical considerations.pptx](./W8.%20Writing%20and%20ethical%20considerations.pptx)

@@ -1,6 +1,7 @@
 # Week 14.1: Final Presentations
 
-This section outlines the structure and academic requirements for communicating applied data analysis research to a professional audience, emphasizing methodological clarity and empirical evidence.
+> [!info] Overview
+> This section outlines the structure and academic requirements for communicating applied data analysis research to a professional audience, emphasizing methodological clarity and empirical evidence.
 
 ## Detailed Reading: Presenting Applied Data Analysis
 
@@ -18,14 +19,13 @@ The presentation structure directly tracks the [formal academic structure](../W8
 ### Peer Review
 The peer review session following each presentation constitutes a fundamental component of the scientific method. Reviewers evaluate the internal validity of the causal claims, the external validity of the sample, the appropriateness of the statistical models, and the theoretical consistency of the constructs. Responding to and incorporating this critical feedback ensures the empirical robustness of the final research output.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Causal Mediation Analysis](../W13_1_Mediation/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Causal Mediation Analysis](../W13_1_Mediation/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W14. project presentations.pdf](./W14.%20project%20presentations.pdf)
-
-### Download (Originals & Scripts)
-- [W14. project presentations.pptx](./W14.%20project%20presentations.pptx)
+> [!note] References and Materials
+> **View (PDFs)**
+> - [W14. project presentations.pdf](./W14.%20project%20presentations.pdf)
+>
+> **Download (Originals & Scripts)**
+> - [W14. project presentations.pptx](./W14.%20project%20presentations.pptx)

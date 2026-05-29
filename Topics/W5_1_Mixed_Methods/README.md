@@ -1,6 +1,7 @@
 # Week 5.1: Mixed Methods
 
-This section explains the design and implementation of mixed methods research, focusing on the systematic integration of quantitative and qualitative data to answer complex research questions.
+> [!info] Overview
+> This section explains the design and implementation of mixed methods research, focusing on the systematic integration of quantitative and qualitative data to answer complex research questions.
 
 ## Required and Complementary Readings
 * [Creswell, J. W., & Creswell, J. D. (2023). *Research design: Qualitative, quantitative, and mixed methods approach* (Sixth edition).](../../References/John%20W.%20Creswell,%20David%20J.%20Creswell%20-%20Research%20Design%20Qualitative,%20Quantitative,%20and%20Mixed%20Methods%20Approaches.pdf) Sage. (pp. 235–280)
@@ -25,15 +26,15 @@ To achieve integration, researchers use specific tools:
 
 By explicitly integrating the data streams, researchers neutralize the limitations of isolated methods and provide empirical support for complex phenomena.
 
-## Cross-References
-* Return to the [Course Root](../../README.md)
-* Previous topic: [Ordered Logistic Regression](../W4_2_Ordered_Logistic_Regression/README.md)
-* Next topic: [Sampling and Data Collection](../W6_1_Sampling_and_Data_Collection/README.md)
+> [!tip] Cross-References
+> * Return to the [Course Root](../../README.md)
+> * Previous topic: [Ordered Logistic Regression](../W4_2_Ordered_Logistic_Regression/README.md)
+> * Next topic: [Sampling and Data Collection](../W6_1_Sampling_and_Data_Collection/README.md)
 
-## References and Materials
-
-### View (PDFs)
-- [W5. Mixed Methods Procedures.pdf](./W5.%20Mixed%20Methods%20Procedures.pdf)
-
-### Download (Originals & Scripts)
-- [W5. Mixed Methods Procedures.pptx](./W5.%20Mixed%20Methods%20Procedures.pptx)
+> [!note] References and Materials
+> 
+> **View (PDFs)**
+> - [W5. Mixed Methods Procedures.pdf](./W5.%20Mixed%20Methods%20Procedures.pdf)
+> 
+> **Download (Originals & Scripts)**
+> - [W5. Mixed Methods Procedures.pptx](./W5.%20Mixed%20Methods%20Procedures.pptx)
