@@ -19,4 +19,4 @@ Welcome to the course repository. Here, materials, presentations, and R scripts 
 
 ## References
 
-All readings can be consulted directly in the [References repository folder](https://github.com/BscLCG/Data-Analysis/tree/main/References).
+All readings can be consulted directly in the [References repository folder](https://github.com/BscLCG/Data-Analysis/tree/Main/References).
