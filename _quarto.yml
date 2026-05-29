@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: _site
   render:
-    - index.md
+    - README.md
     - Topics/W1_Intro_and_research/README.md
     - Topics/W2_1_Problem_and_Research_Questions/README.md
     - Topics/W2_2_EDA_and_Linear_Regression/README.md
@@ -24,7 +24,7 @@ website:
     search: true
     contents:
       - text: "Home"
-        file: index.md
+        file: README.md
       - section: "Topics"
         contents:
           - text: "Week 1: Intro and research approaches"
