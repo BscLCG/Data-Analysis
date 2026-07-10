@@ -229,5 +229,5 @@ resettest(modelo_mult, power = 2:3, type = "fitted")
 ```
 
 ::: {.callout-tip title="Cross-References"}
-* Return to [Topics overview](../../index.qmd)
+* Return to [Topics overview](../../README.md)
 :::

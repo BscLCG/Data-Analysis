@@ -125,5 +125,5 @@ parameterEstimates(fit) %>%
 > **Interpretation:** The table above shows the specific indirect effects through the essay, interview, and recommendation. We can determine which pathway carries the most significant mediating effect by observing the `est` (estimate) and `pvalue`.
 
 ::: {.callout-tip title="Cross-References"}
-* Return to [Topics overview](../../index.qmd)
+* Return to [Topics overview](../../README.md)
 :::

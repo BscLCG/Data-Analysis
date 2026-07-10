@@ -177,5 +177,5 @@ cat("Probabilidad Perfil B (Mid ICFES/GPA, Rango 1):", round(plogis(pred_B$fit),
 ```
 
 ::: {.callout-tip title="Cross-References"}
-* Return to [Topics overview](../../index.qmd)
+* Return to [Topics overview](../../README.md)
 :::
