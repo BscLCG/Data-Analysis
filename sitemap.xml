@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://BscLCG.github.io/Data-Analysis/Labs/W13_Mediation/index.html</loc>
+    <lastmod>2026-07-10T22:27:23.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BscLCG.github.io/Data-Analysis/Labs/W4_Ordered_Logit/index.html</loc>
+    <lastmod>2026-07-10T22:27:22.993Z</lastmod>
+  </url>
+  <url>
     <loc>https://BscLCG.github.io/Data-Analysis/Topics/W14_1_Presentations/README.html</loc>
     <lastmod>2026-05-29T01:02:36.887Z</lastmod>
   </url>
@@ -55,5 +63,13 @@
   <url>
     <loc>https://BscLCG.github.io/Data-Analysis/Topics/W13_1_Mediation/README.html</loc>
     <lastmod>2026-05-29T01:02:36.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BscLCG.github.io/Data-Analysis/Labs/W3_Linear_Regression/index.html</loc>
+    <lastmod>2026-07-10T22:27:21.901Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BscLCG.github.io/Data-Analysis/Labs/W9_Logit_Example/index.html</loc>
+    <lastmod>2026-07-10T22:27:23.007Z</lastmod>
   </url>
 </urlset>

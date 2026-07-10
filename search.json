@@ -1,5 +1,115 @@
 [
   {
+    "objectID": "Labs/W13_Mediation/index.html",
+    "href": "Labs/W13_Mediation/index.html",
+    "title": "Data Lab: Multiple Mediation Analysis",
+    "section": "",
+    "text": "In this practical lab, we will perform a Multiple Mediation Analysis using Structural Equation Modeling (SEM) with the lavaan package. We will simulate a scenario with a binary predictor (X), multiple binary mediators (M), and a binary outcome (Y).",
+    "crumbs": [
+      "Labs",
+      "W13: Mediation Analysis"
+    ]
+  },
+  {
+    "objectID": "Labs/W13_Mediation/index.html#data-loading-dichotomizing-simulation",
+    "href": "Labs/W13_Mediation/index.html#data-loading-dichotomizing-simulation",
+    "title": "Data Lab: Multiple Mediation Analysis",
+    "section": "1. Data Loading, Dichotomizing & Simulation",
+    "text": "1. Data Loading, Dichotomizing & Simulation\nWe’ll start with the UCLA dataset. We will dichotomize our predictor (GRE) and simulate three new binary mediators (passing an essay, interview, and recommendation) that depend on the GRE score.\n\n# Load required libraries\nlibrary(lavaan)\nlibrary(dplyr)\nlibrary(tidyr) \n\n# Load the dataset\ndt &lt;- read.csv(\"https://stats.idre.ucla.edu/stat/data/binary.csv\")\n\n# A. Dummy coding for the covariates (Rank)\ndt &lt;- dt %&gt;%\n  mutate(\n    rank2 = ifelse(rank == 2, 1, 0),\n    rank3 = ifelse(rank == 3, 1, 0),\n    rank4 = ifelse(rank == 4, 1, 0)\n  )\n\n# B. Make GRE Dichotomous (1 = High GRE [&gt;= 600], 0 = Low GRE [&lt; 600])\ndt &lt;- dt %&gt;%\n  mutate(\n    gre_high = ifelse(gre &gt;= 600, 1, 0)\n  )\n\n\nSimulating Mediators\nWe simulate the 3 new dichotomous mediators based on the binary gre_high. We adjust the logit math. For example, in prob_essay: - If gre_high = 0 (Low GRE), prob is \\(plogis(-1) \\approx 27\\%\\) pass rate. - If gre_high = 1 (High GRE), prob is \\(plogis(-1 + 2) = plogis(1) \\approx 73\\%\\) pass rate.\n\nset.seed(123) \ndt &lt;- dt %&gt;%\n  mutate(\n    prob_essay = plogis(-1 + 2.0 * gre_high),\n    essay_pass = rbinom(n(), size = 1, prob = prob_essay),\n    \n    prob_interview = plogis(-1.5 + 2.5 * gre_high),\n    interview_pass = rbinom(n(), size = 1, prob = prob_interview),\n    \n    prob_rec = plogis(-0.5 + 1.5 * gre_high),\n    rec_pass = rbinom(n(), size = 1, prob = prob_rec)\n  )\n\n\n\nPreparing Variables for lavaan\nWe define endogenous categorical variables as ordered for lavaan. Note: We do NOT need to make gre_high ordered because it is EXOGENOUS (no arrows point to it). lavaan handles exogenous binary variables perfectly as 0/1 numeric.\n\ndt$admit &lt;- ordered(dt$admit)\ndt$essay_pass &lt;- ordered(dt$essay_pass)\ndt$interview_pass &lt;- ordered(dt$interview_pass)\ndt$rec_pass &lt;- ordered(dt$rec_pass)",
+    "crumbs": [
+      "Labs",
+      "W13: Mediation Analysis"
+    ]
+  },
+  {
+    "objectID": "Labs/W13_Mediation/index.html#defining-the-sem-model",
+    "href": "Labs/W13_Mediation/index.html#defining-the-sem-model",
+    "title": "Data Lab: Multiple Mediation Analysis",
+    "section": "2. Defining the SEM Model",
+    "text": "2. Defining the SEM Model\nWe define the structural paths: 1. \\(X \\rightarrow M\\) pathways 2. \\(M \\rightarrow Y\\) and \\(X \\rightarrow Y\\) pathways 3. We calculate specific indirect effects and total effects using the := operator.\n\nmodel_3_mediators_binaryX &lt;- '\n  # The X -&gt; M pathways (Now using gre_high)\n  essay_pass ~ a1 * gre_high\n  interview_pass ~ a2 * gre_high\n  rec_pass ~ a3 * gre_high\n\n  # The M -&gt; Y, X -&gt; Y, and Covariate pathways pointing to Admit\n  admit ~ cp * gre_high + b1 * essay_pass + b2 * interview_pass + b3 * rec_pass + gpa + rank2 + rank3 + rank4\n\n  # Specific Indirect Effects\n  ind_essay := a1 * b1\n  ind_interview := a2 * b2\n  ind_rec := a3 * b3\n\n  # Total Effects\n  total_indirect := ind_essay + ind_interview + ind_rec\n  total_effect := cp + total_indirect\n'",
+    "crumbs": [
+      "Labs",
+      "W13: Mediation Analysis"
+    ]
+  },
+  {
+    "objectID": "Labs/W13_Mediation/index.html#model-fitting-results",
+    "href": "Labs/W13_Mediation/index.html#model-fitting-results",
+    "title": "Data Lab: Multiple Mediation Analysis",
+    "section": "3. Model Fitting & Results",
+    "text": "3. Model Fitting & Results\nWe fit the model using sem(). Because we declared our endogenous variables as ordered, lavaan automatically uses the DWLS (Diagonally Weighted Least Squares) estimator.\n\n# Fit the model \nfit &lt;- sem(model = model_3_mediators_binaryX, data = dt)\n\n# Print full summary\nsummary(fit, standardized = TRUE, fit.measures = TRUE, rsquare = TRUE)\n\nlavaan 0.6-21 ended normally after 43 iterations\n\n  Estimator                                       DWLS\n  Optimization method                           NLMINB\n  Number of model parameters                        15\n\n  Number of observations                           400\n\nModel Test User Model:\n                                              Standard      Scaled\n  Test Statistic                                13.050      13.415\n  Degrees of freedom                                15          15\n  P-value (Unknown)                                 NA       0.570\n  Scaling correction factor                                  1.230\n  Shift parameter                                            2.808\n    simple second-order correction                                \n\nModel Test Baseline Model:\n\n  Test statistic                                 6.198       6.196\n  Degrees of freedom                                 6           6\n  P-value                                           NA       0.402\n  Scaling correction factor                                  1.013\n\nUser Model versus Baseline Model:\n\n  Comparative Fit Index (CFI)                    1.000       1.000\n  Tucker-Lewis Index (TLI)                       4.931       4.237\n                                                                  \n  Robust Comparative Fit Index (CFI)                            NA\n  Robust Tucker-Lewis Index (TLI)                               NA\n\nRoot Mean Square Error of Approximation:\n\n  RMSEA                                          0.000       0.000\n  90 Percent confidence interval - lower         0.000       0.000\n  90 Percent confidence interval - upper         0.042       0.043\n  P-value H_0: RMSEA &lt;= 0.050                    0.984       0.981\n  P-value H_0: RMSEA &gt;= 0.080                    0.000       0.000\n                                                                  \n  Robust RMSEA                                                  NA\n  90 Percent confidence interval - lower                        NA\n  90 Percent confidence interval - upper                        NA\n  P-value H_0: Robust RMSEA &lt;= 0.050                            NA\n  P-value H_0: Robust RMSEA &gt;= 0.080                            NA\n\nStandardized Root Mean Square Residual:\n\n  SRMR                                           0.058       0.058\n\nParameter Estimates:\n\n  Parameterization                               Delta\n  Standard errors                           Robust.sem\n  Information                                 Expected\n  Information saturated (h1) model        Unstructured\n\nRegressions:\n                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all\n  essay_pass ~                                                          \n    gre_high  (a1)    1.274    0.145    8.811    0.000    1.274    0.538\n  interview_pass ~                                                      \n    gre_high  (a2)    1.624    0.158   10.292    0.000    1.624    0.631\n  rec_pass ~                                                            \n    gre_high  (a3)    1.096    0.144    7.634    0.000    1.096    0.481\n  admit ~                                                               \n    gre_high  (cp)    0.258    0.252    1.022    0.307    0.258    0.118\n    essay_pss (b1)   -0.011    0.091   -0.120    0.904   -0.011   -0.012\n    intrvw_ps (b2)    0.025    0.095    0.257    0.797    0.025    0.029\n    rec_pass  (b3)    0.002    0.091    0.020    0.984    0.002    0.002\n    gpa               0.507    0.186    2.728    0.006    0.507    0.177\n    rank2            -0.435    0.197   -2.207    0.027   -0.435   -0.193\n    rank3            -0.841    0.209   -4.029    0.000   -0.841   -0.354\n    rank4            -0.942    0.247   -3.810    0.000   -0.942   -0.323\n\nThresholds:\n                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all\n    essay_pass|t1     1.075    0.667    1.612    0.107    1.075    0.906\n    intervw_pss|t1    0.503    0.738    0.682    0.495    0.503    0.391\n    rec_pass|t1      -0.346    0.648   -0.534    0.594   -0.346   -0.303\n    admit|t1          1.800    0.647    2.780    0.005    1.800    1.649\n\nVariances:\n                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all\n   .essay_pass        1.000                               1.000    0.711\n   .interview_pass    1.000                               1.000    0.602\n   .rec_pass          1.000                               1.000    0.769\n   .admit             0.999                               0.999    0.839\n\nR-Square:\n                   Estimate\n    essay_pass        0.289\n    interview_pass    0.398\n    rec_pass          0.231\n    admit             0.161\n\nDefined Parameters:\n                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all\n    ind_essay        -0.014    0.116   -0.120    0.904   -0.014   -0.006\n    ind_interview     0.040    0.155    0.257    0.797    0.040    0.018\n    ind_rec           0.002    0.100    0.020    0.984    0.002    0.001\n    total_indirect    0.028    0.215    0.129    0.897    0.028    0.013\n    total_effect      0.286    0.141    2.022    0.043    0.286    0.131\n\n\n\n3.1 Extracting Indirect Effects\nLet’s isolate just the indirect effects to compare the mediating pathways.\n\n# Extract just the indirect effects to compare\nparameterEstimates(fit) %&gt;% \n  filter(op == \":=\") %&gt;% \n  select(lhs, est, se, z, pvalue) %&gt;%\n  mutate(across(where(is.numeric), ~ round(., 4)))\n\n             lhs    est    se      z pvalue\n1      ind_essay -0.014 0.116 -0.120  0.904\n2  ind_interview  0.040 0.155  0.257  0.797\n3        ind_rec  0.002 0.100  0.020  0.984\n4 total_indirect  0.028 0.215  0.129  0.897\n5   total_effect  0.286 0.141  2.022  0.043\n\n\n\nInterpretation: The table above shows the specific indirect effects through the essay, interview, and recommendation. We can determine which pathway carries the most significant mediating effect by observing the est (estimate) and pvalue.\n\n\n\n\n\n\n\nTipCross-References\n\n\n\n\nReturn to Topics overview",
+    "crumbs": [
+      "Labs",
+      "W13: Mediation Analysis"
+    ]
+  },
+  {
+    "objectID": "Labs/W4_Ordered_Logit/index.html",
+    "href": "Labs/W4_Ordered_Logit/index.html",
+    "title": "Data Lab: Ordered Logistic Regression",
+    "section": "",
+    "text": "In this practical lab, we will analyze data using an Ordinal Logistic Regression (Proportional Odds Model). We will fit the model, interpret the odds ratios, verify the proportional odds assumption, and visualize predicted probabilities.",
+    "crumbs": [
+      "Labs",
+      "W4: Ordered Logit"
+    ]
+  },
+  {
+    "objectID": "Labs/W4_Ordered_Logit/index.html#data-loading-and-preparation",
+    "href": "Labs/W4_Ordered_Logit/index.html#data-loading-and-preparation",
+    "title": "Data Lab: Ordered Logistic Regression",
+    "section": "1. Data Loading and Preparation",
+    "text": "1. Data Loading and Preparation\nWe’ll load the UCLA ordinal dataset, which studies students’ intent to apply to graduate school.\n\n# Load required libraries\nlibrary(MASS)     # Required for polr() function\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(tibble)\nlibrary(reshape2)\nlibrary(foreign)\n\n# Load the dataset\ndat &lt;- read.dta(\"https://stats.idre.ucla.edu/stat/data/ologit.dta\")\n\n\n\n\n\n\n\nWarningFixing Factor Contrasts\n\n\n\nWhen importing Stata .dta files, categorical variables are sometimes parsed as ordered factors. When R runs regressions on ordered factors, it automatically uses orthogonal polynomial contrasts, leading to .L (linear) and .Q (quadratic) suffixes in the output parameters which are hard to interpret.\nTo fix this, we explicitly convert our predictors to standard, unordered factors.\n\n\n\n# Convert predictors to standard unordered factors to prevent .L and .Q contrasts\ndat$pared &lt;- factor(dat$pared, ordered = FALSE)\ndat$public &lt;- factor(dat$public, ordered = FALSE)\n\n# Inspect the structure of the dataset\nsummary(dat)\n\n             apply     pared   public       gpa       \n unlikely       :220   0:337   0:343   Min.   :1.900  \n somewhat likely:140   1: 63   1: 57   1st Qu.:2.720  \n very likely    : 40                   Median :2.990  \n                                       Mean   :2.999  \n                                       3rd Qu.:3.270  \n                                       Max.   :4.000  \n\n# Verify the ordinal nature of the dependent variable\nstr(dat$apply)\n\n Factor w/ 3 levels \"unlikely\",\"somewhat likely\",..: 3 2 1 2 2 1 2 2 1 2 ...\n\n# Generate a cross-tabulation\nxtabs(~apply + pared, data = dat)\n\n                 pared\napply               0   1\n  unlikely        200  20\n  somewhat likely 110  30\n  very likely      27  13\n\nxtabs(~apply + public, data = dat)\n\n                 public\napply               0   1\n  unlikely        189  31\n  somewhat likely 124  16\n  very likely      30  10",
+    "crumbs": [
+      "Labs",
+      "W4: Ordered Logit"
+    ]
+  },
+  {
+    "objectID": "Labs/W4_Ordered_Logit/index.html#model-fitting",
+    "href": "Labs/W4_Ordered_Logit/index.html#model-fitting",
+    "title": "Data Lab: Ordered Logistic Regression",
+    "section": "2. Model Fitting",
+    "text": "2. Model Fitting\nWe estimate the Proportional Odds Logistic Regression model using polr.\n\n# Estimate the model\nm &lt;- polr(apply ~ pared + public + gpa, data = dat, Hess = TRUE)\n\n# View model summary\nsummary(m)\n\nCall:\npolr(formula = apply ~ pared + public + gpa, data = dat, Hess = TRUE)\n\nCoefficients:\n           Value Std. Error t value\npared1   1.04769     0.2658  3.9418\npublic1 -0.05879     0.2979 -0.1974\ngpa      0.61594     0.2606  2.3632\n\nIntercepts:\n                            Value   Std. Error t value\nunlikely|somewhat likely     2.2039  0.7795     2.8272\nsomewhat likely|very likely  4.2994  0.8043     5.3453\n\nResidual Deviance: 717.0249 \nAIC: 727.0249 \n\n\n\n2.1 Significance Testing\npolr does not provide p-values by default, so we calculate them using the t-values and the normal distribution.\n\n# Calculate p-values\nctable &lt;- coef(summary(m))\np &lt;- pnorm(abs(ctable[, \"t value\"]), lower.tail = FALSE) * 2\n\nctable &lt;- cbind(ctable, \"p value\" = p)\nprint(round(ctable, 3))\n\n                             Value Std. Error t value p value\npared1                       1.048      0.266   3.942   0.000\npublic1                     -0.059      0.298  -0.197   0.844\ngpa                          0.616      0.261   2.363   0.018\nunlikely|somewhat likely     2.204      0.780   2.827   0.005\nsomewhat likely|very likely  4.299      0.804   5.345   0.000\n\n\n\n\n2.2 Interpretation with Odds Ratios\nWe transform log-odds to Odds Ratios (OR) and compute 95% confidence intervals.\n\nci &lt;- confint(m)\n\nWaiting for profiling to be done...\n\nOR &lt;- exp(coef(m))\nci_exp &lt;- exp(ci)\n\n# Prepare data for Forest Plot visualization\ndf_plot &lt;- tibble(\n  variable = rownames(ci_exp),\n  OR = OR,\n  lower = ci_exp[, 1],\n  upper = ci_exp[, 2],\n  color = c(\"red\", \"steelblue\", \"steelblue1\") # Custom colors for variables\n)\ndf_plot$variable &lt;- factor(df_plot$variable, levels = rev(df_plot$variable))\n\nprint(df_plot)\n\n# A tibble: 3 × 5\n  variable    OR lower upper color     \n  &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     \n1 pared1   2.85  1.70   4.82 red       \n2 public1  0.943 0.521  1.68 steelblue \n3 gpa      1.85  1.11   3.10 steelblue1",
+    "crumbs": [
+      "Labs",
+      "W4: Ordered Logit"
+    ]
+  },
+  {
+    "objectID": "Labs/W4_Ordered_Logit/index.html#diagnostic-proportional-odds-assumption",
+    "href": "Labs/W4_Ordered_Logit/index.html#diagnostic-proportional-odds-assumption",
+    "title": "Data Lab: Ordered Logistic Regression",
+    "section": "3. Diagnostic: Proportional Odds Assumption",
+    "text": "3. Diagnostic: Proportional Odds Assumption\nA key assumption of the ordinal model is that the relationship between each pair of outcome groups is the same (Parallel Slopes). We test this by comparing binary logits for different thresholds.\n\ndat$y_gt1 &lt;- as.numeric(dat$apply != \"unlikely\")      # unlikely vs (somewhat + very)\ndat$y_gt2 &lt;- as.numeric(dat$apply == \"very likely\")   # (unlikely + somewhat) vs very\n\nm1 &lt;- glm(y_gt1 ~ pared + public + gpa, data = dat, family = binomial)\nm2 &lt;- glm(y_gt2 ~ pared + public + gpa, data = dat, family = binomial)\n\n# Compare coefficients\ndf1 &lt;- tibble(modelo = \"y &gt; 1\", variable = names(coef(m1)), OR = exp(coef(m1)))\ndf2 &lt;- tibble(modelo = \"y &gt; 2\", variable = names(coef(m2)), OR = exp(coef(m2)))\n\nbind_rows(df1, df2) %&gt;%\n  filter(variable != \"(Intercept)\") %&gt;%\n  ggplot(aes(x = OR, y = variable, color = modelo)) +\n  geom_point(position = position_dodge(width = 0.5), size = 3) +\n  labs(title = \"Proportional Odds Assumption Check\",\n       subtitle = \"Coefficients should be similar across models\",\n       x = \"Odds Ratio\", y = \"Predictor\") +\n  theme_minimal()",
+    "crumbs": [
+      "Labs",
+      "W4: Ordered Logit"
+    ]
+  },
+  {
+    "objectID": "Labs/W4_Ordered_Logit/index.html#predictions-and-visualizations",
+    "href": "Labs/W4_Ordered_Logit/index.html#predictions-and-visualizations",
+    "title": "Data Lab: Ordered Logistic Regression",
+    "section": "4. Predictions and Visualizations",
+    "text": "4. Predictions and Visualizations\nWe simulate a grid of values to visualize the model’s predicted probabilities across GPA ranges.\n\n# Create a simulation grid\nnewdat &lt;- data.frame(\n  pared = factor(rep(0:1, 200), ordered = FALSE),\n  public = factor(rep(0:1, each = 200), ordered = FALSE),\n  gpa = rep(seq(from = 1.9, to = 4, length.out = 100), 4)\n)\n\n# Predict probabilities\nnewdat &lt;- cbind(newdat, predict(m, newdat, type = \"probs\"))\n\n# Reshape data to long format\nlnewdat &lt;- melt(newdat, id.vars = c(\"pared\", \"public\", \"gpa\"),\n                variable.name = \"Level\", value.name = \"Probability\")\n\nlnewdat$Level &lt;- factor(lnewdat$Level,\n                        levels = c(\"unlikely\", \"somewhat likely\", \"very likely\"),\n                        labels = c(\"Unlikely\", \"Somewhat Likely\", \"Very Likely\"))\n\n# Plot the curves\nggplot(lnewdat, aes(x = gpa, y = Probability, colour = Level)) +\n  geom_line(size = 1.2) +\n  facet_grid(pared ~ public, labeller = label_both) + \n  scale_color_manual(values = c(\"Unlikely\" = \"red\", \n                                \"Somewhat Likely\" = \"steelblue\", \n                                \"Very Likely\" = \"steelblue1\")) +\n  labs(\n    x = \"Grade Point Average (GPA)\",\n    y = \"Predicted Probability\",\n    colour = \"Intent Level\",\n    title = \"Predicted Probabilities of Applying to Graduate School\",\n    subtitle = \"By GPA, Parental Education, and Institution Type\"\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(\n    strip.text = element_text(face = \"bold\", size = 12),\n    legend.position = \"bottom\",\n    legend.title = element_text(face = \"bold\"),\n    plot.title = element_text(face = \"bold\", size = 14, hjust = 0.5)\n  )\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.",
+    "crumbs": [
+      "Labs",
+      "W4: Ordered Logit"
+    ]
+  },
+  {
+    "objectID": "Labs/W4_Ordered_Logit/index.html#forest-plot",
+    "href": "Labs/W4_Ordered_Logit/index.html#forest-plot",
+    "title": "Data Lab: Ordered Logistic Regression",
+    "section": "5. Forest Plot",
+    "text": "5. Forest Plot\n\nggplot(df_plot, aes(x = OR, y = variable)) +\n  geom_point(aes(color = color), size = 3) +\n  geom_errorbarh(aes(xmin = lower, xmax = upper, color = color), height = 0.2) +\n  geom_vline(xintercept = 1, linetype = \"dashed\", color = \"gray50\") +\n  scale_x_log10() +\n  scale_color_identity() +\n  labs(\n    x = \"Odds Ratio (OR) (Log Scale)\",\n    y = \"Predictor Variables\",\n    title = \"Forest Plot: Ordinal Logistic Regression\"\n  ) +\n  theme_minimal(base_size = 13)\n\nWarning: `geom_errobarh()` was deprecated in ggplot2 4.0.0.\nℹ Please use the `orientation` argument of `geom_errorbar()` instead.\n\n\n`height` was translated to `width`.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipCross-References\n\n\n\n\nReturn to Topics overview",
+    "crumbs": [
+      "Labs",
+      "W4: Ordered Logit"
+    ]
+  },
+  {
     "objectID": "Topics/W14_1_Presentations/README.html",
     "href": "Topics/W14_1_Presentations/README.html",
     "title": "Week 14.1: Final Presentations",
@@ -445,6 +555,149 @@
     "crumbs": [
       "Topics",
       "Week 13.1: Causal Mediation Analysis"
+    ]
+  },
+  {
+    "objectID": "Labs/W3_Linear_Regression/index.html",
+    "href": "Labs/W3_Linear_Regression/index.html",
+    "title": "Data Lab: Linear Regression Analysis",
+    "section": "",
+    "text": "In this practical lab, we will perform a comprehensive Linear Regression Analysis. We’ll start with Exploratory Data Analysis, fit simple and multiple regression models, verify the OLS assumptions, and visualize our results.",
+    "crumbs": [
+      "Labs",
+      "W3: Linear Regression"
+    ]
+  },
+  {
+    "objectID": "Labs/W3_Linear_Regression/index.html#setting-up-the-environment",
+    "href": "Labs/W3_Linear_Regression/index.html#setting-up-the-environment",
+    "title": "Data Lab: Linear Regression Analysis",
+    "section": "1. Setting up the environment",
+    "text": "1. Setting up the environment\nWe begin by loading the necessary libraries and our dataset. We’ll use the built-in mtcars dataset for the simple regression, and generate a synthetic dataset later for multiple regression.\n\n# Load necessary libraries for data manipulation, visualization, and diagnostic testing\nlibrary(datasets)\nlibrary(ggplot2) \nlibrary(lmtest) # Required for assumption verification tests (bptest, dwtest, resettest)\nlibrary(car)    # Required for multicollinearity test (vif)\n\n# Load the built-in mtcars dataset and preview the first few rows\ndata(mtcars) \nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1",
+    "crumbs": [
+      "Labs",
+      "W3: Linear Regression"
+    ]
+  },
+  {
+    "objectID": "Labs/W3_Linear_Regression/index.html#exploratory-data-analysis-eda",
+    "href": "Labs/W3_Linear_Regression/index.html#exploratory-data-analysis-eda",
+    "title": "Data Lab: Linear Regression Analysis",
+    "section": "2. Exploratory Data Analysis (EDA)",
+    "text": "2. Exploratory Data Analysis (EDA)\nBefore fitting models, we perform an exploratory analysis to understand the relationships between our variables of interest.\n\n# Generate summary statistics for the dataset\nsummary(mtcars) \n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000  \n\n# Create a scatter plot of Weight vs. MPG to visually inspect their relationship\nggplot(mtcars, aes(x = wt, y = mpg)) + \n  geom_point(color = \"steelblue\", size = 3) + \n  labs(title = \"Scatter plot of Weight vs. MPG\", \n       x = \"Weight (1000 lbs)\", \n       y = \"Miles Per Gallon (MPG)\") +\n  theme_minimal()\n\n\n\n\n\n\n\n# Calculate the Pearson correlation coefficient between weight and MPG\ncor(mtcars$wt, mtcars$mpg)\n\n[1] -0.8676594",
+    "crumbs": [
+      "Labs",
+      "W3: Linear Regression"
+    ]
+  },
+  {
+    "objectID": "Labs/W3_Linear_Regression/index.html#simple-linear-regression",
+    "href": "Labs/W3_Linear_Regression/index.html#simple-linear-regression",
+    "title": "Data Lab: Linear Regression Analysis",
+    "section": "3. Simple Linear Regression",
+    "text": "3. Simple Linear Regression\nWe fit a linear regression model to predict mpg (Y) based on car weight wt (X): \\[Y = \\beta_0 + \\beta_1 X + \\epsilon\\]\n\n# Fit the simple linear regression model \nmodelo &lt;- lm(mpg ~ wt, data = mtcars) \n\n# Display the summary of the model\nsummary(modelo)\n\n\nCall:\nlm(formula = mpg ~ wt, data = mtcars)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-4.5432 -2.3647 -0.1252  1.4096  6.8727 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  37.2851     1.8776  19.858  &lt; 2e-16 ***\nwt           -5.3445     0.5591  -9.559 1.29e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.046 on 30 degrees of freedom\nMultiple R-squared:  0.7528,    Adjusted R-squared:  0.7446 \nF-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10\n\n\n\nInterpretation: In the summary output, the intercept is \\(\\beta_0\\) and the coefficient under the wt column is \\(\\beta_1\\) (the slope). The slope is estimated to be -5.34, meaning that for every additional 1000 lbs of weight, the car loses about 5.34 miles per gallon.\n\n\n3.1 Visual Diagnostic Plots\n\n# Generate standard visual diagnostic plots \n# 1. Residuals vs Fitted: Checks for non-linear patterns.\n# 2. Normal Q-Q: Checks if residuals are normally distributed.\n# 3. Scale-Location: Checks the assumption of constant variance (homoscedasticity).\n# 4. Residuals vs Leverage: Identifies influential observations/outliers.\npar(mfrow = c(2, 2))\nplot(modelo)\n\n\n\n\n\n\n\n\n\n\n3.2 Formal Verification of OLS Assumptions\nBeyond visual diagnostics, we use formal statistical tests to verify the core assumptions.\n\n# 1. Normality of Residuals (Shapiro-Wilk)\nshapiro.test(residuals(modelo))\n\n\n    Shapiro-Wilk normality test\n\ndata:  residuals(modelo)\nW = 0.94508, p-value = 0.1044\n\n# 2. Homoscedasticity (Breusch-Pagan)\nbptest(modelo)\n\n\n    studentized Breusch-Pagan test\n\ndata:  modelo\nBP = 0.040438, df = 1, p-value = 0.8406\n\n# 3. Independence of Residuals (Durbin-Watson)\ndwtest(modelo)\n\n\n    Durbin-Watson test\n\ndata:  modelo\nDW = 1.2517, p-value = 0.0102\nalternative hypothesis: true autocorrelation is greater than 0\n\n# 4. Linearity (RESET test)\nresettest(modelo, power = 2:3, type = \"fitted\")\n\n\n    RESET test\n\ndata:  modelo\nRESET = 5.1315, df1 = 2, df2 = 28, p-value = 0.01263",
+    "crumbs": [
+      "Labs",
+      "W3: Linear Regression"
+    ]
+  },
+  {
+    "objectID": "Labs/W3_Linear_Regression/index.html#regression-with-categorical-variables",
+    "href": "Labs/W3_Linear_Regression/index.html#regression-with-categorical-variables",
+    "title": "Data Lab: Linear Regression Analysis",
+    "section": "4. Regression with Categorical Variables",
+    "text": "4. Regression with Categorical Variables\nWe can also use linear models to test differences across categories (which is mathematically equivalent to an independent t-test).\n\n# Fit a model predicting MPG based on transmission type (am)\nmodelo3 &lt;- lm(mpg ~ am, data = mtcars) \nsummary(modelo3)\n\n\nCall:\nlm(formula = mpg ~ am, data = mtcars)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-9.3923 -3.0923 -0.2974  3.2439  9.5077 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   17.147      1.125  15.247 1.13e-15 ***\nam             7.245      1.764   4.106 0.000285 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.902 on 30 degrees of freedom\nMultiple R-squared:  0.3598,    Adjusted R-squared:  0.3385 \nF-statistic: 16.86 on 1 and 30 DF,  p-value: 0.000285\n\n# Perform a t-test to formally compare MPG across the two transmission types\nt.test(mpg ~ am, data = mtcars)\n\n\n    Welch Two Sample t-test\n\ndata:  mpg by am\nt = -3.7671, df = 18.332, p-value = 0.001374\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n -11.280194  -3.209684\nsample estimates:\nmean in group 0 mean in group 1 \n       17.14737        24.39231",
+    "crumbs": [
+      "Labs",
+      "W3: Linear Regression"
+    ]
+  },
+  {
+    "objectID": "Labs/W3_Linear_Regression/index.html#regression-and-uncertainty",
+    "href": "Labs/W3_Linear_Regression/index.html#regression-and-uncertainty",
+    "title": "Data Lab: Linear Regression Analysis",
+    "section": "5. Regression and Uncertainty",
+    "text": "5. Regression and Uncertainty\nLet’s visualize the fit of our model and understand the variance breakdown (SSR, ESS, TSS).\n\npar(mfrow = c(1, 1))\nplot(mtcars$wt, mtcars$mpg, main = \"Actual vs Fitted Values\",\n     xlab = \"Weight (1000 lbs)\", ylab = \"Miles Per Gallon (MPG)\", pch = 19, col = \"steelblue\")\npoints(mtcars$wt, fitted(modelo), col = \"firebrick\", pch = 19)\nlegend(\"topright\", legend = c(\"Actual\", \"Fitted\"), col = c(\"steelblue\", \"firebrick\"), pch = 19)\n\n\n\n\n\n\n\n# Calculate Sum of Squared Residuals (SSR)\nSRC &lt;- sum((fitted(modelo) - mtcars$mpg)^2)\n\n# Calculate Explained Sum of Squares (ESS)\nSEC &lt;- sum((fitted(modelo) - mean(mtcars$mpg))^2)\n\n# Calculate Total Sum of Squares (TSS)\nSTC &lt;- SRC + SEC\n\n# Calculate R-squared manually\nR2 &lt;- SEC / STC\ncat(\"Manually calculated R-squared:\", R2, \"\\n\")\n\nManually calculated R-squared: 0.7528328 \n\n\n\n5.1 Simulating Sampling Uncertainty\nLet’s consider 4 random samples of 10 cars to see how the regression line and confidence bands fluctuate around the true population line.\n\nset.seed(123)\npar(mfrow = c(2, 2)) # Set up a 2x2 grid for the 4 plots\nfor(i in 1:4){\n  # Plot the full population\n  plot(mpg ~ wt, data = mtcars,\n       xlab = \"Weight\", ylab = \"Miles Per Gallon\",\n       main = paste(\"Random Sample\", i),\n       ylim = c(min(mtcars$mpg), max(mtcars$mpg) + 0.3))\n  \n  # Add the true population regression line\n  abline(modelo)\n  \n  if(i == 1){\n    legend(\"topright\", \n           pch = c(NA, NA, NA, 1, 16), \n           lty = c(1, 1, 2, NA, NA),\n           col = c(1, 2, 2, 1, 2),\n           legend = c(\"Population truth\", \"Sample estimate\",\n                      \"Sample conf. band\", \"Unselected\", \"Sampled\"),\n           cex = 0.7, bty = \"n\")\n  }\n  \n  # Randomly select 10 cars\n  selected.cars &lt;- sample(1:nrow(mtcars), 10)\n  \n  # Highlight the sampled points in red\n  points(mtcars[selected.cars, \"wt\"], \n         mtcars[selected.cars, \"mpg\"], pch = 16, col = 2)\n  \n  # Fit a regression line using only the sample\n  model.sel &lt;- lm(mpg ~ wt, data = mtcars[selected.cars, ])\n  abline(model.sel, col = 2)\n  \n  # Make a confidence band\n  ww &lt;- qt(0.975, 10 - 2)\n  plot.x &lt;- data.frame(wt = seq(1.513, 5.424, 0.1))\n  plot.fit &lt;- predict(model.sel, plot.x, level = 0.95, interval = \"confidence\", se.fit = TRUE)\n  \n  lines(plot.x$wt, plot.fit$fit[, 1] + ww * plot.fit$se.fit, col = 2, lty = 2)\n  lines(plot.x$wt, plot.fit$fit[, 1] - ww * plot.fit$se.fit, col = 2, lty = 2)\n}",
+    "crumbs": [
+      "Labs",
+      "W3: Linear Regression"
+    ]
+  },
+  {
+    "objectID": "Labs/W3_Linear_Regression/index.html#multiple-regression",
+    "href": "Labs/W3_Linear_Regression/index.html#multiple-regression",
+    "title": "Data Lab: Linear Regression Analysis",
+    "section": "6. Multiple Regression",
+    "text": "6. Multiple Regression\nWe will generate a synthetic dataset for public policies to model economic_output.\n\n# Generate a synthetic dataset for public policies\nset.seed(123)\nn &lt;- 1000\npublic_policies_data &lt;- data.frame(\n  region = paste(\"Region\", 1:n),\n  education_expenditure = runif(n, 5000, 15000),   # Education spending\n  healthcare_expenditure = runif(n, 2000, 10000),  # Healthcare spending\n  poverty_rate = runif(n, 5, 30)                   # Poverty rate (%)\n)\n\n# Calculate economic output based on true coefficients and random noise\npublic_policies_data$economic_output &lt;- 10000 + \n  0.5 * public_policies_data$education_expenditure + \n  0.3 * public_policies_data$healthcare_expenditure - \n  200 * public_policies_data$poverty_rate + \n  rnorm(n, 0, 5000) \n\n# Fit a multiple regression model\nmodelo_mult &lt;- lm(economic_output ~ education_expenditure + healthcare_expenditure + poverty_rate, \n                  data = public_policies_data)\n\n# Summarize the multiple regression model\nsummary(modelo_mult)\n\n\nCall:\nlm(formula = economic_output ~ education_expenditure + healthcare_expenditure + \n    poverty_rate, data = public_policies_data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-15281.2  -3231.9    -55.9   3327.0  16267.7 \n\nCoefficients:\n                         Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)             1.039e+04  7.797e+02  13.330  &lt; 2e-16 ***\neducation_expenditure   4.207e-01  5.444e-02   7.727 2.67e-14 ***\nhealthcare_expenditure  3.085e-01  6.839e-02   4.511 7.23e-06 ***\npoverty_rate           -1.809e+02  2.141e+01  -8.448  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4925 on 996 degrees of freedom\nMultiple R-squared:  0.1197,    Adjusted R-squared:  0.117 \nF-statistic: 45.13 on 3 and 996 DF,  p-value: &lt; 2.2e-16\n\n\n\n6.1 Diagnostics for Multiple Regression\nWith multiple predictors, we also need to check for multicollinearity.\n\n# 1. Absence of Multicollinearity (VIF)\n# VIF values &gt; 5 or 10 indicate problematic multicollinearity.\nvif(modelo_mult)\n\n education_expenditure healthcare_expenditure           poverty_rate \n              1.009081               1.006410               1.007963 \n\n# 2. Normality of Residuals\nshapiro.test(residuals(modelo_mult))\n\n\n    Shapiro-Wilk normality test\n\ndata:  residuals(modelo_mult)\nW = 0.99907, p-value = 0.9086\n\n# 3. Homoscedasticity \nbptest(modelo_mult)\n\n\n    studentized Breusch-Pagan test\n\ndata:  modelo_mult\nBP = 0.85037, df = 3, p-value = 0.8374\n\n# 4. Independence of Residuals\ndwtest(modelo_mult)\n\n\n    Durbin-Watson test\n\ndata:  modelo_mult\nDW = 1.9981, p-value = 0.4893\nalternative hypothesis: true autocorrelation is greater than 0\n\n# 5. Linearity\nresettest(modelo_mult, power = 2:3, type = \"fitted\")\n\n\n    RESET test\n\ndata:  modelo_mult\nRESET = 0.44981, df1 = 2, df2 = 994, p-value = 0.6379\n\n\n\n\n\n\n\n\nTipCross-References\n\n\n\n\nReturn to Topics overview",
+    "crumbs": [
+      "Labs",
+      "W3: Linear Regression"
+    ]
+  },
+  {
+    "objectID": "Labs/W9_Logit_Example/index.html",
+    "href": "Labs/W9_Logit_Example/index.html",
+    "title": "Data Lab: Logistic Regression (Binomial Model)",
+    "section": "",
+    "text": "In this practical lab, we will analyze data using a Binomial Logistic Regression Model. We will explore the data, fit the model, verify assumptions (such as linearity of the logit and multicollinearity), and visualize predicted probabilities across different profiles.",
+    "crumbs": [
+      "Labs",
+      "W9: Logit Example"
+    ]
+  },
+  {
+    "objectID": "Labs/W9_Logit_Example/index.html#data-loading-and-preparation",
+    "href": "Labs/W9_Logit_Example/index.html#data-loading-and-preparation",
+    "title": "Data Lab: Logistic Regression (Binomial Model)",
+    "section": "1. Data Loading and Preparation",
+    "text": "1. Data Loading and Preparation\nWe load the UCLA binary dataset which studies how GRE scores (renamed to puntaje_ICFES), GPA, and undergraduate institution rank influence admission to postgraduate programs. The response variable, admit, is binary.\n\n# Load required libraries\nlibrary(aod)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(car) # Required for logistic regression assumption tests (VIF, Box-Tidwell)\n\n# Load the dataset\ndt &lt;- read.csv(\"https://stats.idre.ucla.edu/stat/data/binary.csv\")\n\n# Rename 'gre' to 'puntaje_ICFES' for local context\nnames(dt)[names(dt) == \"gre\"] &lt;- \"puntaje_ICFES\"\n\n# Convert rank into an explicitly ordered factor\ndt$rank_cat &lt;- NA\ndt$rank_cat[dt$rank == 1] &lt;- \"rango_1\"\ndt$rank_cat[dt$rank == 2] &lt;- \"rango_2\"\ndt$rank_cat[dt$rank == 3] &lt;- \"rango_3\"\ndt$rank_cat[dt$rank == 4] &lt;- \"rango_4\"\n\ndt$rank_ord &lt;- factor(dt$rank_cat, \n                      levels = c(\"rango_1\", \"rango_2\", \"rango_3\", \"rango_4\"), \n                      ordered = TRUE)\n\n# Format the binary response variable 'admit' into a descriptive factor\ndt &lt;- dt %&gt;%\n  mutate(admit = factor(admit, levels = c(0, 1), labels = c(\"No admitido\", \"Admitido\")))",
+    "crumbs": [
+      "Labs",
+      "W9: Logit Example"
+    ]
+  },
+  {
+    "objectID": "Labs/W9_Logit_Example/index.html#exploratory-data-analysis-eda",
+    "href": "Labs/W9_Logit_Example/index.html#exploratory-data-analysis-eda",
+    "title": "Data Lab: Logistic Regression (Binomial Model)",
+    "section": "2. Exploratory Data Analysis (EDA)",
+    "text": "2. Exploratory Data Analysis (EDA)\nBefore running the model, let’s explore the relationships in our data.\n\nsummary(dt)\n\n         admit     puntaje_ICFES        gpa             rank      \n No admitido:273   Min.   :220.0   Min.   :2.260   Min.   :1.000  \n Admitido   :127   1st Qu.:520.0   1st Qu.:3.130   1st Qu.:2.000  \n                   Median :580.0   Median :3.395   Median :2.000  \n                   Mean   :587.7   Mean   :3.390   Mean   :2.485  \n                   3rd Qu.:660.0   3rd Qu.:3.670   3rd Qu.:3.000  \n                   Max.   :800.0   Max.   :4.000   Max.   :4.000  \n   rank_cat            rank_ord  \n Length:400         rango_1: 61  \n Class :character   rango_2:151  \n Mode  :character   rango_3:121  \n                    rango_4: 67  \n                                 \n                                 \n\n# Cross-tabulation between admission and university rank\nxtabs(~admit + rank_ord, data = dt)\n\n             rank_ord\nadmit         rango_1 rango_2 rango_3 rango_4\n  No admitido      28      97      93      55\n  Admitido         33      54      28      12\n\n# Comparative Histogram for ICFES scores\nhist(dt$puntaje_ICFES, \n     col = rgb(0, 0, 1, 0.5), \n     main = \"Distribución Comparativa de Puntajes ICFES\", \n     xlab = \"Puntaje\", \n     ylab = \"Frecuencia\",\n     xlim = c(200, 800)) \n\n\n\n\n\n\n\n\n\np1 &lt;- ggplot(dt, aes(x = admit, y = puntaje_ICFES, fill = admit)) +\n  geom_boxplot() +\n  scale_fill_manual(values = c(\"steelblue\", \"red\")) +\n  labs(title = \"ICFES por admisión\", x = \"Admisión\", y = \"ICFES\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")\n\np2 &lt;- ggplot(dt, aes(x = admit, y = gpa, fill = admit)) +\n  geom_boxplot() +\n  scale_fill_manual(values = c(\"steelblue\", \"red\")) +\n  labs(title = \"GPA por admisión\", x = \"Admisión\", y = \"GPA\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")\n\nlibrary(patchwork) # To display side by side\np1 + p2",
+    "crumbs": [
+      "Labs",
+      "W9: Logit Example"
+    ]
+  },
+  {
+    "objectID": "Labs/W9_Logit_Example/index.html#model-fitting",
+    "href": "Labs/W9_Logit_Example/index.html#model-fitting",
+    "title": "Data Lab: Logistic Regression (Binomial Model)",
+    "section": "3. Model Fitting",
+    "text": "3. Model Fitting\nWe estimate the binomial logit model using the Generalized Linear Model (glm) function with a logistic link.\n\n# Estimate the binomial logit model\nlogit &lt;- glm(admit ~ puntaje_ICFES + gpa + rank_ord, data = dt, family = \"binomial\")\n\n# View the summary\nsummary(logit)\n\n\nCall:\nglm(formula = admit ~ puntaje_ICFES + gpa + rank_ord, family = \"binomial\", \n    data = dt)\n\nCoefficients:\n               Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   -4.881757   1.113111  -4.386 1.16e-05 ***\npuntaje_ICFES  0.002264   0.001094   2.070   0.0385 *  \ngpa            0.804038   0.331819   2.423   0.0154 *  \nrank_ord.L    -1.189399   0.287159  -4.142 3.44e-05 ***\nrank_ord.Q     0.232092   0.251685   0.922   0.3564    \nrank_ord.C     0.099017   0.212052   0.467   0.6405    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 499.98  on 399  degrees of freedom\nResidual deviance: 458.52  on 394  degrees of freedom\nAIC: 470.52\n\nNumber of Fisher Scoring iterations: 4\n\n\n\nInterpretation: The estimated coefficients are in log-odds units. For example, for each additional unit in the ICFES score, the log-odds of admission increase by about 0.002. For each additional unit in GPA, the log-odds increase by 0.804. Since rank_ord is an ordered factor, R outputs polynomial contrasts (.L, .Q, .C) to capture linear and non-linear trends across ranks.\n\n\n3.1 Odds Ratios\nTo interpret the coefficients properly, we transform them from log-odds into Odds Ratios (OR).\n\nexp(cbind(OR = coef(logit), confint(logit)))\n\nWaiting for profiling to be done...\n\n\n                      OR        2.5 %    97.5 %\n(Intercept)   0.00758368 0.0008102071 0.0642159\npuntaje_ICFES 1.00226699 1.0001376016 1.0044457\ngpa           2.23454482 1.1738582158 4.3238349\nrank_ord.L    0.30440429 0.1701010347 0.5271488\nrank_ord.Q    1.26123523 0.7642378161 2.0569058\nrank_ord.C    1.10408551 0.7305857958 1.6805509",
+    "crumbs": [
+      "Labs",
+      "W9: Logit Example"
+    ]
+  },
+  {
+    "objectID": "Labs/W9_Logit_Example/index.html#verification-of-logistic-regression-assumptions",
+    "href": "Labs/W9_Logit_Example/index.html#verification-of-logistic-regression-assumptions",
+    "title": "Data Lab: Logistic Regression (Binomial Model)",
+    "section": "4. Verification of Logistic Regression Assumptions",
+    "text": "4. Verification of Logistic Regression Assumptions\nLogistic regression doesn’t assume normality of residuals or homoscedasticity like OLS, but it has its own strict assumptions.\n\n# 1. Absence of Multicollinearity (VIF)\n# Values near 1 are excellent.\nvif(logit)\n\n                  GVIF Df GVIF^(1/(2*Df))\npuntaje_ICFES 1.134377  1        1.065071\ngpa           1.155902  1        1.075129\nrank_ord      1.025759  3        1.004248\n\n# 2. Absence of Strongly Influential Outliers\n# Points significantly higher than the rest warrant further investigation.\nplot(logit, which = 4, id.n = 3)",
+    "crumbs": [
+      "Labs",
+      "W9: Logit Example"
+    ]
+  },
+  {
+    "objectID": "Labs/W9_Logit_Example/index.html#predictions-and-visualizations",
+    "href": "Labs/W9_Logit_Example/index.html#predictions-and-visualizations",
+    "title": "Data Lab: Logistic Regression (Binomial Model)",
+    "section": "5. Predictions and Visualizations",
+    "text": "5. Predictions and Visualizations\nWe calculate predicted probabilities of admission holding GPA at its mean, across all 4 institution ranks and varying ICFES scores.\n\n# Create simulation grid\nn_dt2 &lt;- with(dt, data.frame(\n  puntaje_ICFES = rep(seq(from = 200, to = 800, length.out = 100), 4), \n  gpa = mean(gpa, na.rm = TRUE), \n  rank_ord = factor(rep(c(\"rango_1\", \"rango_2\", \"rango_3\", \"rango_4\"), each = 100), \n                    levels = c(\"rango_1\", \"rango_2\", \"rango_3\", \"rango_4\"), \n                    ordered = TRUE)\n))\n\n# Predict values on link scale (log-odds) and compute standard errors\nn_dt3 &lt;- cbind(n_dt2, predict(logit, newdata = n_dt2, type = \"link\", se = TRUE))\n\n# Transform into probabilities using plogis\nn_dt3 &lt;- within(n_dt3, {\n  PredictedProb &lt;- plogis(fit)\n  LL &lt;- plogis(fit - (1.96 * se.fit))\n  UL &lt;- plogis(fit + (1.96 * se.fit))\n})\n\n# Plot the predicted probability curves\nggplot(n_dt3, aes(x = puntaje_ICFES, y = PredictedProb)) +\n  geom_ribbon(aes(ymin = LL, ymax = UL, fill = rank_ord), alpha = 0.2) +\n  geom_line(aes(colour = rank_ord), size = 1) +\n  scale_fill_manual(values = c(\"steelblue4\", \"steelblue2\", \"indianred2\", \"indianred4\")) +\n  scale_colour_manual(values = c(\"steelblue4\", \"steelblue2\", \"indianred2\", \"indianred4\")) +\n  labs(x = \"Puntaje ICFES (GRE)\", y = \"Probabilidad Predicha de Admisión\", \n       fill = \"Rank\", colour = \"Rank\",\n       title = \"Probabilidad de Admisión por Puntaje y Rango de Universidad\") +\n  theme_bw(base_size = 12) +\n  theme(legend.position = \"bottom\",\n        legend.title = element_text(face = \"bold\"))\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n\n\n\n\n\n\n\n\n5.1 Specific Population Profiles\nWe can evaluate specific cases of admission probability by constructing concrete student profiles.\n\n# Create concrete population profiles\nperfil_A &lt;- data.frame(puntaje_ICFES = 800, gpa = 4.0, \n                       rank_ord = factor(\"rango_4\", levels = c(\"rango_1\", \"rango_2\", \"rango_3\", \"rango_4\"), ordered = TRUE))\n\nperfil_B &lt;- data.frame(puntaje_ICFES = 600, gpa = 3.0, \n                       rank_ord = factor(\"rango_1\", levels = c(\"rango_1\", \"rango_2\", \"rango_3\", \"rango_4\"), ordered = TRUE))\n\n# Predict linear index (log-odds)\npred_A &lt;- predict(logit, newdata = perfil_A, type = \"link\", se.fit = TRUE)\npred_B &lt;- predict(logit, newdata = perfil_B, type = \"link\", se.fit = TRUE)\n\n# Convert log-odds into bounded probabilities\ncat(\"Probabilidad Perfil A (Top ICFES/GPA, Rango 4):\", round(plogis(pred_A$fit), 3), \"\\n\")\n\nProbabilidad Perfil A (Top ICFES/GPA, Rango 4): 0.374 \n\ncat(\"Probabilidad Perfil B (Mid ICFES/GPA, Rango 1):\", round(plogis(pred_B$fit), 3), \"\\n\")\n\nProbabilidad Perfil B (Mid ICFES/GPA, Rango 1): 0.445 \n\n\n\n\n\n\n\n\nTipCross-References\n\n\n\n\nReturn to Topics overview",
+    "crumbs": [
+      "Labs",
+      "W9: Logit Example"
     ]
   }
 ]

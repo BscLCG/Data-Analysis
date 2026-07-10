@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>readme – Data Analysis</title>
+<title>Data Lab: Multiple Mediation Analysis – Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W14_1_Presentations/README.html">Week 14.1: Final Presentations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Labs/W3_Linear_Regression/index.html">Labs</a></li><li class="breadcrumb-item"><a href="../../Labs/W13_Mediation/index.html">W13: Mediation Analysis</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -195,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Topics/W14_1_Presentations/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 14.1: Final Presentations</span></a>
   </div>
 </li>
@@ -230,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Labs/W13_Mediation/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Labs/W13_Mediation/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">W13: Mediation Analysis</span></a>
   </div>
 </li>
@@ -246,73 +310,276 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-14.1-final-presentations" id="toc-week-14.1-final-presentations" class="nav-link active" data-scroll-target="#week-14.1-final-presentations">Week 14.1: Final Presentations</a>
+  <li><a href="#data-loading-dichotomizing-simulation" id="toc-data-loading-dichotomizing-simulation" class="nav-link active" data-scroll-target="#data-loading-dichotomizing-simulation">1. Data Loading, Dichotomizing &amp; Simulation</a>
   <ul class="collapse">
-  <li><a href="#detailed-reading-presenting-applied-data-analysis" id="toc-detailed-reading-presenting-applied-data-analysis" class="nav-link" data-scroll-target="#detailed-reading-presenting-applied-data-analysis">Detailed Reading: Presenting Applied Data Analysis</a>
-  <ul class="collapse">
-  <li><a href="#presentation-structure" id="toc-presentation-structure" class="nav-link" data-scroll-target="#presentation-structure">Presentation Structure</a></li>
-  <li><a href="#peer-review" id="toc-peer-review" class="nav-link" data-scroll-target="#peer-review">Peer Review</a></li>
+  <li><a href="#simulating-mediators" id="toc-simulating-mediators" class="nav-link" data-scroll-target="#simulating-mediators">Simulating Mediators</a></li>
+  <li><a href="#preparing-variables-for-lavaan" id="toc-preparing-variables-for-lavaan" class="nav-link" data-scroll-target="#preparing-variables-for-lavaan">Preparing Variables for <code>lavaan</code></a></li>
   </ul></li>
+  <li><a href="#defining-the-sem-model" id="toc-defining-the-sem-model" class="nav-link" data-scroll-target="#defining-the-sem-model">2. Defining the SEM Model</a></li>
+  <li><a href="#model-fitting-results" id="toc-model-fitting-results" class="nav-link" data-scroll-target="#model-fitting-results">3. Model Fitting &amp; Results</a>
+  <ul class="collapse">
+  <li><a href="#extracting-indirect-effects" id="toc-extracting-indirect-effects" class="nav-link" data-scroll-target="#extracting-indirect-effects">3.1 Extracting Indirect Effects</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Topics/W1_Intro_and_research/README.html">Topics</a></li><li class="breadcrumb-item"><a href="../../Topics/W14_1_Presentations/README.html">Week 14.1: Final Presentations</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
 
-
-
-
-<section id="week-14.1-final-presentations" class="level1">
-<h1>Week 14.1: Final Presentations</h1>
-<div class="alert alert-info">
-<div class="alert-heading">
-<strong>Overview</strong>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Labs/W3_Linear_Regression/index.html">Labs</a></li><li class="breadcrumb-item"><a href="../../Labs/W13_Mediation/index.html">W13: Mediation Analysis</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Data Lab: Multiple Mediation Analysis</h1>
 </div>
-<p>This section outlines the structure and academic requirements for communicating applied data analysis research to a professional audience, emphasizing methodological clarity and empirical evidence.</p>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout-info" title="Lab Overview">
+<p>In this practical lab, we will perform a <strong>Multiple Mediation Analysis</strong> using Structural Equation Modeling (SEM) with the <code>lavaan</code> package. We will simulate a scenario with a binary predictor (X), multiple binary mediators (M), and a binary outcome (Y).</p>
 </div>
-<section id="detailed-reading-presenting-applied-data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="detailed-reading-presenting-applied-data-analysis">Detailed Reading: Presenting Applied Data Analysis</h2>
-<p>The culmination of the research process is the formal communication of findings. A study holds no value if its methodology, results, and implications are not clearly transmitted to a critical audience. In the final phase of the research cycle, researchers transition from data processing to public presentation.</p>
-<section id="presentation-structure" class="level3">
-<h3 class="anchored" data-anchor-id="presentation-structure">Presentation Structure</h3>
-<p>Presenting applied data analysis requires synthesizing complex, multi-month projects into strict timeframes. Researchers typically have 25 minutes to present their complete study, followed by a Q&amp;A session. This format mirrors academic conferences and professional consulting environments.</p>
-<p>The presentation structure directly tracks the <a href="../../Topics/W8_1_Writing_and_Ethics/README.html">formal academic structure</a>:</p>
-<ol type="1">
-<li><strong>Problem and Theoretical Framework</strong>: Presenters must establish the research problem and articulate the primary research question. This section justifies the relevance of the problem using key literature and explicit <a href="../../Topics/W4_1_Use_of_Theory/README.html">theoretical models</a>.</li>
-<li><strong>Methodology</strong>: The presentation details the empirical approach. For quantitative projects, this involves defining the population, the <a href="../../Topics/W6_1_Sampling_and_Data_Collection/README.html">sampling strategy</a>, the operationalization of variables, and the specific statistical estimators used (e.g., <a href="../../Topics/W3_2_Logistic_Regression/README.html">Logistic regression</a>). For <a href="../../Topics/W5_1_Mixed_Methods/README.html">mixed-methods projects</a>, the section must explain the integration process and structural design.</li>
-<li><strong>Results</strong>: This is the core of the presentation. Researchers use visual aids—such as coefficient plots, predicted probability graphs, and <a href="../../Topics/W5_1_Mixed_Methods/README.html">joint displays</a>—to convey complex relationships efficiently.</li>
-<li><strong>Discussion</strong>: The presentation concludes with the empirical implications of the findings, followed by an explicit statement of the study’s design limitations (e.g., potential confounding variables or non-probability sampling constraints).</li>
-</ol>
+<section id="data-loading-dichotomizing-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="data-loading-dichotomizing-simulation">1. Data Loading, Dichotomizing &amp; Simulation</h2>
+<p>We’ll start with the UCLA dataset. We will dichotomize our predictor (GRE) and simulate three new binary mediators (passing an essay, interview, and recommendation) that depend on the GRE score.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr) </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://stats.idre.ucla.edu/stat/data/binary.csv"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># A. Dummy coding for the covariates (Rank)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">rank2 =</span> <span class="fu">ifelse</span>(rank <span class="sc">==</span> <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">rank3 =</span> <span class="fu">ifelse</span>(rank <span class="sc">==</span> <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">rank4 =</span> <span class="fu">ifelse</span>(rank <span class="sc">==</span> <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># B. Make GRE Dichotomous (1 = High GRE [&gt;= 600], 0 = Low GRE [&lt; 600])</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt <span class="sc">%&gt;%</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">gre_high =</span> <span class="fu">ifelse</span>(gre <span class="sc">&gt;=</span> <span class="dv">600</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="simulating-mediators" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-mediators">Simulating Mediators</h3>
+<p>We simulate the 3 new dichotomous mediators based on the binary <code>gre_high</code>. We adjust the logit math. For example, in <code>prob_essay</code>: - If <code>gre_high = 0</code> (Low GRE), prob is <span class="math inline">\(plogis(-1) \approx 27\%\)</span> pass rate. - If <code>gre_high = 1</code> (High GRE), prob is <span class="math inline">\(plogis(-1 + 2) = plogis(1) \approx 73\%\)</span> pass rate.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>) </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_essay =</span> <span class="fu">plogis</span>(<span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> <span class="fl">2.0</span> <span class="sc">*</span> gre_high),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">essay_pass =</span> <span class="fu">rbinom</span>(<span class="fu">n</span>(), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> prob_essay),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_interview =</span> <span class="fu">plogis</span>(<span class="sc">-</span><span class="fl">1.5</span> <span class="sc">+</span> <span class="fl">2.5</span> <span class="sc">*</span> gre_high),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">interview_pass =</span> <span class="fu">rbinom</span>(<span class="fu">n</span>(), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> prob_interview),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_rec =</span> <span class="fu">plogis</span>(<span class="sc">-</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> gre_high),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">rec_pass =</span> <span class="fu">rbinom</span>(<span class="fu">n</span>(), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> prob_rec)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="peer-review" class="level3">
-<h3 class="anchored" data-anchor-id="peer-review">Peer Review</h3>
-<p>The peer review session following each presentation constitutes a fundamental component of the scientific method. Reviewers evaluate the internal validity of the causal claims, the external validity of the sample, the appropriateness of the statistical models, and the theoretical consistency of the constructs. Responding to and incorporating this critical feedback ensures the empirical robustness of the final research output.</p>
-<div class="alert alert-success">
-<div class="alert-heading">
-<strong>Cross-References</strong>
+<section id="preparing-variables-for-lavaan" class="level3">
+<h3 class="anchored" data-anchor-id="preparing-variables-for-lavaan">Preparing Variables for <code>lavaan</code></h3>
+<p>We define endogenous categorical variables as <code>ordered</code> for <code>lavaan</code>. Note: We do NOT need to make <code>gre_high</code> ordered because it is <strong>EXOGENOUS</strong> (no arrows point to it). <code>lavaan</code> handles exogenous binary variables perfectly as 0/1 numeric.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dt<span class="sc">$</span>admit <span class="ot">&lt;-</span> <span class="fu">ordered</span>(dt<span class="sc">$</span>admit)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>dt<span class="sc">$</span>essay_pass <span class="ot">&lt;-</span> <span class="fu">ordered</span>(dt<span class="sc">$</span>essay_pass)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>dt<span class="sc">$</span>interview_pass <span class="ot">&lt;-</span> <span class="fu">ordered</span>(dt<span class="sc">$</span>interview_pass)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>dt<span class="sc">$</span>rec_pass <span class="ot">&lt;-</span> <span class="fu">ordered</span>(dt<span class="sc">$</span>rec_pass)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<ul>
-<li>Return to the <a href="../../README.html">Course Root</a></li>
-<li>Previous topic: <a href="../../Topics/W13_1_Mediation/README.html">Causal Mediation Analysis</a></li>
-</ul>
-</div>
-<div class="alert alert-secondary">
-<div class="alert-heading">
-<strong>References and Materials</strong>
-</div>
-<p><strong>View (PDFs)</strong></p>
-<ul>
-<li><a href="./W14. project presentations.pdf">W14. project presentations.pdf</a></li>
-</ul>
-<p><strong>Download (Originals &amp; Scripts)</strong></p>
-<ul>
-<li><a href="./W14. project presentations.pptx">W14. project presentations.pptx</a></li>
-</ul>
-</div>
-
-
 </section>
+</section>
+<section id="defining-the-sem-model" class="level2">
+<h2 class="anchored" data-anchor-id="defining-the-sem-model">2. Defining the SEM Model</h2>
+<p>We define the structural paths: 1. <span class="math inline">\(X \rightarrow M\)</span> pathways 2. <span class="math inline">\(M \rightarrow Y\)</span> and <span class="math inline">\(X \rightarrow Y\)</span> pathways 3. We calculate specific indirect effects and total effects using the <code>:=</code> operator.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>model_3_mediators_binaryX <span class="ot">&lt;-</span> <span class="st">'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="st">  # The X -&gt; M pathways (Now using gre_high)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="st">  essay_pass ~ a1 * gre_high</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">  interview_pass ~ a2 * gre_high</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">  rec_pass ~ a3 * gre_high</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">  # The M -&gt; Y, X -&gt; Y, and Covariate pathways pointing to Admit</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">  admit ~ cp * gre_high + b1 * essay_pass + b2 * interview_pass + b3 * rec_pass + gpa + rank2 + rank3 + rank4</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">  # Specific Indirect Effects</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">  ind_essay := a1 * b1</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="st">  ind_interview := a2 * b2</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="st">  ind_rec := a3 * b3</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="st">  # Total Effects</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="st">  total_indirect := ind_essay + ind_interview + ind_rec</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="st">  total_effect := cp + total_indirect</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="model-fitting-results" class="level2">
+<h2 class="anchored" data-anchor-id="model-fitting-results">3. Model Fitting &amp; Results</h2>
+<p>We fit the model using <code>sem()</code>. Because we declared our endogenous variables as <code>ordered</code>, <code>lavaan</code> automatically uses the DWLS (Diagonally Weighted Least Squares) estimator.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the model </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">sem</span>(<span class="at">model =</span> model_3_mediators_binaryX, <span class="at">data =</span> dt)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print full summary</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit, <span class="at">standardized =</span> <span class="cn">TRUE</span>, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">rsquare =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-21 ended normally after 43 iterations
+
+  Estimator                                       DWLS
+  Optimization method                           NLMINB
+  Number of model parameters                        15
+
+  Number of observations                           400
+
+Model Test User Model:
+                                              Standard      Scaled
+  Test Statistic                                13.050      13.415
+  Degrees of freedom                                15          15
+  P-value (Unknown)                                 NA       0.570
+  Scaling correction factor                                  1.230
+  Shift parameter                                            2.808
+    simple second-order correction                                
+
+Model Test Baseline Model:
+
+  Test statistic                                 6.198       6.196
+  Degrees of freedom                                 6           6
+  P-value                                           NA       0.402
+  Scaling correction factor                                  1.013
+
+User Model versus Baseline Model:
+
+  Comparative Fit Index (CFI)                    1.000       1.000
+  Tucker-Lewis Index (TLI)                       4.931       4.237
+                                                                  
+  Robust Comparative Fit Index (CFI)                            NA
+  Robust Tucker-Lewis Index (TLI)                               NA
+
+Root Mean Square Error of Approximation:
+
+  RMSEA                                          0.000       0.000
+  90 Percent confidence interval - lower         0.000       0.000
+  90 Percent confidence interval - upper         0.042       0.043
+  P-value H_0: RMSEA &lt;= 0.050                    0.984       0.981
+  P-value H_0: RMSEA &gt;= 0.080                    0.000       0.000
+                                                                  
+  Robust RMSEA                                                  NA
+  90 Percent confidence interval - lower                        NA
+  90 Percent confidence interval - upper                        NA
+  P-value H_0: Robust RMSEA &lt;= 0.050                            NA
+  P-value H_0: Robust RMSEA &gt;= 0.080                            NA
+
+Standardized Root Mean Square Residual:
+
+  SRMR                                           0.058       0.058
+
+Parameter Estimates:
+
+  Parameterization                               Delta
+  Standard errors                           Robust.sem
+  Information                                 Expected
+  Information saturated (h1) model        Unstructured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  essay_pass ~                                                          
+    gre_high  (a1)    1.274    0.145    8.811    0.000    1.274    0.538
+  interview_pass ~                                                      
+    gre_high  (a2)    1.624    0.158   10.292    0.000    1.624    0.631
+  rec_pass ~                                                            
+    gre_high  (a3)    1.096    0.144    7.634    0.000    1.096    0.481
+  admit ~                                                               
+    gre_high  (cp)    0.258    0.252    1.022    0.307    0.258    0.118
+    essay_pss (b1)   -0.011    0.091   -0.120    0.904   -0.011   -0.012
+    intrvw_ps (b2)    0.025    0.095    0.257    0.797    0.025    0.029
+    rec_pass  (b3)    0.002    0.091    0.020    0.984    0.002    0.002
+    gpa               0.507    0.186    2.728    0.006    0.507    0.177
+    rank2            -0.435    0.197   -2.207    0.027   -0.435   -0.193
+    rank3            -0.841    0.209   -4.029    0.000   -0.841   -0.354
+    rank4            -0.942    0.247   -3.810    0.000   -0.942   -0.323
+
+Thresholds:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    essay_pass|t1     1.075    0.667    1.612    0.107    1.075    0.906
+    intervw_pss|t1    0.503    0.738    0.682    0.495    0.503    0.391
+    rec_pass|t1      -0.346    0.648   -0.534    0.594   -0.346   -0.303
+    admit|t1          1.800    0.647    2.780    0.005    1.800    1.649
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+   .essay_pass        1.000                               1.000    0.711
+   .interview_pass    1.000                               1.000    0.602
+   .rec_pass          1.000                               1.000    0.769
+   .admit             0.999                               0.999    0.839
+
+R-Square:
+                   Estimate
+    essay_pass        0.289
+    interview_pass    0.398
+    rec_pass          0.231
+    admit             0.161
+
+Defined Parameters:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    ind_essay        -0.014    0.116   -0.120    0.904   -0.014   -0.006
+    ind_interview     0.040    0.155    0.257    0.797    0.040    0.018
+    ind_rec           0.002    0.100    0.020    0.984    0.002    0.001
+    total_indirect    0.028    0.215    0.129    0.897    0.028    0.013
+    total_effect      0.286    0.141    2.022    0.043    0.286    0.131</code></pre>
+</div>
+</div>
+<section id="extracting-indirect-effects" class="level3">
+<h3 class="anchored" data-anchor-id="extracting-indirect-effects">3.1 Extracting Indirect Effects</h3>
+<p>Let’s isolate just the indirect effects to compare the mediating pathways.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract just the indirect effects to compare</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parameterEstimates</span>(fit) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(op <span class="sc">==</span> <span class="st">":="</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(lhs, est, se, z, pvalue) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span> <span class="fu">round</span>(., <span class="dv">4</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             lhs    est    se      z pvalue
+1      ind_essay -0.014 0.116 -0.120  0.904
+2  ind_interview  0.040 0.155  0.257  0.797
+3        ind_rec  0.002 0.100  0.020  0.984
+4 total_indirect  0.028 0.215  0.129  0.897
+5   total_effect  0.286 0.141  2.022  0.043</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Interpretation:</strong> The table above shows the specific indirect effects through the essay, interview, and recommendation. We can determine which pathway carries the most significant mediating effect by observing the <code>est</code> (estimate) and <code>pvalue</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Cross-References">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cross-References
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Return to <a href="../../README.html">Topics overview</a></li>
+</ul>
+</div>
+</div>
+
+
 </section>
 </section>
 
