@@ -1,0 +1,129 @@
+---
+title: "Data Lab: Multiple Mediation Analysis"
+format:
+  html:
+    code-fold: false
+---
+
+::: {.callout-info title="Lab Overview"}
+In this practical lab, we will perform a **Multiple Mediation Analysis** using Structural Equation Modeling (SEM) with the `lavaan` package. We will simulate a scenario with a binary predictor (X), multiple binary mediators (M), and a binary outcome (Y).
+:::
+
+## 1. Data Loading, Dichotomizing & Simulation
+
+We'll start with the UCLA dataset. We will dichotomize our predictor (GRE) and simulate three new binary mediators (passing an essay, interview, and recommendation) that depend on the GRE score.
+
+```{r setup, message=FALSE, warning=FALSE}
+# Load required libraries
+library(lavaan)
+library(dplyr)
+library(tidyr) 
+
+# Load the dataset
+dt <- read.csv("https://stats.idre.ucla.edu/stat/data/binary.csv")
+
+# A. Dummy coding for the covariates (Rank)
+dt <- dt %>%
+  mutate(
+    rank2 = ifelse(rank == 2, 1, 0),
+    rank3 = ifelse(rank == 3, 1, 0),
+    rank4 = ifelse(rank == 4, 1, 0)
+  )
+
+# B. Make GRE Dichotomous (1 = High GRE [>= 600], 0 = Low GRE [< 600])
+dt <- dt %>%
+  mutate(
+    gre_high = ifelse(gre >= 600, 1, 0)
+  )
+```
+
+### Simulating Mediators
+
+We simulate the 3 new dichotomous mediators based on the binary `gre_high`. We adjust the logit math. For example, in `prob_essay`: 
+- If `gre_high = 0` (Low GRE), prob is $plogis(-1) \approx 27\%$ pass rate.
+- If `gre_high = 1` (High GRE), prob is $plogis(-1 + 2) = plogis(1) \approx 73\%$ pass rate.
+
+```{r simulate-mediators}
+set.seed(123) 
+dt <- dt %>%
+  mutate(
+    prob_essay = plogis(-1 + 2.0 * gre_high),
+    essay_pass = rbinom(n(), size = 1, prob = prob_essay),
+    
+    prob_interview = plogis(-1.5 + 2.5 * gre_high),
+    interview_pass = rbinom(n(), size = 1, prob = prob_interview),
+    
+    prob_rec = plogis(-0.5 + 1.5 * gre_high),
+    rec_pass = rbinom(n(), size = 1, prob = prob_rec)
+  )
+```
+
+### Preparing Variables for `lavaan`
+
+We define endogenous categorical variables as `ordered` for `lavaan`. 
+Note: We do NOT need to make `gre_high` ordered because it is **EXOGENOUS** (no arrows point to it). `lavaan` handles exogenous binary variables perfectly as 0/1 numeric.
+
+```{r prep-lavaan}
+dt$admit <- ordered(dt$admit)
+dt$essay_pass <- ordered(dt$essay_pass)
+dt$interview_pass <- ordered(dt$interview_pass)
+dt$rec_pass <- ordered(dt$rec_pass)
+```
+
+## 2. Defining the SEM Model
+
+We define the structural paths:
+1. $X \rightarrow M$ pathways
+2. $M \rightarrow Y$ and $X \rightarrow Y$ pathways
+3. We calculate specific indirect effects and total effects using the `:=` operator.
+
+```{r define-model}
+model_3_mediators_binaryX <- '
+  # The X -> M pathways (Now using gre_high)
+  essay_pass ~ a1 * gre_high
+  interview_pass ~ a2 * gre_high
+  rec_pass ~ a3 * gre_high
+
+  # The M -> Y, X -> Y, and Covariate pathways pointing to Admit
+  admit ~ cp * gre_high + b1 * essay_pass + b2 * interview_pass + b3 * rec_pass + gpa + rank2 + rank3 + rank4
+
+  # Specific Indirect Effects
+  ind_essay := a1 * b1
+  ind_interview := a2 * b2
+  ind_rec := a3 * b3
+
+  # Total Effects
+  total_indirect := ind_essay + ind_interview + ind_rec
+  total_effect := cp + total_indirect
+'
+```
+
+## 3. Model Fitting & Results
+
+We fit the model using `sem()`. Because we declared our endogenous variables as `ordered`, `lavaan` automatically uses the DWLS (Diagonally Weighted Least Squares) estimator.
+
+```{r model-fit}
+# Fit the model 
+fit <- sem(model = model_3_mediators_binaryX, data = dt)
+
+# Print full summary
+summary(fit, standardized = TRUE, fit.measures = TRUE, rsquare = TRUE)
+```
+
+### 3.1 Extracting Indirect Effects
+
+Let's isolate just the indirect effects to compare the mediating pathways.
+
+```{r indirect-effects}
+# Extract just the indirect effects to compare
+parameterEstimates(fit) %>% 
+  filter(op == ":=") %>% 
+  select(lhs, est, se, z, pvalue) %>%
+  mutate(across(where(is.numeric), ~ round(., 4)))
+```
+
+> **Interpretation:** The table above shows the specific indirect effects through the essay, interview, and recommendation. We can determine which pathway carries the most significant mediating effect by observing the `est` (estimate) and `pvalue`.
+
+::: {.callout-tip title="Cross-References"}
+* Return to [Topics overview](../../index.qmd)
+:::

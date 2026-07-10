@@ -16,6 +16,10 @@ project:
     - Topics/W9_1_Logit_Example/README.md
     - Topics/W13_1_Mediation/README.md
     - Topics/W14_1_Presentations/README.md
+    - Labs/W3_Linear_Regression/index.qmd
+    - Labs/W4_Ordered_Logit/index.qmd
+    - Labs/W9_Logit_Example/index.qmd
+    - Labs/W13_Mediation/index.qmd
 
 website:
   title: "Data Analysis"
@@ -53,6 +57,16 @@ website:
             file: Topics/W13_1_Mediation/README.md
           - text: "Week 14.1: Final Presentations"
             file: Topics/W14_1_Presentations/README.md
+      - section: "Labs"
+        contents:
+          - text: "W3: Linear Regression"
+            file: Labs/W3_Linear_Regression/index.qmd
+          - text: "W4: Ordered Logit"
+            file: Labs/W4_Ordered_Logit/index.qmd
+          - text: "W9: Logit Example"
+            file: Labs/W9_Logit_Example/index.qmd
+          - text: "W13: Mediation Analysis"
+            file: Labs/W13_Mediation/index.qmd
 
 format:
   html:
